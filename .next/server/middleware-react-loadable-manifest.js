@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST='{"app\\\\[locale]\\\\Client.js -> bootstrap":{"id":200,"files":["static/chunks/200.d4506b7232b8cd67.js"]},"app\\\\not-found.js -> bootstrap":{"id":200,"files":["static/chunks/200.d4506b7232b8cd67.js"]},"components\\\\Error\\\\ErrorPage.js -> bootstrap":{"id":200,"files":["static/chunks/200.d4506b7232b8cd67.js"]}}';

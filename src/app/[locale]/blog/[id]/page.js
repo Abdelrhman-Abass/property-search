@@ -7,11 +7,13 @@ import { notFound } from "next/navigation";
 
 export const fetchData = async (id) => {
   const blog = await ApiGetter({ url: `/api/Blog/${id}` });
+  
   return blog;
 };
 
 export async function generateMetadata({ params }) {
   const blog = await fetchData(params.id);
+  console.log(blog)
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
   const image = blog?.data?.image

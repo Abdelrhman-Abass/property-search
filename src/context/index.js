@@ -29,6 +29,7 @@ export const DataProvider = ({ children }) => {
             ApiGetter({ url: "/api/Settings" }),
           ]);
 
+
         setPropertyTypesData(
           formatSelectData(propertyTypesResponse?.data, locale)
         );
