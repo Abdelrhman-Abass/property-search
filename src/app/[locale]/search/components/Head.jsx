@@ -60,7 +60,7 @@ const Head = ({ headSearchTerm }) => {
           {searchParams.get("SearchTerm") && (
             <div>
               <span>{locale == "ar" ? "بحث عن" : "Search about"}</span>
-              <span> '{searchParams.get("SearchTerm")}'</span>
+              <span> &apos;{searchParams.get("SearchTerm")}&apos;</span>
             </div>
           )}
         </div>
