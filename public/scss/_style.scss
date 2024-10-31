@@ -3646,7 +3646,8 @@ li {
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-
+    height: auto;
+    width: auto;
 }
 
 .home-banner-style1::before {
