@@ -3,7 +3,8 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-const data = ({ colstyle = false, data }) => {
+const Data = ({ colstyle = false, data }) => {
+
   const h = useTranslations("home");
   const g = useTranslations("global");
   const local = useLocale();
@@ -67,4 +68,4 @@ const data = ({ colstyle = false, data }) => {
   );
 };
 
-export default data;
+export default Data;

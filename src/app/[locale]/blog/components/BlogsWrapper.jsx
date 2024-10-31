@@ -14,8 +14,8 @@ const BlogsWrapper = ({ blogsData, pageSize }) => {
     <>
       <div className="blog-wrapper">
         {blogsData?.success && blogsData?.data?.items?.length ? (
-          blogsData?.data?.items?.map((blog) => (
-            <Blog id={blog.id} blog={blog} />
+          blogsData?.data?.items?.map((blog, index) => (
+            <Blog id={blog.id} blog={blog} key={index}/>
           ))
         ) : (
           <ErrorMessage

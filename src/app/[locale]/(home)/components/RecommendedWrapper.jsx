@@ -3,7 +3,7 @@ import { useLocale } from "next-intl";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
-import Card from "./Card";
+// import Card from "./Card";
 import MainCard from "@/layout/main/MainCard";
 
 const RecommendedWrapper = ({ data, type = "compound" }) => {

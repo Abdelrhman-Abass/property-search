@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import ContactUs from "@/layout/contact/ContactUs";
 import { ApiGetter } from "@/services/ApiGetter";
 
+
 export async function generateMetadata({ params }) {
   const compundData = await ApiGetter({
     url: `/api/CompoundDetails/${params.id}`,

@@ -1,11 +1,11 @@
 "use client"
 import Image from "next/image";
 import "../../../public/loadingStyle.css";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 const loading = () => {
-  useEffect(() => { 
+  // useEffect(() => { 
 
-  },[])
+  // },[])
   return (
     <div className="loading-page">
       <div className="my_spinner">

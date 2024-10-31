@@ -2,8 +2,10 @@ import { useLocale } from "next-intl";
 import React from "react";
 
 const Banner = ({ data }) => {
-  if (!data) return null;
   const locale = useLocale();
+  
+  if (!data) return null;
+
   return (
     <section className="pt40 pb40">
       <div className="container">
