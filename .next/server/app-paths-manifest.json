@@ -1,3 +1,21 @@
 {
-  "/[locale]/(home)/page": "app/[locale]/(home)/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/[locale]/(home)/@TopCompounds/page": "app/[locale]/(home)/@TopCompounds/page.js",
+  "/[locale]/(home)/@homeHero/page": "app/[locale]/(home)/@homeHero/page.js",
+  "/[locale]/area/[id]/@Compounds/page": "app/[locale]/area/[id]/@Compounds/page.js",
+  "/[locale]/(home)/@TopAreas/page": "app/[locale]/(home)/@TopAreas/page.js",
+  "/[locale]/(home)/@Recommended/page": "app/[locale]/(home)/@Recommended/page.js",
+  "/[locale]/(home)/page": "app/[locale]/(home)/page.js",
+  "/[locale]/compound/[id]/@List/page": "app/[locale]/compound/[id]/@List/page.js",
+  "/[locale]/area/[id]/page": "app/[locale]/area/[id]/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js",
+  "/[locale]/developer/[id]/@Compounds/page": "app/[locale]/developer/[id]/@Compounds/page.js",
+  "/[locale]/compound/[id]/page": "app/[locale]/compound/[id]/page.js",
+  "/[locale]/developer/[id]/page": "app/[locale]/developer/[id]/page.js",
+  "/[locale]/property/[id]/page": "app/[locale]/property/[id]/page.js",
+  "/[locale]/property/[id]/@Recommendes/page": "app/[locale]/property/[id]/@Recommendes/page.js",
+  "/[locale]/search/page": "app/[locale]/search/page.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/blog/[id]/page": "app/[locale]/blog/[id]/page.js",
+  "/[locale]/blog/page": "app/[locale]/blog/page.js"
 }
