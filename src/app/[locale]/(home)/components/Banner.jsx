@@ -10,23 +10,14 @@ const Banner = ({ data }) => {
 
   console.log(imagePath)
   return (
-    <section className="pt40 pb40">
-      <Link href="/">
-          <div className="list-thumb">
-            <Image
-              width={382}
-              height={248}
-              className="w-100 h-100 cover"
-              src={imagePath}
-            />
-            <div className="list-price">
-            </div>
-          </div>
-        </Link>
+    <section className="pt40 pb40">          
       <div className="container">
         <div
           style={{
             backgroundImage: `url(${imagePath})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '215px', 
           }}
           className="home-banner"
           data-aos="fade-up"
