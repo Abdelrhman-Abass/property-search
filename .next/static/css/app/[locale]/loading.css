@@ -1,0 +1,82 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./public/loadingStyle.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/* body {
+  overflow-y: hidden;
+} */
+.loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+.loading-page:after {
+  background: url(/_next/static/media/logo.fca11011.png) no-repeat center;
+  background-size: contain;
+  opacity: 0.03;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+@keyframes spinner-rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.my_spinner {
+  position: relative;
+  z-index: 0;
+  width: 260px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 2rem;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #162a53;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#e91e39, #e91e39),
+      linear-gradient(#162a5346, #162a5346),
+      linear-gradient(#162a5346, #162a5346),
+      linear-gradient(#162a5346, #162a5346);
+    animation: spinner-rotate 2s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    background: white;
+    border-radius: 4px;
+  }
+}
+
+.loading-page .my_spinner img {
+  height: 90px;
+  width: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
