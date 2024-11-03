@@ -5,6 +5,8 @@ import HomeTopCompounds from "./@TopCompounds/page";
 import HomeRecommended from "./@Recommended/page";
 import { ApiGetter } from "@/services/ApiGetter";
 import HomeHeroPage from "./@homeHero/page";
+
+
 const Home = async () => {
   const banners = await ApiGetter({ url: `/api/PageSections` });
 
