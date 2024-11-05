@@ -42,11 +42,7 @@ const Data = ({ colstyle = false, data }) => {
           <p className="list-text">
             {local == "ar" ? data.areaNameAR : data.areaNameEN}
           </p>
-          {/* <div className="list-meta d-flex align-items-center">
-            <span className="flaticon-bed d-flex" /> {data.bed} {g("bed")}
-            <span className="flaticon-shower d-flex" /> {data.bath} {g("bath")}
-            <span className="flaticon-expand d-flex" /> {data.sqft} {g("sqft")}
-          </div> */}
+          
           <div className="list-meta d-flex align-items-center">
             <span className="flaticon-expand d-flex" />
             {data.propertyCount} {h("properties")}

@@ -7,17 +7,11 @@ const Banner = ({ data }) => {
   if (!data) return null;
   const imagePath = `${process.env.NEXT_PUBLIC_BANNERS_IMAGE}/${data.path}`;
 
-  console.log(imagePath)
   return (
     <section className="pt40 pb40">          
       <div className="container">
         <div
-          // style={{
-          //   backgroundImage: `url(${imagePath})`,
-          //   backgroundSize: 'cover',
-          //   backgroundPosition: 'center',
-          //   height: '215px', 
-          // }}
+          
           className="home-banner"
           data-aos="fade-up"
           data-aos-delay="100"
