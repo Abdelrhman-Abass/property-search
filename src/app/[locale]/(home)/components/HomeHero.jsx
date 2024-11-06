@@ -12,12 +12,6 @@ const HomeHero = ({ data }) => {
       
       className="home-banner-style1 p0"
     >
-      {/* <Image
-              width={100}
-              height={100}
-              className="w-100 h-100 cover"
-              src={imagePath}
-            />    */}
       <div className="home-style1">
         <div className="container">
           <div className="row">

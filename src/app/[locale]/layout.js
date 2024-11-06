@@ -92,6 +92,7 @@ export default async function RootLayout({ children, params: { locale } }) {
     <html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        
         <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />

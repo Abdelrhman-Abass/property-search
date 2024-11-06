@@ -3645,10 +3645,13 @@ li {
     background-image: url(/slider.webp);
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;  // Add this line
     position: relative;
-    height: auto;
-    width: auto;
+    width: 100%;  // Add this line
+    
+    
 }
+
 
 .home-banner-style1::before {
     content: "";

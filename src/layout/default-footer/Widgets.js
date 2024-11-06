@@ -9,6 +9,7 @@ const Widgets = ({ topAreas, mostSearched, recommended }) => {
   const t = useTranslations("home");
 
   const handelLinks = (data, url = "") => {
+    if (!data) return [];
     return data.map(({ id, nameAR, nameEN }) => ({
       href: `/${url}/${id}`,
       label: locale == "ar" ? nameAR : nameEN,
