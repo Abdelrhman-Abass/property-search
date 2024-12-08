@@ -15,7 +15,6 @@ const WhatsAppButton = () => {
         rel="noopener noreferrer" // Security feature
       >
         <i className="fab fa-whatsapp whatsapp-icon"></i> {/* FontAwesome WhatsApp icon */}
-        Contact on WhatsApp
       </button>
     </Link>
   );

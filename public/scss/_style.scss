@@ -5358,12 +5358,14 @@ section {
 .whatsapp-button {
     position: fixed;
     bottom: 20px; /* Distance from the bottom of the page */
-    right: 20px; /* Distance from the right of the page */
+    right: 45px; /* Distance from the right of the page */
     background-color: #25d366; /* WhatsApp green */
     color: white;
     padding: 12px 24px;
     border: none;
-    border-radius: 50px; /* Make it a round button */
+    border-radius: 50%; /* Make it a round button */
+    height: 50px;
+    width: 50px;
     font-size: 16px;
     display: flex;
     align-items: center; /* Align text and icon in the center */
@@ -5402,7 +5404,7 @@ section {
     background-color: transparent;
     border: 1px solid #eb1b34;
     border-radius: 50%;
-    bottom: 45px;
+    bottom: 85px;
     color: #eb1b34;
     display: block;
     height: 50px;
