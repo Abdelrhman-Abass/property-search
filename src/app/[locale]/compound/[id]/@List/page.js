@@ -2,6 +2,7 @@
 import React from "react";
 import PropertiesList from "../components/PropertiesList";
 import { ApiGetter } from "@/services/ApiGetter";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 const Properties = async ({ id, title, searchParams }) => {
   const { OrderBy, page } = searchParams;
@@ -17,12 +18,15 @@ const Properties = async ({ id, title, searchParams }) => {
   const properties = data?.data;
 
   return (
+    <>
     <PropertiesList
       title={title}
       data={properties?.items}
       pageSize={pageSize}
       totalRecords={properties?.totalRecords}
     />
+    <WhatsAppButton data={title}/>
+    </>
   );
 };
 

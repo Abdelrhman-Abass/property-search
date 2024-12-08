@@ -5,6 +5,7 @@ import HomeTopCompounds from "./@TopCompounds/page";
 import HomeRecommended from "./@Recommended/page";
 import { ApiGetter } from "@/services/ApiGetter";
 import HomeHeroPage from "./@homeHero/page";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 
 const Home = async () => {
@@ -19,6 +20,8 @@ const Home = async () => {
       <HomeTopCompounds />
       <Banner data={banners?.data?.find((item) => item?.order === 3)} />
       <HomeRecommended />
+      <WhatsAppButton/>
+
     </>
   );
 };

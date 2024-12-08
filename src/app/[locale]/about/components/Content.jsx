@@ -1,4 +1,5 @@
 "use client";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 import ErrorMessage from "@/components/Error/ErrorMessage";
 import { isHTML } from "@/services";
 import { useLocale, useTranslations } from "next-intl";
@@ -40,6 +41,8 @@ const Content = ({ data }) => {
             )}
           </div>
         </div>
+        <WhatsAppButton/>
+
       </div>
     </section>
   );
