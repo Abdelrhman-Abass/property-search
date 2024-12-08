@@ -2973,17 +2973,17 @@ li {
 
 
 
-.facilities .list-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-// .responsive-layout {
-//     display: grid;
-//     grid-template-columns: 1fr;
+// .facilities .list-meta {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     flex-wrap: wrap;
 // }
+
+.facilities .list-meta {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 @media (min-width: 640px) {
     .facilities .list-meta {
@@ -2994,12 +2994,14 @@ li {
 }
 
 
-// @media (min-width: 1024px) {
-//     .responsive-layout {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-// }
+@media (min-width: 1024px) {
+    .facilities .list-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+}
 
 .listing-style14 .list-meta a:last-child {
     margin-right: 0;
