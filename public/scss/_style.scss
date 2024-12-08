@@ -2957,26 +2957,29 @@ li {
     font-weight: 600;
 }
 
-.facilities .listing-style14 .list-meta {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-right: 0 !important;
-}
+// .facilities .listing-style14 .list-meta {
+//     display: flex;
+//     align-items: center;
+//     gap: 24px;
+//     margin-right: 0 !important;
+// }
 .facilities .listing-style14 .list-meta {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   
-  @media (min-width: 640px) {
-    .facilities .listing-style14 .list-meta {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
+//   @media (min-width: 640px) {
+//     .facilities .listing-style14 .list-meta {
+//       grid-template-columns: 1fr 1fr;
+//     }
+//   }
   
   @media (min-width: 768px) {
-    .responsive-layout {
-      grid-template-columns: 1fr 1fr 1fr;
+    .facilities .listing-style14 .list-meta {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-right: 0 !important;;
     }
   }
   
