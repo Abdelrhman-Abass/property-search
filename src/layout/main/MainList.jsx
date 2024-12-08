@@ -5,6 +5,7 @@ import CardLoading from "../CardLoading";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import ErrorMessage from "@/components/Error/ErrorMessage";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 export default function MainList({
   data,
@@ -93,6 +94,7 @@ export default function MainList({
               </div>
             )}
           </div>
+          <WhatsAppButton data={title}/>
         </div>
       </section>
       <section className="pt0 pb90">
