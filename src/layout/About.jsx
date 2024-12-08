@@ -52,7 +52,7 @@ const About = ({ data, isCompound }) => {
                 return (
                   <p
                     key={id}
-                    className="d-flex align-items-center flex-column gap-2"
+                    className="d-flex align-items-center sm:flex-column gap-2"
                     href="#"
                   >
                     <span className={iconName} />
