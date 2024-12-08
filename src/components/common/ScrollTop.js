@@ -29,7 +29,7 @@ export default function ScrollToTop() {
 
   return (
     <>
-      isVisible && (
+      {isVisible && (
       <button
         className="scrollToHome"
         style={{ cursor: "pointer" }}
@@ -37,7 +37,7 @@ export default function ScrollToTop() {
       >
         <i className="fas fa-angle-up"></i>
       </button>
-      )
+      )}
       <WhatsAppButton className="scrollToHome"/>
     </>
   );
