@@ -5354,6 +5354,24 @@ section {
     width: 100%;
     z-index: 99999;
 }
+.whatsapp-button {
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.whatsapp-button:hover {
+    background-color: #128c7e; /* Darker green for hover effect */
+}
+  
+.whatsapp-button:focus {
+    outline: none; /* Remove the default focus outline */
+}
 
 .scrollToHome {
     background-color: transparent;

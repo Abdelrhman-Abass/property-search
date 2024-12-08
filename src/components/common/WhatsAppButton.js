@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
   return (
     <Link href={whatsappUrl} passHref>
       <button
-        className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+        className="whatsapp-button"
         target="_blank" // Opens the link in a new tab
         rel="noopener noreferrer" // Security feature
       >
