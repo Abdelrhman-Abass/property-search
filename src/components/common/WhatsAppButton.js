@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const WhatsAppButton = () => {
   const phoneNumber = '+201094002482'; // Replace with the phone number you want to send the message to
-  const message = 'Hello, I am interested in your services!'; // The message to send
+  const message = 'Hello, I am interested in your services! '; // The message to send
   const encodedMessage = encodeURIComponent(message); // Encode the message to be URL safe
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
