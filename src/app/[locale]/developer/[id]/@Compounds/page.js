@@ -8,7 +8,7 @@ const DeveloperCompounds = async ({ id, title }) => {
     url: `/api/Compound/GetByDeveloperId${id}`,
   });
 
-  return <MainList title={title} data={data?.data || []} type="compound" />;
+  return <MainList title={title} data={data?.data || []} dev={true} type="compound" />;
 };
 
 export default DeveloperCompounds;

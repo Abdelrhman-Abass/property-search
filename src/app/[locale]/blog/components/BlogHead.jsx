@@ -1,12 +1,29 @@
+"use client"
 import { blogFormatDate } from "@/services";
 import { useLocale } from "next-intl";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export default function BlogHead({ blog }) {
   const locale = useLocale();
   const blogDate = blogFormatDate(blog?.createdDateUtc, locale);
   const imagePath = `${process.env.NEXT_PUBLIC_ARTICLES_IMAGE}/${blog?.image}`;
+  const [openIndex, setOpenIndex] = useState(null); // Tracks which collapsible is open
+
+  const toggleCollapse = (index) => {
+    if (openIndex === index) {
+      setOpenIndex(null); // Close if already open
+    } else {
+      setOpenIndex(index); // Open the clicked collapsible
+    }
+  };
+
+  const fakeData = [
+    { id: 1, title: "Unit 1", content: { line1: "Detail 1A", line2: "Detail 1B" } },
+    { id: 2, title: "Unit 2", content: { line1: "Detail 2A", line2: "Detail 2B" } },
+    { id: 3, title: "Unit 3", content: { line1: "Detail 3A", line2: "Detail 3B" } },
+  ];
+
 
   return (
     <>
@@ -30,25 +47,110 @@ export default function BlogHead({ blog }) {
         </div>
       </div>
       <div
-        className="mx-auto maxw1600 mt20"
+        className="container mx-auto maxw1600 mt20"
         data-aos="fade-up"
         data-aos-delay="300"
       >
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-9">
             <div className="large-thumb">
               <Image
-                width={796}
-                height={600}
+                width={400}
+                height={400}
                 priority
-                className="cover w-100"
+                style={{ borderRadius: 10 }}
+                className="w-100"
                 src={imagePath}
                 alt={blog?.titleAR}
               />
             </div>
           </div>
+          <div className="col-lg-3 mt20-sm">
+            <div className="price-component">
+              <h1 className="price">
+                جنيه <span className="price-value">8,510,0000</span>
+              </h1>
+              <p className="price-subtext">اسعار تبدأ من</p>
+
+              <div className="info-boxes">
+                <div className="info-box">
+                  <p>8 سنوات</p>
+                  <p className="info-label">تقسيط</p>
+                </div>
+                <div className="info-box">
+                  <p>20%</p>
+                  <p className="info-label">مقدم</p>
+                </div>
+              </div>
+
+              <h2 className="section-title">أنواع الوحدات</h2>
+
+              <div>
+                {fakeData.map((item, index) => (
+                  <div key={item.id} className="collapsible-button">
+                    {/* Toggle Button */}
+                    <div
+                      style={{
+                        textAlign: locale == "ar" ? "right" : "left" ,
+                      }}
+                      className="collapse-toggle"
+                      onClick={() => toggleCollapse(index)}
+                    >
+                       {openIndex === index ? <i className="fa fa-sm fa-caret-down"></i> : 
+                       
+                        locale === "ar" ? <i class="fa fa-sm fa-caret-left" aria-hidden="true"></i>: <i class="fa fa-sm fa-caret-right" aria-hidden="true"></i>
+                       
+                       } {item.title}
+                    </div>
+
+                    {/* Collapsible Content */}
+                    <div
+                      className="collapse-content"
+                      style={{
+                        display: openIndex === index ? "block" : "none", // Toggles visibility
+                        maxHeight: openIndex === index ? "200px" : "0", // Animates height
+                        overflow: "hidden",
+                        transition: "max-height 0.6s ease-in-out, padding 0.3s ease-in-out",
+                        padding: openIndex === index ? "10px" : "0",
+                        textAlign: locale == "ar" ? "right" : "left",
+                      }}
+                    >
+                      <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line1}</p>
+                      <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line2}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+
+            </div>
+          </div>
         </div>
       </div>
     </>
+  );
+}
+
+
+function UnitCollapsible({ title, content }) {
+  const [isOpen, setIsOpen] = useState(false); // Ensure React is imported
+
+  const toggleCollapse = () => {
+    console.log("Previous isOpen state:", isOpen); // Debug log
+    setIsOpen((prev) => !prev);
+  };
+
+  return (
+    <div>
+      <button className="collapse-toggle" onClick={toggleCollapse}>
+        {title} ▾
+      </button>
+      {isOpen && (
+        <div className="collapse-content">
+          <p>{content.line1}</p>
+          <p>{content.line2}</p>
+        </div>
+      )}
+    </div>
   );
 }

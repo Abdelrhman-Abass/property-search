@@ -57,7 +57,7 @@ const page = async ({ params }) => {
   return (
     <>
       {/* Blog Section Area */}
-      <section className="our-blog pt150 ">
+      <section className="our-blog ">
         {blog?.success ? (
           <>
             <BlogHead blog={blog?.data} imagePath={imagePath} />
@@ -65,6 +65,7 @@ const page = async ({ params }) => {
               contents={blog?.data?.contents}
               imagePath={imagePath}
             />
+
           </>
         ) : (
           <BlogError blog={blog} blogId={params.id} />

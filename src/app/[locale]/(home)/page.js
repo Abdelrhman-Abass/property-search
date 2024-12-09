@@ -20,7 +20,7 @@ const Home = async () => {
       <HomeTopCompounds />
       <Banner data={banners?.data?.find((item) => item?.order === 3)} />
       <HomeRecommended />
-      <WhatsAppButton/>
+      <WhatsAppButton data={"property search"}/>
 
     </>
   );

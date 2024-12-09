@@ -56,7 +56,7 @@ const About = ({ data, isCompound }) => {
                     href="#"
                   >
                     <span className={iconName} />
-                    {locale == "ar" ? nameAR : nameEN}
+                    <p>{locale == "ar" ? nameAR : nameEN}</p>
                   </p>
                 );
               }

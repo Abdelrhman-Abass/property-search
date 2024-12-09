@@ -33,7 +33,7 @@ const About = ({ developer, id }) => {
                 ) : (
                   <div className="text">{content}</div>
                 )}
-                {/* <div className="agent-single-accordion">
+                <div className="agent-single-accordion">
                   <div
                     className="accordion accordion-flush"
                     id="accordionFlushExample"
@@ -67,7 +67,7 @@ const About = ({ developer, id }) => {
                       </h2>
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

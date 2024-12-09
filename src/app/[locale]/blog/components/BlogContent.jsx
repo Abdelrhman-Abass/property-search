@@ -2,6 +2,7 @@
 import { useLocale } from "next-intl";
 import Image from "next/image";
 import React from "react";
+import AsksSection from "@/components/common/AskAccordion";
 
 const BlogContent = ({ contents = [] }) => {
   const locale = useLocale();
@@ -56,6 +57,8 @@ const BlogContent = ({ contents = [] }) => {
           </div>
         </div>
       </div>
+      <AsksSection/>     
+
     </div>
   );
 };

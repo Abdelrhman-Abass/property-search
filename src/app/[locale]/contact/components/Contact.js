@@ -29,7 +29,7 @@ const Contact = () => {
       <section data-aos="fade-up" data-aos-delay="200">
         <div className="container">
           <div className="row d-flex align-items-end">
-            <div className="col-lg-5 position-relative ">
+            <div className="col-lg-4 position-relative ">
               <ContactUs />
             </div>
             <div className="col-lg-5 offset-lg-2">

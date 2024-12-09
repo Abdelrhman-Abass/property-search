@@ -6,6 +6,8 @@ import About from "../components/About";
 import DeveloperCompounds from "./@Compounds/page";
 import { notFound } from "next/navigation";
 import { ApiGetter } from "@/services/ApiGetter";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
+import AsksSection from "@/components/common/AskAccordion";
 
 async function getDeveloperDetails(id) {
   return await ApiGetter({
@@ -57,7 +59,7 @@ const Developer = async ({ params }) => {
   }
 
   return (
-    <section className="agent-single pt60 pb-0">
+    <section className="agent-single pt60 pt10-sm pb-0">
       <div className="cta-agent bgc-dark mx-auto maxw1600 pt60 pb60 bdrs12 position-relative mx20-lg">
         <div className="container">
           <div className="row align-items-center">
@@ -99,6 +101,14 @@ const Developer = async ({ params }) => {
         }
         id={params?.id}
       />
+      <WhatsAppButton data={params.locale == "ar"
+            ? developerDetails?.data?.developerNameAR
+            : developerDetails?.data?.developerNameEN}/>
+
+            <div className="container">
+       <AsksSection/>     
+
+            </div>
     </section>
   );
 };

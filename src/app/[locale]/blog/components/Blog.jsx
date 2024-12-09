@@ -26,8 +26,8 @@ const Blog = ({ blog }) => {
     <div className="blog-style1 large-size bgc-white">
       <div className="blog-img">
         <Image
-          width={600}
-          height={360}
+          width={300}
+          height={200}
           priority
           className="w-100 cover"
           src={imagePath}

@@ -6,6 +6,7 @@ import About from "../components/About.jsx";
 import AboutCompounds from "./@Compounds/page.js";
 import { notFound } from "next/navigation";
 import { ApiGetter } from "@/services/ApiGetter.js";
+import WhatsAppButton from "@/components/common/WhatsAppButton.js";
 
 async function getAreaDetails(id) {
   return await ApiGetter({ url: `/api/Area/${id}` });
@@ -96,6 +97,10 @@ const Area = async ({ params }) => {
         }
         id={params.id}
       />
+      <WhatsAppButton data={params.locale == "ar"
+            ? areaDetails?.data?.nameAr
+            : areaDetails?.data?.nameEn
+            }/>
     </section>
   );
 };

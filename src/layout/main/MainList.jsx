@@ -13,6 +13,7 @@ export default function MainList({
   title,
   colstyle = false,
   isCompoundDetails = false,
+  dev=false,
   searchParams = {},
   networkError = false,
 }) {
@@ -57,7 +58,7 @@ export default function MainList({
 
   return (
     <>
-      <section className="breadcumb-section pb5 pt5">
+      <section className={`breadcumb-section pb5 pt5 ${dev && "about-ar"}`}>
         <div className="container">
           <div className="row mt25 mb75 justify-content-between gap-3">
             <div className="col-lg-08 w-fit">
@@ -94,10 +95,10 @@ export default function MainList({
               </div>
             )}
           </div>
-          <WhatsAppButton data={title}/>
+          {/* <WhatsAppButton data={title}/> */}
         </div>
       </section>
-      <section className="pt0 pb90">
+      <section className="pt0 pb40">
         <div className="container">
           <div className="row" style={{ rowGap: 32 }}>
             {!isLoading ? (

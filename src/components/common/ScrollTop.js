@@ -38,7 +38,7 @@ export default function ScrollToTop() {
         <i className="fas fa-angle-up"></i>
       </button>
       )}
-      <WhatsAppButton/>
+      {/* <WhatsAppButton/> */}
     </>
   );
 }
