@@ -11,8 +11,10 @@ const BlogContent = ({ contents = [] }) => {
 
   return (
     <div className="container">
-      <div className="roww" data-aos="fade-up" data-aos-delay="500">
-        <div className="col-xl-8 offset-xl-2">
+      <div className="roww" style={{
+        textAlign: locale == "ar" ? "right" : "left",
+      }} data-aos="fade-up" data-aos-delay="500">
+        <div className="col-xl-8 ">
           <div className="ui-content mt40 mb60">
             {/* <h4 className="mb10">1. Reduce the clutter</h4> */}
             {orderContents?.map(
@@ -42,9 +44,8 @@ const BlogContent = ({ contents = [] }) => {
                   <iframe
                     width={800}
                     height={470}
-                    src={`https://www.youtube.com/embed/${
-                      mediaContent?.path.split("v=")[1]
-                    }`}
+                    src={`https://www.youtube.com/embed/${mediaContent?.path.split("v=")[1]
+                      }`}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
@@ -57,7 +58,7 @@ const BlogContent = ({ contents = [] }) => {
           </div>
         </div>
       </div>
-      <AsksSection/>     
+      <AsksSection />
 
     </div>
   );
