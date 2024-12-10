@@ -73,25 +73,25 @@ export default function BlogHead({ blog }) {
                   <h1 className="price">
                     جنيه <span className="price-value">{blog.priceStartsFrom}</span>
                   </h1>
-                  <p className="price-subtext">اسعار تبدأ من</p>
+                  <p className="price-subtext"> {locale == "ar" ? "أسعار تبدأ من  " : "Prices Starts from"}اسعار تبدأ من</p>
                 </>
               )}
               {blog.downPaymentPercentage !== null && blog.installmentYears !== null ? (
 
                 <div className="info-boxes">
                   <div className="info-box">
-                    <p>{blog.installmentYears} سنوات</p>
-                    <p className="info-label">تقسيط</p>
+                    <p>{blog.installmentYears} {locale == "ar" ? " سنوات" : " Years"}</p>
+                    <p className="info-label"> {locale == "ar" ? " تقسيط" : "Installment"}</p>
                   </div>
                   <div className="info-box">
                     <p>{blog.downPaymentPercentage}%</p>
-                    <p className="info-label">مقدم</p>
+                    <p className="info-label"> {locale == "ar" ? "مقدم " : " Deposit"}</p>
                   </div>
                 </div>
               ) :
                 null}
 
-              <h2 className="section-title">أنواع الوحدات</h2>
+              <h2 className="section-title">  {locale == "ar" ? "أنواع الوحدات" : "Units Kind"}</h2>
 
               <div>
                 {blog.propertyTypes.map((item, index) => (
@@ -123,7 +123,8 @@ export default function BlogHead({ blog }) {
                         textAlign: locale == "ar" ? "right" : "left",
                       }}
                     >
-                      <p style={{textAlign: locale == "ar" ? "right" : "left"}}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  الأسعار : ":"  Price : " } {item.price} </p>
+                      <p style={{textAlign: locale == "ar" ? "right" : "left"}}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  السعر : ":"  Price : " } {Intl.NumberFormat('fr-FR').format(item.price) }</p>
+                      <p style={{textAlign: locale == "ar" ? "right" : "left"}}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  المساحه : ":"  Space : " } {Intl.NumberFormat('fr-FR').format(item.price) }</p>
                       {/* <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line2}</p> */}
                     </div>
                   </div>

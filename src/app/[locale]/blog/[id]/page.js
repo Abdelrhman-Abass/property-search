@@ -34,6 +34,14 @@ export async function generateMetadata({ params }) {
       description,
       seoTag,
     },
+    other: seoTag
+      ? [
+          {
+            name: "keywords",
+            content: seoTag,
+          },
+        ]
+      : [],
   };
   if (image) {
     seoResult.twitter = { ...seoResult.twitter, image };
