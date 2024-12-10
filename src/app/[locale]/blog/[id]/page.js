@@ -54,18 +54,18 @@ export async function generateMetadata({ params }) {
     seoResult.twitter = { ...seoResult.twitter, image };
     seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
   }
-  if (blog?.data?.seoMetaTags) {
-    const tags = Array.isArray(blog.data.seoMetaTags)
-      ? blog.data.seoMetaTags
-      : [blog.data.seoMetaTags];
+  // if (blog?.data?.seoMetaTags) {
+  //   const tags = Array.isArray(blog.data.seoMetaTags)
+  //     ? blog.data.seoMetaTags
+  //     : [blog.data.seoMetaTags];
 
-    seoResult.additionalMetaTags.push(
-      ...tags.map((tag) => ({
-        name: "custom-tag",
-        content: tag,
-      }))
-    );
-  }
+  //   seoResult.additionalMetaTags.push(
+  //     ...tags.map((tag) => ({
+  //       name: "custom-tag",
+  //       content: tag,
+  //     }))
+  //   );
+  // }
   return seoResult;
 }
 
