@@ -16,23 +16,23 @@ export async function generateMetadata({ params }) {
   console.log(blog)
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
-  const mateTag = blog?.data?.seoMetaTags;
+  const seoTag = blog?.data?.seoMetaTags;
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
   let seoResult = {
     title,
     description,
-    mateTag,
+    seoTag,
     openGraph: {
       title,
       description,
-      mateTag,
+      seoTag,
     },
     twitter: {
       title,
       description,
-      mateTag,
+      seoTag,
     },
   };
   if (image) {
@@ -47,7 +47,6 @@ export async function generateMetadata({ params }) {
       content: tag,
     }));
   }
-
   return seoResult;
 }
 
