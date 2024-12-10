@@ -124,7 +124,7 @@ export default function BlogHead({ blog }) {
                       }}
                     >
                       <p style={{textAlign: locale == "ar" ? "right" : "left"}}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  السعر : ":"  Price : " } {Intl.NumberFormat('fr-FR').format(item.price) }</p>
-                      <p style={{textAlign: locale == "ar" ? "right" : "left"}}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  المساحه : ":"  Space : " } {Intl.NumberFormat('fr-FR').format(item.price) }</p>
+                      <p style={{textAlign: locale == "ar" ? "right" : "left"}}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  المساحه : ":"  Space : " } {Intl.NumberFormat('fr-FR').format(item.area) }</p>
                       {/* <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line2}</p> */}
                     </div>
                   </div>
