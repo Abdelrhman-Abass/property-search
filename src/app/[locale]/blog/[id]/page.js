@@ -17,22 +17,22 @@ export async function generateMetadata({ params }) {
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
   // const description = blog?.data?.seoMetaTags;
-  const custom = blog?.data?.seoMetaTags;
+  const keywords = blog?.data?.seoMetaTags;
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
     const seoResult = {
-      custom,
+      keywords,
       title,
       description,
       openGraph: {
-        custom,
+        keywords,
         title,
         description,
         images: image ? [{ url: image }] : undefined,
       },
       twitter: {
-        custom,
+        keywords,
         title,
         description,
         card: "summary", // Twitter card type
