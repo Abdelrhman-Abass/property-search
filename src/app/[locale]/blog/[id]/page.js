@@ -16,24 +16,25 @@ export async function generateMetadata({ params }) {
   // console.log(blog)
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
-  const tag = blog?.data?.seoMetaTags;
+  // const description = blog?.data?.seoMetaTags;
+  const custom = blog?.data?.seoMetaTags;
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
     const seoResult = {
+      custom,
       title,
       description,
-      tag,
       openGraph: {
+        custom,
         title,
         description,
-        tag,
         images: image ? [{ url: image }] : undefined,
       },
       twitter: {
+        custom,
         title,
         description,
-        tag,
         card: "summary", // Twitter card type
         image: image || undefined,
       },
@@ -42,12 +43,12 @@ export async function generateMetadata({ params }) {
     };
   
     // Handle additional meta tags
-    if (tag) {
-      seoResult.additionalMetaTags.push({
-        name: "keywords",
-        content: tag, // Add as a comma-separated string
-      });
-    }
+    // if (custom) {
+    //   seoResult.additionalMetaTags.push({
+    //     name: "keywords",
+    //     content: custom, // Add as a comma-separated string
+    //   });
+    // }
 
   if (image) {
     seoResult.twitter = { ...seoResult.twitter, image };
