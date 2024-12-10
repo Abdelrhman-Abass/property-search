@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   const description =
     developerDetails?.data?.seoTitle ||
     "can develop compounds in areas at Property Search";
-  const seoTag =
+  const keywords =
     developerDetails?.data?.seoMetaTags ||
     "can develop compounds in areas at Property Search";
   const image = developerDetails?.data?.logo
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   let seoResult = {
     title,
     description,
-    seoTag,
+    keywords,
     twitter: {
       title,
       description,
@@ -40,21 +40,21 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      seoTag,
+      keywords,
     },
   };
   if (image) {
     seoResult.twitter = { ...seoResult.twitter, image };
     seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
   }
-  if (developerDetails?.data?.seoMetaTags) {
-    let tags = developerDetails?.data.seoMetaTags;
-    tags = Array.isArray(tags) && tags.length > 0 ? tags : [tags];
-    seoResult.other = tags.map((tag) => ({
-      title: tag,
-      content: tag,
-    }));
-  }
+  // if (developerDetails?.data?.seoMetaTags) {
+  //   let tags = developerDetails?.data.seoMetaTags;
+  //   tags = Array.isArray(tags) && tags.length > 0 ? tags : [tags];
+  //   seoResult.other = tags.map((tag) => ({
+  //     title: tag,
+  //     content: tag,
+  //   }));
+  // }
   return seoResult;
 }
 
