@@ -106,7 +106,7 @@ const Developer = async ({ params }) => {
             : developerDetails?.data?.developerNameEN}/>
 
             <div className="container">
-       <AsksSection/>     
+       <AsksSection questions={developerDetails?.data?.questions}/>     
 
             </div>
     </section>

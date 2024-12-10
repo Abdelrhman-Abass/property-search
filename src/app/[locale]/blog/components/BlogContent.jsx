@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import AsksSection from "@/components/common/AskAccordion";
 
-const BlogContent = ({ contents = [] }) => {
+const BlogContent = ({ contents = [] , questions= []}) => {
   const locale = useLocale();
   const orderContents = contents.sort((a, b) => a.order - b.order);
   const imagePath = `${process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE}`;
@@ -58,7 +58,7 @@ const BlogContent = ({ contents = [] }) => {
           </div>
         </div>
       </div>
-      <AsksSection />
+      <AsksSection questions={questions} />
 
     </div>
   );

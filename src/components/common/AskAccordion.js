@@ -1,16 +1,21 @@
 import React from "react";
+import { useLocale } from "next-intl";
 
-const AsksSection = () => {
+
+const AsksSection = ({questions= []}) => {
+  const locale = useLocale()
   return (
     <div className="asks-container mb50">
-      <div className="ask">
-        <div className="question">What is your favorite color?</div>
-        <div className="answer">My favorite color is blue.</div>
+      {questions.map((que ,idx)=>(
+      <div className="ask" key={idx}>
+        <div className="question">{locale == "ar" ? que.textAR :que.textEN }</div>
+        <div className="answer">{locale == "ar" ? que.answerTextAR :que.answerTextEN }</div>
       </div>
-      <div className="ask">
+      ))}
+      {/* <div className="ask">
         <div className="question">What is your favorite food?</div>
         <div className="answer">I love pizza!</div>
-      </div>
+      </div> */}
       {/* Add more questions and answers as needed */}
     </div>
   );

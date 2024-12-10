@@ -67,40 +67,47 @@ export default function BlogHead({ blog }) {
           </div>
           <div className="col-lg-3 mt20-sm">
             <div className="price-component">
-              <h1 className="price">
-                جنيه <span className="price-value">8,510,0000</span>
-              </h1>
-              <p className="price-subtext">اسعار تبدأ من</p>
+              {blog.priceStartsFrom !== null && (
+                <>
+                  <h1 className="price">
+                    جنيه <span className="price-value">{blog.priceStartsFrom}</span>
+                  </h1>
+                  <p className="price-subtext">اسعار تبدأ من</p>
+                </>
+              )}
+              {blog.downPaymentPercentage !== null && blog.installmentYears !== null ? (
 
-              <div className="info-boxes">
-                <div className="info-box">
-                  <p>8 سنوات</p>
-                  <p className="info-label">تقسيط</p>
+                <div className="info-boxes">
+                  <div className="info-box">
+                    <p>{blog.installmentYears} سنوات</p>
+                    <p className="info-label">تقسيط</p>
+                  </div>
+                  <div className="info-box">
+                    <p>{blog.downPaymentPercentage}%</p>
+                    <p className="info-label">مقدم</p>
+                  </div>
                 </div>
-                <div className="info-box">
-                  <p>20%</p>
-                  <p className="info-label">مقدم</p>
-                </div>
-              </div>
+              ) :
+                null}
 
               <h2 className="section-title">أنواع الوحدات</h2>
 
               <div>
-                {fakeData.map((item, index) => (
+                {blog.propertyTypes.map((item, index) => (
                   <div key={item.id} className="collapsible-button">
                     {/* Toggle Button */}
                     <div
                       style={{
-                        textAlign: locale == "ar" ? "right" : "left" ,
+                        textAlign: locale == "ar" ? "right" : "left",
                       }}
                       className="collapse-toggle"
                       onClick={() => toggleCollapse(index)}
                     >
-                       {openIndex === index ? <i className="fa fa-sm fa-caret-down"></i> : 
-                       
-                        locale === "ar" ? <i class="fa fa-sm fa-caret-left" aria-hidden="true"></i>: <i class="fa fa-sm fa-caret-right" aria-hidden="true"></i>
-                       
-                       } {item.title}
+                      {openIndex === index ? <i className="fa fa-sm fa-caret-down"></i> :
+
+                        locale === "ar" ? <i class="fa fa-sm fa-caret-left" aria-hidden="true"></i> : <i class="fa fa-sm fa-caret-right" aria-hidden="true"></i>
+
+                      } {locale == "ar" ? item.typeNameAR :item.typeNameEN }
                     </div>
 
                     {/* Collapsible Content */}
@@ -115,8 +122,8 @@ export default function BlogHead({ blog }) {
                         textAlign: locale == "ar" ? "right" : "left",
                       }}
                     >
-                      <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line1}</p>
-                      <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line2}</p>
+                      <p style={{textAlign: locale == "ar" ? "right" : "left"}}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  الأسعار : ":"  Price : " } {item.price} </p>
+                      {/* <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line2}</p> */}
                     </div>
                   </div>
                 ))}

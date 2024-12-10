@@ -64,6 +64,7 @@ const page = async ({ params }) => {
             <BlogContent
               contents={blog?.data?.contents}
               imagePath={imagePath}
+              questions={blog?.data?.questions}
             />
 
           </>
