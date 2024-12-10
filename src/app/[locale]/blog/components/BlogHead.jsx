@@ -33,11 +33,11 @@ export default function BlogHead({ blog }) {
             <h2 className="blog-title">
               {locale == "ar" ? blog?.titleAR : blog?.titleEN}
             </h2>
-            <p className="m--1 ff-heading">
+            {/* <p className="m--1 ff-heading">
               {locale == "ar"
                 ? blog?.shortDescriptionAR
                 : blog?.shortDescriptionEN}
-            </p>
+            </p> */}
             <div className="blog-single-meta">
               <div className="post-author d-sm-flex align-items-center">
                 <a className="ml15">{blogDate?.fullDate}</a>
