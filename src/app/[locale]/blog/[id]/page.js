@@ -16,34 +16,37 @@ export async function generateMetadata({ params }) {
   // console.log(blog)
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
-  const seoMetaTags = blog?.data?.seoMetaTags;
+  const tag = blog?.data?.seoMetaTags;
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
     const seoResult = {
       title,
       description,
+      tag,
       openGraph: {
         title,
         description,
+        tag,
         images: image ? [{ url: image }] : undefined,
       },
       twitter: {
         title,
         description,
+        tag,
         card: "summary", // Twitter card type
         image: image || undefined,
       },
+      additionalMetaTags: [], // Always initialize as an array
+
     };
   
     // Handle additional meta tags
-    if (seoMetaTags) {
-      seoResult.additionalMetaTags = [
-        {
-          name: "seoMetaTags",
-          content: JSON.stringify(seoMetaTags), // Add meta keywords tag
-        },
-      ];
+    if (tag) {
+      seoResult.additionalMetaTags.push({
+        name: "keywords",
+        content: tag, // Add as a comma-separated string
+      });
     }
 
   if (image) {
@@ -51,12 +54,16 @@ export async function generateMetadata({ params }) {
     seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
   }
   if (blog?.data?.seoMetaTags) {
-    let tags = blog?.data.seoMetaTags;
-    tags = Array.isArray(tags) && tags.length > 0 ? tags : [tags];
-    seoResult.other = tags.map((tag) => ({
-      title: tag,
-      content: tag,
-    }));
+    const tags = Array.isArray(blog.data.seoMetaTags)
+      ? blog.data.seoMetaTags
+      : [blog.data.seoMetaTags];
+
+    seoResult.additionalMetaTags.push(
+      ...tags.map((tag) => ({
+        name: "custom-tag",
+        content: tag,
+      }))
+    );
   }
   return seoResult;
 }
