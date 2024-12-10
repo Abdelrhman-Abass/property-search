@@ -40,8 +40,8 @@ export async function generateMetadata({ params }) {
     if (seoMetaTags) {
       seoResult.additionalMetaTags = [
         {
-          name: seoMetaTags,
-          content: seoMetaTags, // Add meta keywords tag
+          name: "seoMetaTags",
+          content: JSON.stringify(seoMetaTags), // Add meta keywords tag
         },
       ];
     }
