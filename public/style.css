@@ -334,6 +334,12 @@ li.active a {
   color: #ce8946;
 }
 
+
+@media (max-width: 768px) {
+  .contentArt {
+    margin: 0 !important; /* 100% width for smaller screens */
+  }
+}
 /* Container for the asks section */
 .asks-container {
   width: 100%;
