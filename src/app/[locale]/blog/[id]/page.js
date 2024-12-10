@@ -16,19 +16,23 @@ export async function generateMetadata({ params }) {
   console.log(blog)
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
+  const mateTag = blog?.data?.seoMetaTags;
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
   let seoResult = {
     title,
     description,
+    mateTag,
     openGraph: {
       title,
       description,
+      mateTag,
     },
     twitter: {
       title,
       description,
+      mateTag,
     },
   };
   if (image) {

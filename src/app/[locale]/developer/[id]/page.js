@@ -21,6 +21,9 @@ export async function generateMetadata({ params }) {
   const description =
     developerDetails?.data?.seoTitle ||
     "can develop compounds in areas at Property Search";
+  const metaTag =
+    developerDetails?.data?.seoMetaTags ||
+    "can develop compounds in areas at Property Search";
   const image = developerDetails?.data?.logo
     ? process.env.NEXT_PUBLIC_DEVELOPER_IMAGE +
       `/${developerDetails?.data?.logo}`
@@ -28,13 +31,16 @@ export async function generateMetadata({ params }) {
   let seoResult = {
     title,
     description,
+    metaTag,
     twitter: {
       title,
       description,
+      metaTag,
     },
     openGraph: {
       title,
       description,
+      metaTag,
     },
   };
   if (image) {

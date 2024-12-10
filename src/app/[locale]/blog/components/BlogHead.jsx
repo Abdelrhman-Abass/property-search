@@ -65,6 +65,7 @@ export default function BlogHead({ blog }) {
               />
             </div>
           </div>
+          {blog.propertyTypes.length != 0 && (
           <div className="col-lg-3 mt20-sm">
             <div className="price-component">
               {blog.priceStartsFrom !== null && (
@@ -132,6 +133,8 @@ export default function BlogHead({ blog }) {
 
             </div>
           </div>
+
+          )}
         </div>
       </div>
     </>
