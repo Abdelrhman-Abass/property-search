@@ -13,36 +13,39 @@ export const fetchData = async (id) => {
 
 export async function generateMetadata({ params }) {
   const blog = await fetchData(params.id);
-  console.log(blog)
+  // console.log(blog)
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
-  const seoTag = blog?.data?.seoMetaTags;
+  const seoMetaTags = blog?.data?.seoMetaTags;
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
-  let seoResult = {
-    title,
-    description,
-    seoTag,
-    openGraph: {
+    const seoResult = {
       title,
       description,
-      seoTag,
-    },
-    twitter: {
-      title,
-      description,
-      seoTag,
-    },
-    other: seoTag
-      ? [
-          {
-            name: "keywords",
-            content: seoTag,
-          },
-        ]
-      : [],
-  };
+      openGraph: {
+        title,
+        description,
+        images: image ? [{ url: image }] : undefined,
+      },
+      twitter: {
+        title,
+        description,
+        card: "summary", // Twitter card type
+        image: image || undefined,
+      },
+    };
+  
+    // Handle additional meta tags
+    if (seoMetaTags) {
+      seoResult.additionalMetaTags = [
+        {
+          name: seoMetaTags,
+          content: seoMetaTags, // Add meta keywords tag
+        },
+      ];
+    }
+
   if (image) {
     seoResult.twitter = { ...seoResult.twitter, image };
     seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
