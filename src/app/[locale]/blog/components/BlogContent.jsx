@@ -10,11 +10,11 @@ const BlogContent = ({ contents = [] , questions= []}) => {
   const imagePath = `${process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE}`;
 
   return (
-    <div className="container mb-100-lg mb-40-md ">
+    <div className="container mb-100-lg mb-40-md mr25 ">
       <div className="roww" style={{
         textAlign: locale == "ar" ? "right" : "left",
       }} data-aos="fade-up" data-aos-delay="500">
-        <div className="col-xl-8 ">
+        <div className="col-xl-9 ">
           <div className="ui-content mt40 mb60">
             {/* <h4 className="mb10">1. Reduce the clutter</h4> */}
             {orderContents?.map(
