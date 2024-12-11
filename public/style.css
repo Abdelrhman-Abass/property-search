@@ -340,6 +340,10 @@ li.active a {
     margin: 0 !important; /* 100% width for smaller screens */
   }
 }
+
+.con{
+  max-height: max-content;
+}
 /* Container for the asks section */
 .asks-container {
   width: 100%;

@@ -1,5 +1,6 @@
 "use client"
 import { blogFormatDate } from "@/services";
+import { MapContext } from "@react-google-maps/api";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -59,7 +60,7 @@ export default function BlogHead({ blog }) {
                 height={400}
                 priority
                 style={{ borderRadius: 10 }}
-                className="w-100"
+                className="w-100 con"
                 src={imagePath}
                 alt={blog?.titleAR}
               />
