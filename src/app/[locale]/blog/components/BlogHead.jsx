@@ -53,6 +53,7 @@ export default function BlogHead({ blog }) {
         data-aos-delay="300"
       >
         <div className="row">
+        {blog.propertyTypes?.length != 0 ? (
           <div className="col-lg-9">
             <div className="large-thumb">
               <Image
@@ -66,7 +67,24 @@ export default function BlogHead({ blog }) {
               />
             </div>
           </div>
-          {blog.propertyTypes.length != 0 && (
+
+        ):
+        (
+          <div className="col-lg-12">
+            <div className="large-thumb">
+              <Image
+                width={400}
+                height={400}
+                priority
+                style={{ borderRadius: 10 }}
+                className="w-100 con"
+                src={imagePath}
+                alt={blog?.titleAR}
+              />
+            </div>
+          </div>
+        )}
+          {blog.propertyTypes?.length != 0 && (
           <div className="col-lg-3 mt20-sm">
             <div className="price-component">
               {blog.priceStartsFrom !== null && (

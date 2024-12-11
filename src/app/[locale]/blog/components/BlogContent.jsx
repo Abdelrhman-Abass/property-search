@@ -14,7 +14,7 @@ const BlogContent = ({ contents = [] , questions= []}) => {
       <div className="roww" style={{
         textAlign: locale == "ar" ? "right" : "left",
       }} data-aos="fade-up" data-aos-delay="500">
-        <div className="col-xl-9 ">
+        <div className="col-xl-11">
           <div className="ui-content mt40 mb60">
             {/* <h4 className="mb10">1. Reduce the clutter</h4> */}
             {orderContents?.map(
@@ -33,11 +33,11 @@ const BlogContent = ({ contents = [] , questions= []}) => {
                 ) : mediaContent.type == 0 ? (
                   <>
                     <Image
-                      width={800}
-                      height={470}
+                      width={400}
+                      height={400}
                       src={`${imagePath}/${mediaContent.path}`}
                       alt="blog"
-                      className="bdrs12 post-img-2 w-100 h-100 cover mt60"
+                      className="bdrs12 post-img-2 w-100 con  mt60 "
                     />
                   </>
                 ) : (
