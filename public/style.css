@@ -76,6 +76,17 @@
   font-size: 16px;
   color: #333;
 }
+.custom-mr-0{
+  margin-right: 5px !important;
+    margin-left: 5px !important;
+}
+
+@media (min-width: 1600px) {
+  .custom-mr-0 {
+    margin-right: 140px !important;
+    margin-left: 140px !important;
+  }
+}
 
 .info-label {
   font-size: 12px;
@@ -401,7 +412,7 @@ li.active a {
 } */
 @media (min-width: 1024px) {
   .about-ar {
-    margin-top: -300px;
+    margin-top: -120px;
   }
 }
 /* property */

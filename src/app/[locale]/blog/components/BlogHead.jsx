@@ -28,7 +28,7 @@ export default function BlogHead({ blog }) {
 
   return (
     <>
-      <div className="container mr5 ml5">
+      <div className="container custom-mr-0 ">
         <div className="row" data-aos="fade-up" data-aos-delay="100">
           <div className="col-lg-12">
             <h2 className="blog-title">

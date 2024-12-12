@@ -10,7 +10,7 @@ const BlogContent = ({ contents = [] , questions= []}) => {
   const imagePath = `${process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE}`;
 
   return (
-    <div className="container mb-100-lg mb-40-md mr5 contentArt ml5">
+    <div className="container mb-100-lg mb-40-md  contentArt custom-mr-0">
       <div className="roww" style={{
         textAlign: locale == "ar" ? "right" : "left",
       }} data-aos="fade-up" data-aos-delay="500">

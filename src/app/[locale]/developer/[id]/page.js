@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       title,
       description,
-      seoTag,
+      keywords,
     },
     openGraph: {
       title,

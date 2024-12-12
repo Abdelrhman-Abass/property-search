@@ -55,7 +55,7 @@ const Area = async ({ params }) => {
     return notFound();
   }
   return (
-    <section className="agent-single pt60 pb-0">
+    <section className="agent-single pt60 pb-0 ">
       <div className="cta-agent bgc-thm-light mx-auto maxw1600 pt60 pb60 bdrs12 position-relative mx20-lg">
         <div className="container">
           <div className="row align-items-center">
