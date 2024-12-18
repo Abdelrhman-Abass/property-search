@@ -10,8 +10,8 @@ export async function generateMetadata({ params, searchParams }) {
   return {
     title:
       params.locale == "ar"
-        ? `بحث ${SearchTerm && `| ${SearchTerm}`}`
-        : `Search  ${SearchTerm && `| ${SearchTerm}`}`,
+        ? `بحث`
+        : `Search `,
   };
 }
 

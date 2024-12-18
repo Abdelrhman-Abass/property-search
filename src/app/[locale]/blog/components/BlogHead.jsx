@@ -89,23 +89,25 @@ export default function BlogHead({ blog }) {
             <div className="price-component">
               {blog.priceStartsFrom !== null && (
                 <>
+                  <span className="price-subtext"> {locale == "ar" ? "أسعار تبدأ من  " : "Prices Starts from"}</span>
                   <h1 className="price">
-                    جنيه <span className="price-value">{blog.priceStartsFrom}</span>
+                    جنيه <span className="price-value">{Intl.NumberFormat('fr-FR').format(blog.priceStartsFrom) }</span>
                   </h1>
-                  <p className="price-subtext"> {locale == "ar" ? "أسعار تبدأ من  " : "Prices Starts from"}اسعار تبدأ من</p>
                 </>
               )}
               {blog.downPaymentPercentage !== null && blog.installmentYears !== null ? (
-
+                <div className="package">
                 <div className="info-boxes">
                   <div className="info-box">
-                    <p>{blog.installmentYears} {locale == "ar" ? " سنوات" : " Years"}</p>
                     <p className="info-label"> {locale == "ar" ? " تقسيط" : "Installment"}</p>
+                    <p>{blog.installmentYears} {locale == "ar" ? " سنوات" : " Years"}</p>
                   </div>
                   <div className="info-box">
+                    <p className="info-label"> {locale == "ar" ? "دفعة مبدئية " : " Deposit"}</p>
                     <p>{blog.downPaymentPercentage}%</p>
-                    <p className="info-label"> {locale == "ar" ? "مقدم " : " Deposit"}</p>
                   </div>
+                </div>
+
                 </div>
               ) :
                 null}
@@ -156,6 +158,7 @@ export default function BlogHead({ blog }) {
 
           )}
         </div>
+        
       </div>
     </>
   );

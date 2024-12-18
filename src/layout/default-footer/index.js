@@ -28,7 +28,7 @@ const Footer = ({ children }) => {
                 />
               </Link>
               <ContactMeta appSettings={appSettings} />
-              <Social appSettings={appSettings} />
+              {/* <Social appSettings={appSettings} /> */}
             </div>
           </div>
           <div className="col-lg-6 mt-4">

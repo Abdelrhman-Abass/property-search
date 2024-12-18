@@ -13,10 +13,8 @@ const Footer = () => {
             ©{" "}
             <a
               style={{ color: "inherit" }}
-              href="https://itlegend.net/ProgrammingServices/Index"
-              target="_blank"
             >
-              It Legend
+              Property Search
             </a>{" "}
             {getCurrentYear()} - All rights reserved
           </p>

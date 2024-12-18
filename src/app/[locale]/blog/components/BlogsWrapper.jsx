@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 
 const BlogsWrapper = ({ blogsData, pageSize }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(blogsData?.data.totalRecords / pageSize);
+  const totalPages = Math.ceil(blogsData?.data.totalRecords / pageSize) || 1;
   const t = useTranslations("blogs");
 
   return (

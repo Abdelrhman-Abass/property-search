@@ -5,11 +5,11 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["49.13.77.125"],
+    domains: ["admin.property-search.com"],
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "49.13.77.125",
+        hostname: "admin.property-search.com",
       },
     ],
   },

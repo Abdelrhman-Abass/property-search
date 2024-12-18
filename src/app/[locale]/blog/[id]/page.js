@@ -4,6 +4,7 @@ import BlogContent from "../components/BlogContent";
 import BlogError from "../components/BlogError";
 import { ApiGetter } from "@/services/ApiGetter";
 import { notFound } from "next/navigation";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 export const fetchData = async (id) => {
   const blog = await ApiGetter({ url: `/api/Blog/${id}` });
@@ -13,7 +14,6 @@ export const fetchData = async (id) => {
 
 export async function generateMetadata({ params }) {
   const blog = await fetchData(params.id);
-  // console.log(blog)
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
   // const description = blog?.data?.seoMetaTags;
@@ -88,6 +88,7 @@ const page = async ({ params }) => {
               imagePath={imagePath}
               questions={blog?.data?.questions}
             />
+              <WhatsAppButton data={blog?.data?.titleAR}/>
 
           </>
         ) : (

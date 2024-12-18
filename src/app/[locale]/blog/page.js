@@ -2,6 +2,7 @@
 import BlogsWrapper from "./components/BlogsWrapper";
 import BlogBreadcumb from "./components/BlogBreadcumb";
 import { ApiGetter } from "@/services/ApiGetter";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 export const fetchData = async (page = 1, pageSize) => {
   const blogs = await ApiGetter({
@@ -20,6 +21,8 @@ const page = async ({ searchParams }) => {
   const page = searchParams?.page || 1;
   const pageSize = 10;
   const blogsData = await fetchData(page, pageSize);
+  console.log(blogsData)
+
 
   return (
     <div className="bgc-f7 pt0-md pt70 pb-0">
@@ -37,6 +40,8 @@ const page = async ({ searchParams }) => {
           </div>
         </div>
       </section>
+      <WhatsAppButton data={"property search"}/>
+
     </div>
   );
 };

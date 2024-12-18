@@ -55,20 +55,41 @@
   margin-top: 4px;
 }
 
-.info-boxes {
+
+.package .info-boxes {
   display: flex;
   justify-content: center;
-  margin: 16px 0;
+  margin: 10px 0 20px;
   gap: 16px;
+  position: relative;
+  border: 1px solid blue; /* Solid border */
+  padding: 20px; 
+  border-radius: 4px; /* Optional: rounded corners */
+  text-align: center; /* Center align content */
+}
+
+
+.package .info-boxes::before {
+  content: "أنظمة الدفع"; /* Word to display */
+  position: absolute;
+  top: -10px; /* Move slightly above the border */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Perfect horizontal centering */
+  background-color: white; /* Background to "cut" through the border */
+  padding: 0 8px; /* Add spacing around the text */
+  color: blue; /* Text color to match the border */
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .info-box {
   background-color: #f7f7f7;
-  padding: 10px 16px;
+  padding: 0px 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   text-align: center;
-  width: 150px;
+  width: 135px;
+  border: 1px solid rgb(15, 41, 80);
 }
 
 .info-box p {
@@ -88,7 +109,41 @@
   }
 }
 
-.info-label {
+.blog-content .info-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: bold;
+  text-align: center;
+  position: relative; /* Required for pseudo-elements */
+  display: inline-block; /* Allows the lines to align closely */
+}
+
+/* Add lines before and after */
+
+
+.blog-content .info-boxes {
+  display: flex;
+  justify-content: start;
+  margin: 7px 0;
+  gap: 16px;
+}
+
+.blog-content  .info-box {
+  background-color: #f7f7f7;
+  padding: 4px 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 120px;
+}
+
+.blog-content  .info-box p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.blog-content  .info-label {
   font-size: 12px;
   color: #666;
 }
@@ -415,6 +470,71 @@ li.active a {
     margin-top: -120px;
   }
 }
+
+.price-blog-out{
+  padding: 10px 0 0;
+  color:#684646 ;
+  font-size: medium;
+}
+.price-blog-out span{
+  color : black;
+}
+
+.contact-buttons-blog-out {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-button-blog-out {
+  border: none;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button-blog-out i {
+  margin: 0;
+}
+
+.contact-button-blog-out:hover {
+  background-color: #ddd;
+}
+
+.contact-button-blog-out.whatsapp {
+  color: #25d366;
+}
+
+
+
+.contact-button-blog-out.phone {
+  color: #128c7e;
+}
+
+
+.contact-button-blog-out.video {
+  color: #007bff;
+}
+
+
+
+.blog-description-background{
+  background: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.blog-description-background ul li{
+  list-style-type:disc;
+}
+.blog-description-background ul li::marker{
+  color: rgb(15, 41, 80); /* Change the bullet color */
+  font-size: 1em; 
+}
+
 /* property */
 /* 
 .plans p{
