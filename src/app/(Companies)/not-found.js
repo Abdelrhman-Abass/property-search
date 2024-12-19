@@ -1,6 +1,6 @@
 "use client";
-import "../../public/scss/main.scss";
-import "../../public/style.css";
+import "../../../public/scss/main.scss";
+import "../../../public/style.css";
 import { Noto_Kufi_Arabic } from "next/font/google";
 import ErrorPage from "@/components/Error/ErrorPage";
 

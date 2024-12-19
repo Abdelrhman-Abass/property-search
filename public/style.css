@@ -46,7 +46,7 @@
 .price-value {
   font-size: 32px;
   font-weight: bold;
-  color: #000;
+  color: rgb(15, 41, 80);
 }
 
 .price-subtext {
@@ -54,36 +54,40 @@
   color: #666;
   margin-top: 4px;
 }
-
+.package{
+  position: relative;
+  background: #f7f7f7;
+  border: 3px solid rgb(15, 41, 80); /* Solid border */
+  padding: 20px; 
+  border-radius: 4px; /* Optional: rounded corners */
+}
 
 .package .info-boxes {
   display: flex;
   justify-content: center;
   margin: 10px 0 20px;
   gap: 16px;
-  position: relative;
-  border: 1px solid blue; /* Solid border */
-  padding: 20px; 
-  border-radius: 4px; /* Optional: rounded corners */
+ 
   text-align: center; /* Center align content */
 }
 
 
 .package .info-boxes::before {
-  content: "أنظمة الدفع"; /* Word to display */
+  content: "أنظمة الدفع";
   position: absolute;
-  top: -10px; /* Move slightly above the border */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Perfect horizontal centering */
-  background-color: white; /* Background to "cut" through the border */
-  padding: 0 8px; /* Add spacing around the text */
-  color: blue; /* Text color to match the border */
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0 8px;
+  color: rgb(15, 41, 80);
   font-weight: bold;
-  font-size: 12px;
+  font-size: 16px;
+  font-family: var(--title-font-family);
 }
 
 .info-box {
-  background-color: #f7f7f7;
+  background-color: white;
   padding: 0px 16px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -470,16 +474,44 @@ li.active a {
     margin-top: -120px;
   }
 }
-
+.companies-head-section{
+  padding-top: 0 !important;
+}
 .price-blog-out{
-  padding: 10px 0 0;
+  padding: 0px 0 10px;
   color:#684646 ;
   font-size: medium;
 }
 .price-blog-out span{
   color : black;
 }
-
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(18, 18, 18, 0.768627451);
+}
+.companies-index {
+  z-index: 50;
+}
+.company-title{
+  color: rgb(15, 41, 80);
+  position: relative;
+  font-size: 2rem; /* Adjust the title size */
+  margin-bottom: 1rem; /* Space below the title */
+}
+.company-title::after {
+  content: "";
+  display: block;
+  width: 80%; /* Length of the line */
+  height: 1px; /* Thickness of the line */
+  background-color: rgb(15, 41, 80); /* Line color, e.g., Bootstrap blue */
+  margin-top: 0.5rem; /* Space between the title and line */
+  transition: width 0.3s ease; /* Smooth animation for the line */
+}
 .contact-buttons-blog-out {
   display: flex;
   gap: 10px;
@@ -519,8 +551,45 @@ li.active a {
   color: #007bff;
 }
 
+.truncate-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+.truncate-text-three {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+.content-padding-companies{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 767.98px) {
+  .content-padding-companies {
+    padding-left: 100px;
+    padding-right: 100px;
+    }
+}
+.custom-height {
+  height: 80%; /* Default height (applies to small screens by default) */
+}
 
+@media (min-width: 768px) { /* Medium screens and up */
+  .custom-height {
+    height: 100%;
+  }
+}
 
+@media (min-width: 992px) { /* Large screens and up */
+  .custom-height {
+    height: 100%;
+  }
+}
 .blog-description-background{
   background: white;
     padding: 10px;

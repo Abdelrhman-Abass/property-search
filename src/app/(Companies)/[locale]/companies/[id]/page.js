@@ -1,14 +1,14 @@
 "use server";
-import BlogHead from "../components/BlogHead";
-import BlogContent from "../components/BlogContent";
 import BlogError from "../components/BlogError";
 import { ApiGetter } from "@/services/ApiGetter";
 import { notFound } from "next/navigation";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
+import CompaniesHead from "../components/CompaniesHead";
+import ContentPhotoList from "../components/ContentPhotoList";
 
 export const fetchData = async (id) => {
-  const blog = await ApiGetter({ url: `/api/Blog/${id}` });
-  
+  const blog = await ApiGetter({ url: `/api/LandingPage/${id}` });
+  console.log(blog)
   return blog;
 };
 
@@ -42,36 +42,16 @@ export async function generateMetadata({ params }) {
 
     };
   
-    // Handle additional meta tags
-    // if (custom) {
-    //   seoResult.additionalMetaTags.push({
-    //     name: "keywords",
-    //     content: custom, // Add as a comma-separated string
-    //   });
-    // }
-
   if (image) {
     seoResult.twitter = { ...seoResult.twitter, image };
     seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
   }
-  // if (blog?.data?.seoMetaTags) {
-  //   const tags = Array.isArray(blog.data.seoMetaTags)
-  //     ? blog.data.seoMetaTags
-  //     : [blog.data.seoMetaTags];
-
-  //   seoResult.additionalMetaTags.push(
-  //     ...tags.map((tag) => ({
-  //       name: "custom-tag",
-  //       content: tag,
-  //     }))
-  //   );
-  // }
   return seoResult;
 }
 
 const page = async ({ params }) => {
   const blog = await fetchData(params.id);
-  const imagePath = `${process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE}`;
+  const imagePath = `${process.env.NEXT_PUBLIC_COMPANIES_CONTENT_IMAGE}`;
   if (!blog || !blog.data) {
     return notFound();
   }
@@ -79,22 +59,28 @@ const page = async ({ params }) => {
   return (
     <>
       {/* Blog Section Area */}
-      <section className="our-blog ">
+      <section className="our-blog pt0 pb0 " >
         {blog?.success ? (
           <>
-            <BlogHead blog={blog?.data} imagePath={imagePath} />
-            <BlogContent
+            <CompaniesHead blog={blog?.data} imagePath={imagePath} />
+            <ContentPhotoList company={blog?.data?.landingPageDetails} imagePath={imagePath} />
+
+            {/* <BlogContent
               contents={blog?.data?.contents}
               imagePath={imagePath}
               questions={blog?.data?.questions}
-            />
+            /> */}
+
               <WhatsAppButton data={blog?.data?.titleAR}/>
+              
+              
 
           </>
         ) : (
           <BlogError blog={blog} blogId={params.id} />
         )}
       </section>
+      
       {/* End Blog Details */}
       {/* <section className="pb90 pb20-md pt-0">
         <div className="container">

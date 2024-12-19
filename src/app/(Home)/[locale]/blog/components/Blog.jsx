@@ -44,30 +44,29 @@ const Blog = ({ blog }) => {
           alt="blog"
         />
       </div>
-      <div className="blog-content pl30 pb20">
+      <div className="blog-content pl30 pb20" >
         <div className="date">
           <span className="month">{blogDate.month}</span>
           <span className="day">{blogDate.day}</span>
         </div>
-        {/* {tags?.map((tag) => (
-          <a
-            style={{ padding: "0 4px", textTransform: "capitalize" }}
-            className="tag"
-            key={tag}
-            href="#"
-          >
-            {tag}
-          </a>
-        ))} */}
-        {priceStartsFrom !== null && (
+        
+        <h6 className="title mt20 truncate-text" style={{height:45}}>
+          <Link href={`/${locale}/blog/${id}`}>
+            {locale == "ar" ? titleAR : titleEN}
+          </Link>
+        </h6>
+
+        {priceStartsFrom !== null ? (
           <>
             <h6 className="price-blog-out">
-              <span className="">{Intl.NumberFormat('fr-FR').format(priceStartsFrom)}</span>  جنيه/ متر
+              <span className="">{Intl.NumberFormat('fr-FR').format(priceStartsFrom)}</span>  جنيه 
             </h6>
           </>
+        ):(
+          <p style={{height:30}}></p>
         )}
 
-        <div className="info-boxes">
+        <div className="info-boxes mb20" style={{height:30}}>
           <div className="info-box">
             <span>{installmentYears} {locale == "ar" ? " تقسيط" : "Installment"}</span>
             {/* <p className="info-label"> {locale == "ar" ? " تقسيط" : "Installment"}</p> */}
@@ -77,11 +76,6 @@ const Blog = ({ blog }) => {
             {/* <p className="info-label"> {locale == "ar" ? "مقدم " : " Deposit"}</p> */}
           </div>
         </div>
-        <h6 className="title mt20 mb20">
-          <Link href={`/${locale}/blog/${id}`}>
-            {locale == "ar" ? titleAR : titleEN}
-          </Link>
-        </h6>
         <div className="contact-buttons-blog-out">
           {/* WhatsApp Button */}
           <Link href={whatsappUrl} passHref>

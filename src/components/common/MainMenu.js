@@ -20,6 +20,9 @@ const MainMenu = () => {
       <li className={isActive(`/${local}/blog`) ? "active" : ""}>
         <Link href={`/${local}/blog`}>{t("blog")}</Link>
       </li>
+      <li className={isActive(`/${local}/companies`) ? "active" : ""}>
+        <Link href={`/${local}/companies`}>{t("startutps")}</Link>
+      </li>
       <li className={isActive(`/${local}/about`) ? "active" : ""}>
         <Link href={`/${local}/about`}>{t("about")}</Link>
       </li>

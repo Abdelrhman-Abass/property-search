@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import "../../../public/loadingStyle.css";
+import "../../../../public/loadingStyle.css";
 // import { useEffect } from "react";
 const loading = () => {
   // useEffect(() => { 
