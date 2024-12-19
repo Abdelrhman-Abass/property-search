@@ -27,7 +27,7 @@ const Content = ({ data }) => {
             {data?.success ? (
               isHTML(content) ? (
                 <div
-                  className="text"
+                  className="text list-pollets"
                   dangerouslySetInnerHTML={{ __html: content }}
                 ></div>
               ) : (

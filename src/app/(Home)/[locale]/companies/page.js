@@ -16,7 +16,7 @@ export const fetchData = async (page = 1, pageSize) => {
 
 export async function generateMetadata({ params }) {
   return {
-    title: params?.locale == "ar" ? "الشركات الناشئة" : "ٌRescued Companies",
+    title: params?.locale == "ar" ? "الشركات المطورة" : "ٌDevelopers Companies",
   };
 }
 

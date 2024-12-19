@@ -95,7 +95,7 @@ export default async function RootLayout({ children, params: { locale } }) {
       <head>
         <link rel="icon" href="/favicon.ico" />
 
-        <title>{title}</title>
+        {/* <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta
@@ -103,7 +103,7 @@ export default async function RootLayout({ children, params: { locale } }) {
           content={locale == "ar" ? arKeywords : enKeywords}
         />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={description} /> */}
         {/* <!-- twitter --> */}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -115,7 +115,6 @@ export default async function RootLayout({ children, params: { locale } }) {
       >
         <NextIntlClientProvider messages={messages}>
           <Client>
-            <MobileMenu />
             <Toaster position="top-left" reverseOrder={false} />
 
             <div style={{ minHeight: "100vh" }}>{children}</div>

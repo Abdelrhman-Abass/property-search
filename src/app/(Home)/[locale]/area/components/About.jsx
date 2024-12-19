@@ -22,7 +22,7 @@ const About = ({ about, id }) => {
                 </h6>
                 {isHTML(content) ? (
                   <div
-                    className="text"
+                    className="text list-pollets"
                     dangerouslySetInnerHTML={{ __html: content }}
                   ></div>
                 ) : (

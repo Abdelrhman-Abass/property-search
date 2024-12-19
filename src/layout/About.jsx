@@ -36,7 +36,7 @@ const About = ({ data, isCompound }) => {
         </h4>
         {isHTML(content) ? (
           <div
-            className="text"
+            className="text list-pollets"
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
         ) : (

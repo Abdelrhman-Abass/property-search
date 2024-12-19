@@ -43,7 +43,21 @@
     "discover": "اكتشف الكمبوندات في",
     "discoverPro": "اكتشف الوحدات في",
     "fethError": "حدث خطأ فى جلب البيانات من الخادم.",
-    "NotFoundItemsError": "لا توجد نتائج متطابقة لبحثك"
+    "NotFoundItemsError": "لا توجد نتائج متطابقة لبحثك",
+    "SpecifyTime" : "حجز موعد",
+    "sendContact" : "ارسال",
+    "ResetContact" : "أعادة الادخال",
+    "fullName" : "الأسم بالكامل",
+    "Mobile" : "رقم الموبيل",
+    "WatsAppMobile" : "رقم الواتس أب",
+    "Date" : "التاريخ",
+    "Time" : "التوقيت",
+    "FullNamePlaceHolder" : "برجاء كتابة الاسم",
+    "MobileHolder": "برجاء ادخال الرقم",
+    "Subscrib" : "اشترك",
+    "EnterSubscrib" : "اضغط للاشتراك",
+    "News" : "تابع أخبار العقارات",
+    "newsProperty" : "تابع بروبرتي سيرش لمعرفة اخر أخبار العقارت"
   },
   "nav": {
     "home": "الرئيسية",
@@ -51,7 +65,7 @@
     "blog": "مقالات",
     "about": "عنا",
     "contact": "تواصل معنا",
-    "startutps": "الشركات الناشئة"
+    "startutps": "الشركات المطورة"
   },
   "home": {
     "best": "أفضل مكان ل",

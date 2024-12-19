@@ -12,12 +12,12 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
   return (
     <div
       style={{ minHeight: 172 }}
-      className="agent-single d-sm-flex align-items-center gap-4"
+      className="agent-single d-sm-flex align-items-center gap-4 "
     >
       <div className="single-img mb30-sm">
         <Image
-          width={172}
-          height={172}
+          width={130}
+          height={130}
           src={image}
           style={{ borderRadius: "50%", objectFit: "cover" }}
           alt="agents"

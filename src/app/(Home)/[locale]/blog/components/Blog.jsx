@@ -68,12 +68,12 @@ const Blog = ({ blog }) => {
 
         <div className="info-boxes mb20" style={{height:30}}>
           <div className="info-box">
-            <span>{installmentYears} {locale == "ar" ? " تقسيط" : "Installment"}</span>
-            {/* <p className="info-label"> {locale == "ar" ? " تقسيط" : "Installment"}</p> */}
-          </div>
-          <div className="info-box">
             <span>{downPaymentPercentage}% {locale == "ar" ? "دفعة مبدئية " : " Deposit"}</span>
             {/* <p className="info-label"> {locale == "ar" ? "مقدم " : " Deposit"}</p> */}
+          </div>
+          <div className="info-box">
+            <span>{installmentYears} {locale == "ar" ? " تقسيط" : "Installment"}</span>
+            {/* <p className="info-label"> {locale == "ar" ? " تقسيط" : "Installment"}</p> */}
           </div>
         </div>
         <div className="contact-buttons-blog-out">

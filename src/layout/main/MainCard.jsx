@@ -27,11 +27,12 @@ const MainCard = ({ colstyle = false, data, type }) => {
         >
           <Link href={`/${locale}/compound/${data.id}`}>
             <div className="list-thumb">
-              <Image
+              <img
                 width={380}
                 height={250}
                 className="w-100 cover"
-                src={image}
+                src={"https://developer-eg.com/palm-east-new-cairo/images/bg.jpg"}
+                // src={image}
                 alt={locale == "ar" ? data?.nameAR : data?.nameEN}
               />
               <div className="list-price">

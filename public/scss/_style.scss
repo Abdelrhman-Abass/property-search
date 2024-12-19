@@ -2971,21 +2971,22 @@ li {
 
 @media (min-width: 768px) {
     .facilities .listing-style14 .list-meta {
-        display: flex;
+        display: grid;
         align-items: center;
         gap: 24px;
         margin-right: 0 !important;
-        ;
+        grid-template-columns: 1fr 1fr 1fr;
+
     }
 }
 
 @media (min-width: 768px) {
     .facilities .listing-style14 .list-meta {
-        display: flex;
+        display: grid;
         align-items: center;
         gap: 24px;
         margin-right: 0 !important;
-        ;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -3002,18 +3003,21 @@ li {
     }
 }
 
-//   @media (min-width: 768px) {
-//     .facilities .listing-style14 .list-meta  {
-//       display: flex;
-//       justify-content: space-between;
-//     }
-//   }
+.list-pollets ul li{
+    list-style-type: disc !important;
+}
+.list-pollets::marker{
+    color: rgb(15, 41, 80) !important;
+    font-size: 1em !important;
+}
 
 .facilities .listing-style14 .list-meta p {
     font-size: 15px;
     margin-right: 0 !important;
     font-family: var(--title-font-family);
     font-weight: 600;
+    margin-bottom: 3px;
+    min-height: 55px;
 }
 
 

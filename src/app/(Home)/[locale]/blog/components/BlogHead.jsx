@@ -99,12 +99,12 @@ export default function BlogHead({ blog }) {
                   {blog.downPaymentPercentage !== null && blog.installmentYears !== null ? (
                     <div className="info-boxes">
                       <div className="info-box">
-                        <p className="info-label"> {locale == "ar" ? " تقسيط" : "Installment"}</p>
-                        <p>{blog.installmentYears} {locale == "ar" ? " سنوات" : " Years"}</p>
-                      </div>
-                      <div className="info-box">
                         <p className="info-label"> {locale == "ar" ? "دفعة مبدئية " : " Deposit"}</p>
                         <p>{blog.downPaymentPercentage}%</p>
+                      </div>
+                      <div className="info-box">
+                        <p className="info-label"> {locale == "ar" ? " تقسيط" : "Installment"}</p>
+                        <p>{blog.installmentYears} {locale == "ar" ? " سنوات" : " Years"}</p>
                       </div>
                     </div>
 

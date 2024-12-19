@@ -56,11 +56,19 @@ const Area = async ({ params }) => {
   }
   return (
     <section className="agent-single pt60 pb-0 ">
-      <div className="cta-agent bgc-thm-light mx-auto maxw1600 pt60 pb60 bdrs12 position-relative mx20-lg">
+      <AboutCompounds
+        title={
+          params.locale == "ar"
+            ? areaDetails?.data?.nameAr
+            : areaDetails?.data?.nameEn
+        }
+        id={params.id}
+      />
+      <div className="cta-agent mx-auto maxw1600  bdrs12 position-relative mx20-lg">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-7">
-              <Breadcrumb data={areaDetails?.data} />
+              <Breadcrumb data={areaDetails?.data} colorWhite={false}/>
               <div className="img-box-12 position-relative d-none d-xl-block">
                 <Image
                   width={120}
@@ -89,18 +97,10 @@ const Area = async ({ params }) => {
         </div>
       </div>
       <About id={params.id} about={areaDetails?.data || []} />
-      <AboutCompounds
-        title={
-          params.locale == "ar"
-            ? areaDetails?.data?.nameAr
-            : areaDetails?.data?.nameEn
-        }
-        id={params.id}
-      />
       <WhatsAppButton data={params.locale == "ar"
-            ? areaDetails?.data?.nameAr
-            : areaDetails?.data?.nameEn
-            }/>
+        ? areaDetails?.data?.nameAr
+        : areaDetails?.data?.nameEn
+      } />
     </section>
   );
 };

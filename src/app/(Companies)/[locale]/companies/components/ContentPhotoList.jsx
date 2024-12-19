@@ -42,7 +42,7 @@ const ContentPhotoList = ({ company }) => {
                 <h3 className="company-title">{locale === "ar" ? item.titleAR : item.titleEN}</h3>
             </div>
             <div
-              className="p-3"
+              className="p-3 list-pollets"
               dangerouslySetInnerHTML={{
                 __html:
                   locale === "ar"

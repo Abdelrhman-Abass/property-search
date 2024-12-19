@@ -42,7 +42,21 @@
     "to": "To",
     "discover": "Discover Compounds in",
     "fethError": "There was an error fetching data from the server.",
-    "NotFoundItemsError": "There are no results for your search."
+    "NotFoundItemsError": "There are no results for your search.",
+    "SpecifyTime": "Book Meeting",
+    "sendContact" : "Send",
+    "ResetContact" : "Reset",
+    "fullName" : "Full Name",
+    "Mobile" : "Mobile Number",
+    "WatsAppMobile" : "WhatsApp Mobile Number",
+    "Date" : "Date",
+    "Time" : "Time",
+    "FullNamePlaceHolder" : "Enter Your Full Name",
+    "MobileHolder" : "Enter Your Number",
+    "Subscrib" : "Subscrib",
+    "EnterSubscrib" : "Enter To SubScribe",
+    "News" : "Follow real state news",
+    "newsProperty" : "Follow the latest real state news"
   },
   "nav": {
     "home": "Home",
@@ -50,7 +64,7 @@
     "blog": "Blog",
     "about": "About Us",
     "contact": "Contact Us",
-    "startutps" :"Rescued Companies"
+    "startutps" :"Developer Companies"
   },
   "home": {
     "best": "The Best Place to",

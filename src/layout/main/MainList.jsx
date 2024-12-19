@@ -58,9 +58,9 @@ export default function MainList({
 
   return (
     <>
-      <section className={`breadcumb-section pb5 pt5 ${dev && "about-ar"}`}>
+      <section className={`breadcumb-section pb5 pt30 ${dev && "about-ar"}`}>
         <div className="container">
-          <div className="row mt25 mb75 justify-content-between gap-3">
+          <div className="row mt25 mb20 justify-content-between gap-3">
             <div className="col-lg-08 w-fit">
               <div className="breadcumb-style1">
                 {title && data?.length > 0 && (
