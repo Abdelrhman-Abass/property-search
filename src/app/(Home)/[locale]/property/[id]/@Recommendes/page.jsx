@@ -1,7 +1,7 @@
 "use server";
 import React from "react";
 import { ApiGetter } from "@/services/ApiGetter";
-import RecommendedWrapper from "@/app/[locale]/(home)/components/RecommendedWrapper";
+import RecommendedWrapper from "@/app/(Home)/[locale]/(home)/components/RecommendedWrapper";
 import RecommendedError from "../components/RecommendedError";
 
 const Recommended = async ({ areaId, minPrice, maxPrice }) => {
