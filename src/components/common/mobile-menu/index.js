@@ -72,9 +72,9 @@ const MobileMenu = () => {
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link href={`/${local}/about`}>{t("about")}</Link>
                 </li>
-                <li data-bs-dismiss="offcanvas" aria-label="Close">
+                {/* <li data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link href={`/${local}/companies`}>{t("startutps")}</Link>
-                </li>
+                </li> */}
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link href={`/${local}/contact`}>{t("contact")}</Link>
                 </li>

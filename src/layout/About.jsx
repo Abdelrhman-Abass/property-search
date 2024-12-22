@@ -14,15 +14,15 @@ const About = ({ data, isCompound }) => {
       ? data?.compoundDescriptionAR
       : data?.compoundDescriptionEN
     : locale == "ar"
-    ? data?.descriptionAR
-    : data?.descriptionEN;
+      ? data?.descriptionAR
+      : data?.descriptionEN;
   const title = isCompound
     ? locale == "ar"
       ? data?.compoundNameAR
       : data?.compoundNameEN
     : locale == "ar"
-    ? data?.titleAR
-    : data?.titleEN;
+      ? data?.titleAR
+      : data?.titleEN;
 
   const amenitiesToShow = showAll
     ? data?.amenities
@@ -86,16 +86,9 @@ const About = ({ data, isCompound }) => {
                 id,
               }) => {
                 return (
-                  <div key={id} className="card bronze">
+                  <div key={id} className="card bronze" style={{ height: locale === "ar" ? "210px" : "auto" }}
+                  >
                     <h4>{locale == "ar" ? nameAr : nameEn}</h4>
-                    <div>
-                      <h5>{receiptPaymentPercentage} %</h5>
-                      <span>
-                        {locale == "ar"
-                          ? "نسبة دفع الاستلام"
-                          : "Receipt Payment"}
-                      </span>
-                    </div>
                     <div>
                       <h5>{downPaymentPercentage} %</h5>
                       <span>
@@ -104,8 +97,24 @@ const About = ({ data, isCompound }) => {
                           : "Down Payment"}
                       </span>
                     </div>
+                    <div>
+                      <h5>ج {receiptPaymentPercentage} </h5>
+                      <span>
+                        {locale == "ar"
+                          ? "دفعة شهرية "
+                          : "Monthly Payment"}
+                      </span>
+                    </div>
+                    {/* <div>
+                      <h5>{yearsToReceive} </h5>
+                      <span>
+                        {locale == "ar"
+                          ? "تقسيط"
+                          : "Installement"}
+                      </span>
+                    </div> */}
                     <p>
-                      {yearsToReceive} {locale == "ar" ? "سنوات" : "Years"}
+                      {locale == "ar" ? "تقسيط" : "Installement"} {yearsToReceive} {locale == "ar" ? "سنوات" : "Years"}
                     </p>
                   </div>
                 );

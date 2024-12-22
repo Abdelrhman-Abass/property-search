@@ -3006,7 +3006,7 @@ li {
 .list-pollets ul li{
     list-style-type: disc !important;
 }
-.list-pollets::marker{
+.list-pollets ul li::marker{
     color: rgb(15, 41, 80) !important;
     font-size: 1em !important;
 }

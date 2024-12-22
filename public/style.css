@@ -495,7 +495,7 @@ li.active a {
   background-color: rgba(18, 18, 18, 0.768627451);
 }
 .companies-index {
-  z-index: 50;
+  z-index: 5;
 }
 .company-title{
   color: rgb(15, 41, 80);
