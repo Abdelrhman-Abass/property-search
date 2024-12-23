@@ -1,11 +1,21 @@
 "use server";
-import Banner from "./components/Banner";
-import HomeTopAreas from "./@TopAreas/page";
-import HomeTopCompounds from "./@TopCompounds/page";
-import HomeRecommended from "./@Recommended/page";
+// import Banner from "./components/Banner";
+// import HomeTopAreas from "./@TopAreas/page";
+// import HomeTopCompounds from "./@TopCompounds/page";
+// import HomeRecommended from "./@Recommended/page";
+// import { ApiGetter } from "@/services/ApiGetter";
+// import HomeHeroPage from "./@homeHero/page";
+// import WhatsAppButton from "@/components/common/WhatsAppButton";
+import dynamic from 'next/dynamic';
 import { ApiGetter } from "@/services/ApiGetter";
-import HomeHeroPage from "./@homeHero/page";
-import WhatsAppButton from "@/components/common/WhatsAppButton";
+
+// Dynamically import components
+const Banner = dynamic(() => import("./components/Banner"));
+const HomeTopAreas = dynamic(() => import("./@TopAreas/page"));
+const HomeTopCompounds = dynamic(() => import("./@TopCompounds/page"));
+const HomeRecommended = dynamic(() => import("./@Recommended/page"));
+const HomeHeroPage = dynamic(() => import("./@homeHero/page"));
+const WhatsAppButton = dynamic(() => import("@/components/common/WhatsAppButton"));
 
 
 const Home = async () => {
