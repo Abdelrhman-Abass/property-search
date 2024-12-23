@@ -67,9 +67,9 @@ const Form = ({ id, type = 0 }) => {
           requestedItemId: id,
           requestedItemType: type,
         };
-        await formHandler(request, "/api/Request");
+        await formHandler(request, `${process.env.NEXT_PUBLIC_BASE_URL}/api/Request`);
       } else {
-        await formHandler(formData, "/api/ContactUs");
+        await formHandler(formData, `${process.env.NEXT_PUBLIC_BASE_URL}/api/ContactUs`);
       }
     }
   };

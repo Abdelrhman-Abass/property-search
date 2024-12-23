@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import WhatsAppButton from "./WhatsAppButton";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
