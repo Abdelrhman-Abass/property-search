@@ -18,6 +18,7 @@
     "next": "^15.1.2",
     "next-intl": "^3.17.4",
     "photoswipe": "^5.3.8",
+    "postcss": "^8.4.49",
     "prop-types": "^15.8.1",
     "rc-slider": "^10.6.2",
     "react": "^19.0.0",
