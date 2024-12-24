@@ -25,7 +25,7 @@ const SwitchLang = ({company =false}) => {
         className="d-flex align-items-center gap-1 lang-btn"
       >
         <div className="lang-global">
-          <Image src="/lang.png" width={19} height={19} alt="lang" />
+          <Image src="/lang.png" width={19} height={19} alt="lang" loading="lazy" />
         </div>
         <span className={`text-uppercase ${company && "text-white"}`}>{local == "ar" ? "EN" : "AR"}</span>
       </button>

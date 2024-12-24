@@ -1,14 +1,13 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/routing";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 
 const ApartmentTypes = ({ data }) => {
   const t = useTranslations("home");
-  const local = useLocale();
 
   // {defaultMediaPath,id,nameEN,nameAR,propertyCount}
   const fakeImage = `https://m.ahstatic.com/is/image/accorhotels/nca_p_i120217:8by10?wid=248&hei=310&dpr=on,2&qlt=85&resMode=sharp2&op_usm=0.5,0.3,2,0&iccEmbed=true&icc=sRGB`;
@@ -46,7 +45,7 @@ const ApartmentTypes = ({ data }) => {
         {[].map((apartment, index) => (
           <SwiperSlide key={index}>
             <div className="item">
-              <Link href={`/${local}/compound/${apartment.title}`}>
+              <Link href={`/compound/${apartment.title}`}>
                 <div className="apartment-style1">
                   <div className="apartment-img">
                     <Image
@@ -56,6 +55,7 @@ const ApartmentTypes = ({ data }) => {
                       className="cover"
                       src={apartment.imageSrc}
                       alt="apartment city"
+                      loading="lazy"
                     />
                   </div>
                   <div className="apartment-content">

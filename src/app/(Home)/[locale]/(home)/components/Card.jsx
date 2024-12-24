@@ -1,7 +1,7 @@
 import { formatPrice } from "@/services";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/routing";
 
 const Data = ({ colstyle = false, data }) => {
 
@@ -19,7 +19,7 @@ const Data = ({ colstyle = false, data }) => {
             : "listing-style1 "
         }
       >
-        <Link href={`/${local}/compound/${data.id}`}>
+        <Link href={`/compound/${data.id}`}>
           <div className="list-thumb">
             <Image
               width={382}
@@ -27,6 +27,7 @@ const Data = ({ colstyle = false, data }) => {
               className="w-100 h-100 cover"
               src={image}
               alt={data?.nameAR}
+              loading="lazy"
             />
             <div className="list-price">
               {formatPrice(data.minPrice)} {g("egp")}
@@ -34,7 +35,7 @@ const Data = ({ colstyle = false, data }) => {
           </div>
         </Link>
         <div className="list-content">
-          <Link href={`/${local}/compound/${data.id}`}>
+          <Link href={`/compound/${data.id}`}>
             <h6 className="list-title ellipsis">
               {local == "ar" ? data.nameAR : data.nameEN}
             </h6>
@@ -53,7 +54,7 @@ const Data = ({ colstyle = false, data }) => {
               {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
             </span>
             <div className="icons d-flex align-items-center">
-              <Link href={`/${local}/developer/${data?.developerID}`}>
+              <Link href={`/developer/${data?.developerID}`}>
                 <span className="flaticon-fullscreen" />
               </Link>
             </div>

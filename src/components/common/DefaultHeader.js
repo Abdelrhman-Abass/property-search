@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/routing";
 import React, { useEffect, useState } from "react";
 import MainMenu from "./MainMenu";
 import { useLocale } from "next-intl";
@@ -36,20 +36,24 @@ const DefaultHeader = () => {
               <div className="col-auto">
                 <div className="d-flex align-items-center justify-content-between">
                   <div className="logos">
-                    <Link className="header-logo logo1" href={`/${locale}`}>
+                    <Link className="header-logo logo1" href={`/`}>
                       <Image
                         width={138}
                         height={44}
                         src="/images/header-logo2.svg"
                         alt="Header Logo"
+                        priority
+                        loading="eager"
                       />
                     </Link>
-                    <Link className="header-logo logo2" href={`/${locale}`}>
+                    <Link className="header-logo logo2" href={`/`}>
                       <Image
                         width={138}
                         height={44}
                         src="/images/header-logo2.svg"
                         alt="Header Logo"
+                        priority
+                        loading="eager"
                       />
                     </Link>
                   </div>

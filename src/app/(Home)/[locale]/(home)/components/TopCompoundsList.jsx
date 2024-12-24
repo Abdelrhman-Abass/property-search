@@ -1,7 +1,7 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/routing";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
@@ -44,7 +44,7 @@ const TopCompoundsList = ({ data }) => {
           ({ defaultMediaPath, id, nameEN, nameAR, propertyCount }, idx) => (
             <SwiperSlide key={`${idx}-${id}`}>
               <div className="item">
-                <Link href={`/${local}/compound/${id}`}>
+                <Link href={`/compound/${id}`}>
                   <div className="apartment-style1">
                     <div className="apartment-img">
                       <Image
@@ -53,6 +53,7 @@ const TopCompoundsList = ({ data }) => {
                         className="cover"
                         alt="apartment city"
                         src={`${process.env.NEXT_PUBLIC_COMPOUNDS_IMAGE}/${defaultMediaPath}`}
+                        loading="lazy"
                       />
                     </div>
                     <div className="apartment-content">

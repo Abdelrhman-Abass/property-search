@@ -42,6 +42,7 @@ const Blog = ({ blog }) => {
           className="w-100 cover"
           src={imagePath}
           alt="blog"
+          loading="lazy"
         />
       </div>
       <div className="blog-content pl30 pb20">

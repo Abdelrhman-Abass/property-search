@@ -1,32 +1,13 @@
 "use client";
 import MainMenu from "@/components/common/MainMenu";
 import Image from "next/image";
-import Link from "@navigation";
+import  {Link}  from "@/routing";
 import React from "react";
 import SwitchLang from "../components/common/SwitchLang";
 import { useLocale } from "next-intl";
 
 const Header = () => {
-  const locale = useLocale();
-  // const [navbar, setNavbar] = useState(false);
-
-  // const changeBackground = () => {
-  //   if (window.scrollY >= 10) {
-  //     setNavbar(true);
-  //   } else {
-  //     setNavbar(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", changeBackground);
-  //   return () => {
-  //     window.removeEventListener("scroll", changeBackground);
-  //   };
-  // }, []);
-
-  //  navbar ? "sticky slideInDown animated" : ""
-
+ 
   return (
     <header
       className={`header-nav nav-homepage-style main-menu sticky slideInDown`}
@@ -37,20 +18,24 @@ const Header = () => {
             <div className="col-auto">
               <div className="d-flex align-items-center justify-content-between gap-5">
                 <div className="logos">
-                  <Link className="header-logo logo1" href={`/${locale}`}>
+                  <Link className="header-logo logo1" href={`/`}>
                     <Image
                       width={155}
                       height={60}
                       src="/logo.png"
                       alt="Header Logo"
+                      priority
+                      loading="eager"
                     />
                   </Link>
-                  <Link className="header-logo logo2" href={`/${locale}`}>
+                  <Link className="header-logo logo2" href={`/`}>
                     <Image
                       width={155}
                       height={60}
                       src="/logo.png"
                       alt="Header Logo"
+                      priority
+                      loading="eager"
                     />
                   </Link>
                 </div>

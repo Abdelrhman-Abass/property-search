@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/routing";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
@@ -42,7 +42,7 @@ const TopAreasList = ({ data = [] }) => {
             idx
           ) => (
             <SwiperSlide key={`${idx}-${id}`} className="pointer topAreas">
-              <Link href={`/${local}/area/${id}`}>
+              <Link href={`/area/${id}`}>
                 <div className="item">
                   <div className="feature-style1">
                     <div className="feature-img">
@@ -52,6 +52,7 @@ const TopAreasList = ({ data = [] }) => {
                         className="w-100 cover"
                         src={`${process.env.NEXT_PUBLIC_AREAS_IMAGE}/${image}`}
                         alt="cities"
+                        loading="lazy"
                       />
                     </div>
                     <div className="feature-content">

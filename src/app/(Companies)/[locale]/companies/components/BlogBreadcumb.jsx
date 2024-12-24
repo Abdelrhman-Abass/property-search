@@ -1,10 +1,9 @@
-import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import {  useTranslations } from "next-intl";
+import Link from "@/routing";
 import React from "react";
 
 const BlogBreadcumb = () => {
   const nav = useTranslations("nav");
-  const locale = useLocale();
   return (
     <section className="breadcumb-section">
       <div className="container">
@@ -13,7 +12,7 @@ const BlogBreadcumb = () => {
             <div className="breadcumb-style1">
               <h2 className="title">{nav("startutps")}</h2>
               <div className="breadcumb-list d-flex gap-1">
-                <Link href={`/${locale}`}>{nav("home")}</Link> <span>/</span>{" "}
+                <Link href={`/`}>{nav("home")}</Link> <span>/</span>{" "}
                 <span href="#">{nav("startutps")}</span>
               </div>
             </div>

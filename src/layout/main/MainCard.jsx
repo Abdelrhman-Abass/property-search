@@ -2,7 +2,7 @@
 import { formatPrice } from "@/services";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/routing";
 
 const MainCard = ({ colstyle = false, data, type }) => {
   const h = useTranslations("home");
@@ -25,7 +25,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
               : "listing-style1 "
           }
         >
-          <Link href={`/${locale}/compound/${data.id}`}>
+          <Link href={`/compound/${data.id}`}>
             <div className="list-thumb">
               <img
                 width={380}
@@ -41,7 +41,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
             </div>
           </Link>
           <div className="list-content">
-            <Link href={`/${locale}/compound/${data.id}`}>
+            <Link href={`/compound/${data.id}`}>
               <h6 className="list-title ellipsis">
                 {locale == "ar" ? data.nameAR : data.nameEN}
               </h6>
@@ -59,7 +59,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
               </span>
               <div className="icons d-flex align-items-center">
-                <Link href={`/${locale}/developer/${data?.developerID}`}>
+                <Link href={`/developer/${data?.developerID}`}>
                   <span className="flaticon-fullscreen" />
                 </Link>
               </div>
@@ -78,7 +78,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
               : "listing-style1 "
           }
         >
-          <Link href={`/${locale}/property/${data.id}`}>
+          <Link href={`/property/${data.id}`}>
             <div className="list-thumb">
               <Image
                 width={382}
@@ -86,6 +86,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 className="w-100 cover"
                 src={`${process.env.NEXT_PUBLIC_PROPERTIES_IMAGE}/${data?.mediaPath}`}
                 alt={locale == "ar" ? data.titleAR : data.titleEn}
+                loading="lazy"
               />
               <div className="list-price">
                 {formatPrice(data?.price)} {g("egp")}
@@ -93,7 +94,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
             </div>
           </Link>
           <div className="list-content">
-            <Link href={`/${locale}/property/${data.id}`}>
+            <Link href={`/property/${data.id}`}>
               <h6 className="list-title ellipsis">
                 {locale == "ar" ? data.titleAR : data.titleEn}
               </h6>
@@ -118,7 +119,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
               </span>
               <div className="icons d-flex align-items-center">
-                <Link href={`/${locale}/developer/${data?.developerId}`}>
+                <Link href={`/developer/${data?.developerId}`}>
                   <span className="flaticon-fullscreen" />
                 </Link>
               </div>

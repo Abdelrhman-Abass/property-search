@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/routing";
 
 const CompoundCard = ({ colstyle = false, data = {} }) => {
   const g = useTranslations("global");
@@ -15,7 +15,7 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
             : "listing-style1 "
         }
       >
-        <Link href={`/${local}/property/${1}`}>
+        <Link href={`/property/${1}`}>
           <div className="list-thumb">
             <Image
               width={382}
@@ -23,6 +23,7 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
               className="w-100 h-100 cover"
               src={data?.image}
               alt="listings"
+              loading="lazy"
             />
             <div className="list-price">
               {data?.price} {g("egp")}
@@ -30,7 +31,7 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
           </div>
         </Link>
         <div className="list-content">
-          <Link href={`/${local}/property/${data?.title}`}>
+          <Link href={`/property/${data?.title}`}>
             <h6 className="list-title">{data?.title}</h6>
           </Link>
           <p className="list-text">{data?.location}</p>
@@ -43,7 +44,7 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
           <div className="list-meta2 d-flex justify-content-between align-items-center">
             <span className="for-what">المطور العقاري</span>
             <div className="icons d-flex align-items-center">
-              <Link href={`/${local}/developer/1`}>
+              <Link href={`/developer/1`}>
                 <span className="flaticon-fullscreen" />
               </Link>
             </div>

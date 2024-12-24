@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import {Link} from "@/routing";
 import Image from "next/image";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
@@ -39,7 +39,7 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
               </span>
             </div>
             <Link
-              href={`/${locale}/area/${data?.areaId}`}
+              href={`/area/${data?.areaId}`}
               className="pd-meta d-md-flex align-items-center w-fit"
             >
               <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm w-fit">
@@ -64,7 +64,7 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
                   : formatPrice(data?.price)}{" "}
                 {t("egp")}
               </h3>
-              <Link href={`/${locale}/developer/${data?.developerId}`}>
+              <Link href={`/developer/${data?.developerId}`}>
                 <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm w-fit">
                   {isCompound
                     ? locale == "ar"

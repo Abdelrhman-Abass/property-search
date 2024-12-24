@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import {Link} from "@/routing";
 import { usePathname } from "next/navigation";
 
 if (typeof window !== "undefined") {

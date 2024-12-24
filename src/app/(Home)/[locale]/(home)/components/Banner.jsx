@@ -24,6 +24,7 @@ const Banner = ({ data }) => {
               src={imagePath}
               alt={"banner"}
               priority
+              loading="eager"
             />   
           <div className="overlay">
             <h5>{locale == "ar" ? data?.titleAR : data?.titleEN}</h5>

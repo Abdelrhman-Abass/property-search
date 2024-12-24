@@ -60,6 +60,7 @@ export default function BlogHead({ blog }) {
                   width={400}
                   height={400}
                   priority
+                  loading="eager"
                   style={{ borderRadius: 10 }}
                   className="w-100 con"
                   src={imagePath}
@@ -76,6 +77,7 @@ export default function BlogHead({ blog }) {
                     width={400}
                     height={400}
                     priority
+                    loading="eager"
                     style={{ borderRadius: 10 }}
                     className="w-100 con"
                     src={imagePath}

@@ -76,6 +76,8 @@ const Area = async ({ params }) => {
                   className="img-1 spin-right"
                   src="/images/about/element-12.png"
                   alt="agents"
+                  loading="lazy"
+
                 />
                 <Image
                   width={41}
@@ -83,6 +85,8 @@ const Area = async ({ params }) => {
                   className="img-2 bounce-x"
                   src="/images/about/element-13.png"
                   alt="agents"
+                  loading="lazy"
+
                 />
                 <Image
                   width={57}
@@ -90,6 +94,8 @@ const Area = async ({ params }) => {
                   className="img-3 bounce-y"
                   src="/images/about/element-11.png"
                   alt="agents"
+                  loading="lazy"
+
                 />
               </div>
             </div>

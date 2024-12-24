@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import {Link} from "@/routing";
 import Image from "next/image";
 import SwitchLang from "../SwitchLang";
 import { useLocale, useTranslations } from "next-intl";
@@ -26,10 +26,11 @@ const MobileMenu = () => {
                   height={9}
                   src="/images/mobile-dark-nav-icon.svg"
                   alt="mobile icon"
+                  loading="lazy"
                 />
               </p>
-              <Link className="mobile_logo" href="/">
-                <Image width={130} height={50} src="/logo.png" alt="logo" />
+              <Link className="mobile_logo" href={"/"}>
+                <Image width={130} height={50} src="/logo.png" alt="logo"  loading="lazy"/>
               </Link>
               <SwitchLang />
             </div>
@@ -53,7 +54,7 @@ const MobileMenu = () => {
               <span className="far fa-times"></span>
             </div>
             <div className="sidebar-logo">
-              <Image width={130} height={50} src="/logo.png" alt="logo" />
+              <Image width={130} height={50} src="/logo.png" alt="logo" loading="lazy" />
             </div>
           </div>
           {/* End header */}
@@ -61,22 +62,22 @@ const MobileMenu = () => {
             <div className="hiddenbar_navbar_content">
               <ul className="sidebar-links">
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href={`/${local}`}>{t("home")}</Link>
+                  <Link href={`/`}>{t("home")}</Link>
                 </li>
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href={`/${local}/search`}>{t("search")}</Link>
+                  <Link href={`/search`}>{t("search")}</Link>
                 </li>
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href={`/${local}/blog`}>{t("blog")}</Link>
+                  <Link href={`/blog`}>{t("blog")}</Link>
                 </li>
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href={`/${local}/about`}>{t("about")}</Link>
+                  <Link href={`/about`}>{t("about")}</Link>
                 </li>
                 {/* <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href={`/${local}/companies`}>{t("startutps")}</Link>
+                  <Link href={`/companies`}>{t("startutps")}</Link>
                 </li> */}
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href={`/${local}/contact`}>{t("contact")}</Link>
+                  <Link href={`/contact`}>{t("contact")}</Link>
                 </li>
               </ul>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import {Link} from "@/routing";
 import React, { useEffect, useState } from "react";
 
 const Widgets = ({ topAreas, mostSearched, recommended }) => {
@@ -42,7 +42,7 @@ const Widgets = ({ topAreas, mostSearched, recommended }) => {
               {section?.links?.map(({ label, href }) => (
                 <li key={href}>
                   <Link
-                    href={`/${locale}${href}`}
+                    href={`/${href}`}
                     className="ellipsis ellipsis-footer"
                   >
                     {label}

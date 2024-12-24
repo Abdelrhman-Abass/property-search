@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocale } from "next-intl";
-import Link from "next/link";
+import {Link} from "@/routing";
 import Image from "next/image";
 
 const BlogSidebar = () => {
@@ -40,11 +40,11 @@ const BlogSidebar = () => {
             key={index}
           >
             <div className="news-img flex-shrink-0">
-              <Image width={90} height={80} src={post.image} alt="blog" />
+              <Image width={90} height={80} src={post.image} alt="blog"  loading="lazy"/>
             </div>
             <div className="news-content flex-shrink-1 mx-3">
               <p className="new-text mb0 fz14">
-                <Link href={`/${local}/blog/${post.id}`}>{post.content}</Link>
+                <Link href={`/blog/${post.id}`}>{post.content}</Link>
               </p>
               <a className="body-light-color" href="#">
                 {post.date.day} {post.date.month}, {post.date.year}

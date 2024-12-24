@@ -60,6 +60,7 @@ const FloorPlans = ({
                             alt="scheme"
                             width={24}
                             height={24}
+                            loading="lazy"
                           />
                         </span>
                       </div>
@@ -80,6 +81,7 @@ const FloorPlans = ({
                         className="w-100 h-100 cover"
                         src={imageSrc}
                         alt="listing figureout"
+                        loading="lazy"
                       />
                     </div>
                   </div>

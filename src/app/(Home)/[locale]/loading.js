@@ -15,6 +15,8 @@ const loading = () => {
           height={60}
           src="/logo.png"
           alt="Header Logo"
+          priority
+          loading="eager"
         />
       </div>
     </div>

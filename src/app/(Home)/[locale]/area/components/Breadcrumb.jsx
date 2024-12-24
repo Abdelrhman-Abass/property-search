@@ -21,6 +21,8 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
           src={image}
           style={{ borderRadius: "50%", objectFit: "cover" }}
           alt="agents"
+          loading="lazy"
+
         />
       </div>
       <div className="single-contant ml0-xs   ">
