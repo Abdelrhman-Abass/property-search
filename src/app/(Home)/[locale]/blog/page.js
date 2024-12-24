@@ -21,7 +21,7 @@ const page = async ({ searchParams }) => {
   const page = searchParams?.page || 1;
   const pageSize = 10;
   const blogsData = await fetchData(page, pageSize);
-  console.log(blogsData)
+  // console.log(blogsData)
 
 
   return (

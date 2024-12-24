@@ -8,7 +8,7 @@ import ContentPhotoList from "../components/ContentPhotoList";
 
 export const fetchData = async (id) => {
   const blog = await ApiGetter({ url: `/api/LandingPage/${id}` });
-  console.log(blog)
+  // console.log(blog)
   return blog;
 };
 

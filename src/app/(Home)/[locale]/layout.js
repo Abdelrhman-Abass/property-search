@@ -81,8 +81,8 @@ export default async function RootLayout({ children, params: { locale } }) {
 
   const title =
     locale == "ar"
-      ? "Property Search | بحث ذكي، وعثور أسرع"
-      : "Property Search | Search Smarter, Find Faster";
+      ? "بروبرتي سيرش - Property Search | بحث ذكي، وعثور أسرع"
+      : "Property Search - بروبرتي سيرش | Search Smarter, Find Faster";
   const description =
     locale == "ar"
       ? "أفضل وسيط عقاري يمكنك من خلاله تصفح ومراقبة اسعار العقارات في مصر. تصفح المناطق والمجمعات السكنية والعقارات حسب السعر والموقع وغرف النوم  والمرافق للعثور على المكان المثالي لك ولعائلتك."
@@ -92,7 +92,7 @@ export default async function RootLayout({ children, params: { locale } }) {
     <html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        
+
         <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
@@ -105,13 +105,27 @@ export default async function RootLayout({ children, params: { locale } }) {
         {/* <!-- twitter --> */}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <script>
+          {`(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5P5PRK53');`}
+        </script>
       </head>
       <body
-        className={`body ${
-          locale == "ar" ? notoKufiArabic.variable : poppins.variable
-        }`}
+        className={`body ${locale == "ar" ? notoKufiArabic.variable : poppins.variable
+          }`}
         cz-shortcut-listen="false"
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5P5PRK53"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <NextIntlClientProvider messages={messages}>
           <Client>
             <Header />

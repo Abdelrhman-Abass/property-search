@@ -1,7 +1,7 @@
 "use client";
 import MainMenu from "@/components/common/MainMenu";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@navigation";
 import React from "react";
 import SwitchLang from "../components/common/SwitchLang";
 import { useLocale } from "next-intl";

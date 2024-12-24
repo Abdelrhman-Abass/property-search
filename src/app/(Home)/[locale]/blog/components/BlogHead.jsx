@@ -169,7 +169,7 @@ function UnitCollapsible({ title, content }) {
   const [isOpen, setIsOpen] = useState(false); // Ensure React is imported
 
   const toggleCollapse = () => {
-    console.log("Previous isOpen state:", isOpen); // Debug log
+    // console.log("Previous isOpen state:", isOpen); // Debug log
     setIsOpen((prev) => !prev);
   };
 

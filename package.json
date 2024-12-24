@@ -35,8 +35,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
     "cssnano": "^7.0.6",
     "eslint": "^8.0.0",
-    "eslint-config-next": "^14.2.6"
+    "eslint-config-next": "^14.2.6",
+    "typescript": "^5.7.2"
   }
 }

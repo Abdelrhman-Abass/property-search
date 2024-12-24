@@ -83,8 +83,8 @@ export default async function RootLayout({ children, params: { locale } }) {
 
   const title =
     locale == "ar"
-      ? "Property Search | بحث ذكي، وعثور أسرع"
-      : "Property Search | Search Smarter, Find Faster";
+      ? "بروبرتي سيرش - Property Search | بحث ذكي، وعثور أسرع"
+      : "Property Search - بروبرتي سيرش | Search Smarter, Find Faster";
   const description =
     locale == "ar"
       ? "أفضل وسيط عقاري يمكنك من خلاله تصفح ومراقبة اسعار العقارات في مصر. تصفح المناطق والمجمعات السكنية والعقارات حسب السعر والموقع وغرف النوم  والمرافق للعثور على المكان المثالي لك ولعائلتك."

@@ -39,6 +39,8 @@ const nextConfig = {
       },
     ],
   },
+  reactStrictMode: false, // Disable strict mode
+
   async rewrites() {
     return [
       {
