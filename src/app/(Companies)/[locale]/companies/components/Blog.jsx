@@ -31,7 +31,6 @@ const Blog = ({ blog }) => {
   const videoCallUrl = `https://somevideoapp.com/call/${phoneNumber}`; // Replace with actual video call URL
 
   const imagePath = `${process.env.NEXT_PUBLIC_COMPANIES_IMAGE}/${image}`;
-  const blogDate = blogFormatDate(createdDateUtc, locale);
   return (
     <div className="blog-style1 large-size bgc-white">
       <div className="blog-img">
@@ -42,7 +41,7 @@ const Blog = ({ blog }) => {
           className="w-100 cover"
           src={imagePath}
           alt="blog"
-          loading="lazy"
+          loading="eager"
         />
       </div>
       <div className="blog-content pl30 pb20">

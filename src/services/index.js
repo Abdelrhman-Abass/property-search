@@ -3,10 +3,15 @@ export const formatPrice = (price) => {
 };
 
 export function blogFormatDate(dateString, locale = "en") {
-  const date = new Date(dateString);
-  // const today = new Date();
+  // Check if dateString is provided and not undefined
+  if (!dateString) {
+    console.error("Invalid date string:", dateString);
+    return { day: "", month: "", fullDate: "" };
+  }
 
-  // Check if the dateString is valid
+  const date = new Date(dateString);
+
+  // Check if the date is valid
   if (isNaN(date)) {
     console.error("Invalid date string:", dateString);
     return { day: "", month: "", fullDate: "" };

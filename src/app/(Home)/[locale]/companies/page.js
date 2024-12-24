@@ -1,6 +1,6 @@
 "use server";
 import BlogsWrapper from "../../../(Companies)/[locale]/companies/components/BlogsWrapper";
-import BlogBreadcumb from "../../../(Companies)/[locale]/companies/components/BlogBreadcumb";
+import BlogBreadcumb from "@/app/(Companies)/[locale]/companies/components/BlogBreadcumb";
 import { ApiGetter } from "@/services/ApiGetter";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
 import Header from "@/layout/Header";
@@ -15,13 +15,15 @@ export const fetchData = async (page = 1, pageSize) => {
 };
 
 export async function generateMetadata({ params }) {
+  const { locale } = await params; // Await params to resolve dynamically
+
   return {
-    title: params?.locale == "ar" ? "الشركات المطورة" : "ٌDevelopers Companies",
+    title: locale == "ar" ? "الشركات المطورة" : "ٌDevelopers Companies",
   };
 }
 
 const page = async ({ searchParams }) => {
-  const page = searchParams?.page || 1;
+  const page = await searchParams?.page || 1;
   const pageSize = 10;
   const companiesData = await fetchData(page, pageSize);
   // console.log(companiesData)

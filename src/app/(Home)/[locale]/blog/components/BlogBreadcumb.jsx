@@ -4,7 +4,6 @@ import React from "react";
 
 const BlogBreadcumb = () => {
   const nav = useTranslations("nav");
-  const locale = useLocale();
   return (
     <section className="breadcumb-section">
       <div className="container">

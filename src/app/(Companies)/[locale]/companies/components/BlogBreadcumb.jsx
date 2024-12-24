@@ -1,5 +1,6 @@
+"use client"
 import {  useTranslations } from "next-intl";
-import Link from "@/routing";
+import Link from "next/link";
 import React from "react";
 
 const BlogBreadcumb = () => {
