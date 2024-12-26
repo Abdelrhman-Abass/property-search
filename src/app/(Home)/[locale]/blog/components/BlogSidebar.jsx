@@ -26,9 +26,9 @@ const BlogSidebar = () => {
         <h6 className="widget-title">Categories</h6>
         <div className="category-list d-flex flex-column mt20">
           {categories.map((category, index) => (
-            <a href="#" key={index}>
+            <Link href="#" key={index}>
               {category}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -46,9 +46,9 @@ const BlogSidebar = () => {
               <p className="new-text mb0 fz14">
                 <Link href={`/blog/${post.id}`}>{post.content}</Link>
               </p>
-              <a className="body-light-color" href="#">
+              <Link className="body-light-color" href="#">
                 {post.date.day} {post.date.month}, {post.date.year}
-              </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -57,9 +57,9 @@ const BlogSidebar = () => {
         <h6 className="widget-title">Popular Tags</h6>
         <div className="tag-list mt20">
           {tags.map((tag, index) => (
-            <a href="#" key={index}>
+            <Link href="#" key={index}>
               {tag}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

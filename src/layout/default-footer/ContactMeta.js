@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import React from "react";
 
 const ContactMeta = ({ appSettings }) => {
@@ -24,12 +25,12 @@ const ContactMeta = ({ appSettings }) => {
             </p>
             {contact.phone && (
               <h6 className="info-phone text-center" dir="ltr">
-                <a href={contact.phoneLink}>{contact.phone}</a>
+                <Link href={contact.phoneLink}>{contact.phone}</Link>
               </h6>
             )}
             {contact.mail && (
               <h6 className="info-phone text-center" style={{ color: "#fff" }}>
-                <a href={contact.mailLink}>{contact.mail}</a>
+                <Link href={contact.mailLink}>{contact.mail}</Link>
               </h6>
             )}
           </div>

@@ -1,6 +1,7 @@
 "use client";
 import { useData } from "@/context";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const CallToActions = () => {
   const t = useTranslations("contact");
@@ -19,14 +20,14 @@ const CallToActions = () => {
             </div>
             <div className="col-lg-5 col-xl-6 " data-aos="fade-left">
               <div className="cta-btns-style1 d-block d-sm-flex align-items-center justify-content-lg-end">
-                <a
+                <Link
                   target="_blank"
                   href={`tel:${appSettings?.phone}`}
                   className="ud-btn btn-dark"
                 >
                   <span className="flaticon-call vam pe-2" />
                   {appSettings?.phone}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

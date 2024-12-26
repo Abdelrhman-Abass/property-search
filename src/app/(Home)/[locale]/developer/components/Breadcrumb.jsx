@@ -1,6 +1,7 @@
 import { formatPrice } from "@/services";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Breadcrumb = ({ colorWhite = true, data = {} }) => {
@@ -36,19 +37,19 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
             </span>
           </div>
           <div className="agent-meta mb15 gap-3 d-md-flex align-items-center">
-            <a
+            <Link
               className={`${colorWhite && "text-white"} text fz15 pe-2 bdrr1 `}
               href="#"
             >
               {data?.propertiesCount} {d("availablePro")}
-            </a>
-            <a
+            </Link>
+            <Link
               className={`${colorWhite && "text-white"} text fz15 pe-2 bdrr1 `}
               href="#"
             >
               {data?.compoundsCount} {d("compounds")}
-            </a>
-            <a
+            </Link>
+            <Link
               className={`${
                 colorWhite && "text-white"
               } text fz15 pe-2 ps-2 bdrr1 `}
@@ -58,7 +59,7 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
               <span>
                 {formatPrice(data?.minPrice)} {global("egp")}
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

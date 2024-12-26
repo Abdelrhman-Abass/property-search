@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React from "react";
 
 const getCurrentYear = () => {
@@ -12,11 +13,12 @@ const Footer = () => {
         <div className="text-center text-lg-start">
           <p className="copyright-text text-gray ff-heading mb-0">
             ©{" "}
-            <a
+            <Link
+            href={"/"}
               style={{ color: "inherit" }}
             >
               Property Search
-            </a>{" "}
+            </Link>{" "}
             {getCurrentYear()} - All rights reserved
           </p>
         </div>

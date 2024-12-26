@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Hero from "@/components/home/hero";
+import Link from "next/link";
 
 const HomeHero = ({ data }) => {
 
@@ -17,9 +18,9 @@ const HomeHero = ({ data }) => {
             </div>
           </div>
         </div>
-        <a href="#top-area">
+        <Link href="#top-area">
           <div className="mouse_scroll animate-up-4"></div>
-        </a>
+        </Link>
       </div>
     </section>
   );

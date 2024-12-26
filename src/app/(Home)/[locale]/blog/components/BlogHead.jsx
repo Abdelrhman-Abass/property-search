@@ -3,6 +3,7 @@ import { blogFormatDate } from "@/services";
 import { MapContext } from "@react-google-maps/api";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function BlogHead({ blog }) {
@@ -41,7 +42,7 @@ export default function BlogHead({ blog }) {
             </p> */}
             <div className="blog-single-meta">
               <div className="post-author d-sm-flex align-items-center">
-                <a className="ml15">{blogDate?.fullDate}</a>
+                <Link href="#" className="ml15">{blogDate?.fullDate}</Link>
               </div>
             </div>
           </div>

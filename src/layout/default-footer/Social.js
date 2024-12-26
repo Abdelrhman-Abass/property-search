@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import React from "react";
 
 const Social = ({ appSettings }) => {
@@ -17,14 +18,14 @@ const Social = ({ appSettings }) => {
       <div className="social-style1">
         {socialIcons.map((icon, index) =>
           icon.url ? (
-            <a
+            <Link
               key={index}
               href={icon.url}
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className={`${icon.icon} list-inline-item`} />
-            </a>
+            </Link>
           ) : null
         )}
       </div>
