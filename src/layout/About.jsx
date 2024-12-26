@@ -43,7 +43,7 @@ const About = ({ data, isCompound }) => {
           <div className="text">{content}</div>
         )}
       </div>
-      <section className="pt30 pb40 facilities">
+      <section className="pt30 pb40 pb20-md facilities">
         <h3>{t("facilities")}</h3>
         <div className="mt30 listing-style14">
           <div className={`list-meta ${showAll ? "expanded" : ""}`}>
@@ -64,6 +64,7 @@ const About = ({ data, isCompound }) => {
           </div>
           {data?.amenities?.length > 12 && (
             <button
+            aria-label="Show "
               className="expanded"
               onClick={() => setShowAll((prev) => !prev)}
             >

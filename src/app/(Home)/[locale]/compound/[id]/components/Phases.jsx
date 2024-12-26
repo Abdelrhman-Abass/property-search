@@ -18,6 +18,7 @@ const Phases = () => {
             <div className="row align-items-center justify-content-center">
               <div className="col-auto">
                 <button
+                aria-label="Phases"
                   className={`${
                     locale == "ar" ? "rotate180" : ""
                   } apartment-type2-prev__active swiper_button `}
@@ -30,6 +31,7 @@ const Phases = () => {
               </div>
               <div className="col-auto">
                 <button
+                aria-label="Phases Right"
                   className={`${
                     locale == "ar" ? "rotate180" : ""
                   } apartment-type2-next__active swiper_button `}

@@ -23,14 +23,14 @@ const WhatsAppButton = ({ data }) => {
       <div className="contact-buttons">
         {/* WhatsApp Button */}
         <Link href={whatsappUrl} passHref>
-          <button className="contact-button whatsapp" target="_blank" rel="noopener noreferrer">
+          <button className="contact-button whatsapp" aria-label="Whats app buuton" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-whatsapp"></i>
           </button>
         </Link>
 
         {/* Phone Button */}
         <Link href={phoneUrl} passHref>
-          <button className="contact-button phone" target="_blank" rel="noopener noreferrer">
+          <button className="contact-button phone" aria-label="Call Phone" target="_blank" rel="noopener noreferrer">
             <i className="fas fa-phone"></i>
           </button>
         </Link>
@@ -38,6 +38,7 @@ const WhatsAppButton = ({ data }) => {
         {/* Video Call Button */}
         <Link href="#" passHref>
           <button
+          aria-label="open toogle"
             className="contact-button video"
             data-bs-toggle="modal"
             data-bs-target="#contactPopFprm"

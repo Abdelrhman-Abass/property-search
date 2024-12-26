@@ -162,6 +162,7 @@ const Form = ({ id, type = 0 }) => {
           <div className="col-md-12">
             <div className="d-grid">
               <button
+              aria-label="Recaptcha"
                 disabled={isLoading}
                 style={{ opacity: isLoading && 0.7 }}
                 type="submit"

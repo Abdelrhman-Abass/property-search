@@ -123,6 +123,7 @@ export default function MainList({
                   />
                   {!networkError ? (
                     <button
+                    aria-label=" Reset "
                       style={{ width: "fit-content", marginTop: "-7px" }}
                       className="advance-search-icon ud-btn btn-thm p-1 px-3"
                       type="button"

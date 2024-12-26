@@ -63,7 +63,7 @@ const Compound = async ({ params, searchParams }) => {
       : compoundData?.compoundNameEn;
   return (
     <>
-      <section className="pt140 pt60-md pb90 bgc-f7">
+      <section className="pt140 pt30-md pb90 bgc-f7">
         <div className="container">
           <HeroHeaderGallery data={compoundData} />
           <div className="row wrap">

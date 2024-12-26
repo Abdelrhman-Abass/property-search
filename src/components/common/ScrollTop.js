@@ -30,6 +30,7 @@ export default function ScrollToTop() {
     <>
       {isVisible && (
       <button
+      aria-label="Scroll button"
         className="scrollToHome"
         style={{ cursor: "pointer" }}
         onClick={scrollToTop}

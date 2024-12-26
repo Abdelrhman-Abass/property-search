@@ -21,6 +21,7 @@ const SwitchLang = ({company =false}) => {
   return (
     <div className="col-auto">
       <button
+      aria-label="Switch language"
         onClick={onChangeLang}
         className="d-flex align-items-center gap-1 lang-btn"
       >

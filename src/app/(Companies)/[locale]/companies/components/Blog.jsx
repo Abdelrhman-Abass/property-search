@@ -69,6 +69,7 @@ const Blog = ({ blog }) => {
               className="contact-button-blog-out whatsapp"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Whats app contact"
             >
               <i className="fab fa-whatsapp"></i>
               <span className="mx10">واتساب</span>
@@ -81,6 +82,7 @@ const Blog = ({ blog }) => {
               className="contact-button-blog-out phone"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="phone calls"
             >
               <i className="fas fa-phone"></i>
               <span className="mx10">اتصل</span>
@@ -93,6 +95,7 @@ const Blog = ({ blog }) => {
               className="contact-button-blog-out video"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Zoom meetings"
             >
               <i className="fas fa-video"></i>
               <span className="mx10">زووم</span>

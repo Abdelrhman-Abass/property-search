@@ -22,6 +22,7 @@ const TopCompounds = ({ data }) => {
               <div className="row align-items-center justify-content-center">
                 <div className="col-auto">
                   <button
+                    aria-label="Top Compunds Right"
                     className={`${
                       local == "en" ? "rotate180" : ""
                     } apartment-type2-next__active swiper_button `}
@@ -36,6 +37,7 @@ const TopCompounds = ({ data }) => {
                 {/* End pagination */}
                 <div className="col-auto">
                   <button
+                  aria-label="Top Compunds Swiper button"
                     className={`${
                       local == "en" ? "rotate180" : ""
                     } apartment-type2-prev__active swiper_button`}

@@ -83,6 +83,7 @@ const Blog = ({ blog }) => {
           {/* WhatsApp Button */}
           <Link href={whatsappUrl} passHref>
             <button
+            aria-label="Whats app"
               className="contact-button-blog-out whatsapp"
               target="_blank"
               rel="noopener noreferrer"
@@ -95,6 +96,7 @@ const Blog = ({ blog }) => {
           {/* Phone Button */}
           <Link href={phoneUrl} passHref>
             <button
+            aria-label="Call us"
               className="contact-button-blog-out phone"
               target="_blank"
               rel="noopener noreferrer"
@@ -107,6 +109,7 @@ const Blog = ({ blog }) => {
           {/* Video Call Button */}
           <Link href={videoCallUrl} passHref>
             <button
+            aria-label="Zoom Us"
               className="contact-button-blog-out video"
               target="_blank"
               rel="noopener noreferrer"

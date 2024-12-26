@@ -52,6 +52,7 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
             className={`${
               local == "ar" ? "right-0" : "left-0"
             } featured-next__active swiper_button _next areas`}
+            aria-label="Recommended Warapper"
           >
             <i className="far fa-chevron-left" />
           </button>
@@ -59,6 +60,8 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
             className={`${
               local == "ar" ? "left-0" : "right-0"
             } featured-prev__active swiper_button _prev areas`}
+            aria-label="Recommended Warapper Change"
+
           >
             <i className="far fa-chevron-right" />
           </button>

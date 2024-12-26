@@ -178,7 +178,7 @@ function UnitCollapsible({ title, content }) {
 
   return (
     <div>
-      <button className="collapse-toggle" onClick={toggleCollapse}>
+      <button className="collapse-toggle" onClick={toggleCollapse} aria-label="Toggle Title">
         {title} ▾
       </button>
       {isOpen && (

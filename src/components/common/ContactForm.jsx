@@ -104,6 +104,8 @@ const StickyNotification = () => {
               {g("News")}
             </h5>
             <button
+               aria-label="News"
+
               style={{
                 background: "none",
                 border: "none",
@@ -117,6 +119,7 @@ const StickyNotification = () => {
           </div>
           <p style={{ fontSize: "12px", margin: "8px 0" }}>{g("newsProperty")}</p>
           <button
+          aria-label="New Propert"
             style={{
               background: "#007bff",
               color: "white",
@@ -207,6 +210,7 @@ const StickyNotification = () => {
               />
               <div className="modal-footer justify-content-between">
                 <button
+                aria-label="Modal footer"
                   className="reset-button"
                   type="button"
                   onClick={() => {
@@ -220,8 +224,8 @@ const StickyNotification = () => {
                 </button>
                 <div className="btn-area">
                   <button
-
-data-bs-dismiss={!errors? "modal" : ""}
+                  aria-label="send contact"
+                  data-bs-dismiss={!errors? "modal" : ""}
                     type="submit"
                     className="ud-btn btn-thm d-flex align-items-center gap-2"
                   >

@@ -86,6 +86,8 @@ const TopAreasList = ({ data = [] }) => {
         className={`${
           local == "ar" ? "right-0" : "left-0"
         } property-by-city-next__active swiper_button _next areas`}
+        aria-label="Top Areas"
+
       >
         <i className="far fa-chevron-left" />
       </button>
@@ -94,6 +96,8 @@ const TopAreasList = ({ data = [] }) => {
         className={`${
           local == "ar" ? "left-0" : "right-0"
         } property-by-city-prev__active swiper_button _prev areas`}
+        aria-label="Top Areas Right"
+
       >
         <i className="far fa-chevron-right" />
       </button>

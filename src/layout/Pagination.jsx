@@ -27,6 +27,7 @@ const Pagination = ({
     paginationItems.push(
       <li className="page-item" key="previous">
         <button
+        aria-label="paginiation left"
           className="page-link"
           onClick={handlePrevious}
           disabled={currentPage === 1}
@@ -43,7 +44,7 @@ const Pagination = ({
           aria-current={currentPage === page ? "page" : undefined}
           key={page}
         >
-          <button className="page-link" onClick={() => setCurrentPage(page)}>
+          <button aria-label="Pagination page" className="page-link" onClick={() => setCurrentPage(page)}>
             {page}
           </button>
         </li>
@@ -53,6 +54,7 @@ const Pagination = ({
     paginationItems.push(
       <li className="page-item" key="next">
         <button
+        aria-label="Pagination Right"
           className="page-link"
           onClick={handleNext}
           disabled={currentPage === totalPages}

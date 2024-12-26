@@ -40,6 +40,7 @@ const HeroContent = () => {
               <div className="col-md-4 col-lg-3">
                 <div className="d-flex align-items-center justify-content-start justify-content-md-center mt-3 mt-md-0 gap-3">
                   <button
+                  aria-label="Advanced"
                     className="advance-search-btn"
                     type="button"
                     data-bs-toggle="modal"
@@ -49,6 +50,7 @@ const HeroContent = () => {
                     {t("advanced")}
                   </button>
                   <button
+                  aria-label="Search"
                     className="advance-search-icon ud-btn btn-thm"
                     onClick={() =>
                       router.push(`/${local}/search?SearchTerm=${searchTerm}`)

@@ -449,13 +449,14 @@ const AdvanceFilterModal = () => {
         </div>
 
         <div className="modal-footer justify-content-between">
-          <button className="reset-button" onClick={handleReset}>
+          <button className="reset-button" aria-label="reset page" onClick={handleReset}>
             <span className="flaticon-turn-back px-1" />
             <u>{translate("reset")}</u>
           </button>
 
           <div className="btn-area">
             <button
+            aria-label="search page"
               data-bs-dismiss="modal"
               type="submit"
               className="ud-btn btn-thm d-flex align-items-center gap-2"

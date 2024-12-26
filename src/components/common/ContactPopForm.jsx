@@ -180,12 +180,12 @@ const ContactPopForm = () => {
                     </div>
 
                     <div className="modal-footer justify-content-between">
-                        <button className="reset-button" type="button" onClick={resetForm}>
+                        <button className="reset-button" type="button" aria-label="Reset" onClick={resetForm}>
                             <span className="flaticon-turn-back px-1" />
                             <u>{g("reset")}</u>
                         </button>
                         <div className="btn-area">
-                            <button type="submit" data-bs-dismiss={!errors ? "modal" : ""}
+                            <button type="submit" aria-label="send form contact" data-bs-dismiss={!errors ? "modal" : ""}
                                 className="ud-btn btn-thm d-flex align-items-center gap-2">
                                 <span>{g("sendContact")}</span>
                             </button>

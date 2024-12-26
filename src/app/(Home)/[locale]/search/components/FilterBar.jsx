@@ -54,6 +54,7 @@ const FilterBar = ({ setOrderBy, setSearchTerm, searchTerm, onSearch }) => {
             </div>
           </div>
           <button
+          aria-label="Filter modal"
             style={{
               width: "fit-content",
               display: "flex",
@@ -70,6 +71,8 @@ const FilterBar = ({ setOrderBy, setSearchTerm, searchTerm, onSearch }) => {
             {t("advanced")}
           </button>
           <button
+            aria-label="Filter modal"
+
             style={{ width: "fit-content" }}
             className="advance-search-icon ud-btn btn-thm"
             type="button"

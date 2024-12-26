@@ -55,7 +55,7 @@ const Area = async ({ params }) => {
     return notFound();
   }
   return (
-    <section className="agent-single pt60 pb-0 ">
+    <section className="agent-single pt60 pt0-sm pb-0 ">
       <AboutCompounds
         title={
           params.locale == "ar"

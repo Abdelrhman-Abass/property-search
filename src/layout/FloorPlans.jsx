@@ -43,6 +43,7 @@ const FloorPlans = ({
                 >
                   <h2 className="accordion-header" id={`heading${index}`}>
                     <button
+                    aria-label="Collapser "
                       className={`accordion-button ${
                         index === 1 ? "" : "collapsed"
                       }`}
