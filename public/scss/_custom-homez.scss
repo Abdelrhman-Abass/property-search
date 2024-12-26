@@ -1,9 +1,6 @@
 html {
     scroll-behavior: smooth !important;
 }
-.nav-tabs .nav-link {
-    margin-bottom: 0;
-}
 
 .cover {
     -o-object-fit: cover !important;
@@ -223,30 +220,9 @@ html {
     }
 }
 
-// modal button
-.img-box-9 button {
-    background: transparent;
-    border: none;
-}
+
 // home 3 hero
-.advance-content-style3 .select-borderless {
-    border-radius: 12px;
-}
-.advance-content-style3 .bootselect-multiselect .select__control {
-    background-color: #f7f7f7;
-    line-height: 50px;
-    height: 55px;
-    border-radius: 12px;
-}
-.advance-content-style3.at-home5 .bootselect-multiselect .select__control {
-    background-color: transparent;
-    cursor: pointer;
-    height: auto;
-    line-height: initial;
-}
-.advance-content-style3.at-home5 .select__value-container {
-    padding: 0;
-}
+
 // home 3 header sticky humberer icon
 header.nav-homepage-style.sticky.at-home3 .sidemenu-btn .img-1 {
     display: block;
@@ -276,9 +252,9 @@ header.nav-homepage-style.sticky.at-home3 .sidemenu-btn .img-1 {
     &.sticky {
         position: fixed;
     }
-    .login-info {
-        color: var(--headings-color);
-    }
+    // .login-info {
+    //     color: var(--headings-color);
+    // }
 }
 
 header.nav-homepage-style.light-header .ace-responsive-menu a {
@@ -433,10 +409,7 @@ header.nav-homepage-style.light-header .ace-responsive-menu a {
     width: 240px;
     height: 220px;
 }
-.dashboard_navigationbar .dropdown-content a.-is-active {
-    background-color: #181a20;
-    color: #ffffff;
-}
+
 .hero_9 {
     @media (max-width: 1199.98px) {
         .item {

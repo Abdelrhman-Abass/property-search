@@ -14,6 +14,7 @@ const Home = async () => {
 
   return (
     <>
+
       <HomeHeroPage />
       <Banner data={banners?.data?.find((item) => item?.order === 1)} notAos />
       <HomeTopAreas />

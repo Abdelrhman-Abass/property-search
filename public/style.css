@@ -23,9 +23,7 @@
   border-radius: 10px; /* Rounded corners on the thumb */
   border: 3px solid #f7f7f7; /* Space around thumb */
 }
-.nextjs-toast-errors-parent{
-	display :none !important;
-}
+
 .price-component {
   text-align: center;
   font-family: "Arial", sans-serif;

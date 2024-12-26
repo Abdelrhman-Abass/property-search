@@ -1,11 +1,11 @@
 "use client"
 import { blogFormatDate } from "@/services";
 import { useLocale } from "next-intl";
-import Link from "@/routing";
 
 import Image from "next/image";
 import React, { useState } from "react";
 import SwitchLang from "@/components/common/SwitchLang";
+import Link from "next/link";
 
 export default function CompaniesHead({ blog }) {
   const locale = useLocale();

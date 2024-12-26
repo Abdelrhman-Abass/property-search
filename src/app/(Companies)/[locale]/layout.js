@@ -2,11 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Client from "./Client";
 import { Poppins, Noto_Kufi_Arabic } from "next/font/google";
-import Header from "@/layout/Header";
-import MobileMenu from "@/components/common/mobile-menu";
-import Footer from "@/layout/default-footer";
 import { Toaster } from "react-hot-toast";
-import MenuWidget from "@/layout/default-footer/MenuWidget";
 import CopyRight from "./components/CopyRight"
 
 
@@ -83,7 +79,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 
   const title =
     locale == "ar"
-      ? "بروبرتي سيرش - Property Search | بحث ذكي، وعثور أسرع"
+      ? "بروبرتي سيرش - Property Search | بحث ذكي، وعثور أسرع"
       : "Property Search - بروبرتي سيرش | Search Smarter, Find Faster";
   const description =
     locale == "ar"
@@ -95,16 +91,6 @@ export default async function RootLayout({ children, params: { locale } }) {
       <head>
         <link rel="icon" href="/favicon.ico" />
 
-        {/* <title>{title}</title>
-        <meta name="title" content={title} />
-        <meta name="description" content={description} />
-        <meta
-          name="keywords"
-          content={locale == "ar" ? arKeywords : enKeywords}
-        />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} /> */}
-        {/* <!-- twitter --> */}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </head>
@@ -122,10 +108,6 @@ export default async function RootLayout({ children, params: { locale } }) {
               style={{ background: "#0f2950" }}
               className="footer-style1 pt0 pb-0 "
             >
-              {/* <Footer>
-                <MenuWidget />
-              </Footer> */}
-
               <CopyRight />
 
             </section>

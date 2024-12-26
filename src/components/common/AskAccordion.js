@@ -12,11 +12,6 @@ const AsksSection = ({questions= []}) => {
         <div className="answer">{locale == "ar" ? que.answerTextAR :que.answerTextEN }</div>
       </div>
       ))}
-      {/* <div className="ask">
-        <div className="question">What is your favorite food?</div>
-        <div className="answer">I love pizza!</div>
-      </div> */}
-      {/* Add more questions and answers as needed */}
     </div>
   );
 };

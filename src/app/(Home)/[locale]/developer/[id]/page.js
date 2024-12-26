@@ -47,14 +47,7 @@ export async function generateMetadata({ params }) {
     seoResult.twitter = { ...seoResult.twitter, image };
     seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
   }
-  // if (developerDetails?.data?.seoMetaTags) {
-  //   let tags = developerDetails?.data.seoMetaTags;
-  //   tags = Array.isArray(tags) && tags.length > 0 ? tags : [tags];
-  //   seoResult.other = tags.map((tag) => ({
-  //     title: tag,
-  //     content: tag,
-  //   }));
-  // }
+
   return seoResult;
 }
 

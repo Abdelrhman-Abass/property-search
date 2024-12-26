@@ -4,8 +4,7 @@ import BlogBreadcumb from "@/app/(Companies)/[locale]/companies/components/BlogB
 import { ApiGetter } from "@/services/ApiGetter";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
 import Header from "@/layout/Header";
-import Footer from "@/layout/default-footer";
-import MenuWidget from "@/layout/default-footer/MenuWidget";
+
 
 export const fetchData = async (page = 1, pageSize) => {
   const companies = await ApiGetter({

@@ -1,11 +1,8 @@
 "use client";
 import React from "react";
 import Hero from "@/components/home/hero";
-import Image from "next/image";
 
 const HomeHero = ({ data }) => {
-
-  const imagePath = `${process.env.NEXT_PUBLIC_SLIDERS_IMAGE}/${data?.path}`;
 
   return (
     <section

@@ -33,6 +33,7 @@ body {
     width: 30px;
     height: 30px;
     margin-top: -13px;
+    border: 2px solid var(--main-color);
     // transition: 0.3s;
     &:hover {
       border-color: var(--headings-color);
@@ -45,6 +46,5 @@ body {
   }
   .rc-slider-track,
   .rc-slider-tracks {
-    background-color: var(--headings-color);
-  }
+    background-color: var(--main-color);  }
 }

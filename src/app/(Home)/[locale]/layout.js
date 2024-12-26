@@ -77,6 +77,7 @@ const poppins = Poppins({
 });
 
 export default async function RootLayout({ children, params: { locale } }) {
+  
   const messages = await getMessages();
 
   const title =

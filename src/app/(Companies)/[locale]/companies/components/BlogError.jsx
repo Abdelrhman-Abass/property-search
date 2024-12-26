@@ -9,7 +9,6 @@ const BlogError = ({ blog, blogId }) => {
     <div className="container">
       <ErrorMessage
         networkError={blog === null}
-        // error={ blog?.errors?.id?.[0] || t("blogDetailsError")}
         error={t("blogDetailsError") + ` ${blogId}`}
       />
     </div>
