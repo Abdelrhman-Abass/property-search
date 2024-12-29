@@ -35,7 +35,7 @@ export default function CompaniesHead({ blog }) {
         <nav className="navbar companies-index p-3">
           <div className="container">
             <div className="logos">
-              <Link className="header-logo logo1" href={`/`}>
+              <Link className="header-logo logo1" href={`/`} aria-label="Logo Image">
                 <Image
                   width={100}
                   height={60}

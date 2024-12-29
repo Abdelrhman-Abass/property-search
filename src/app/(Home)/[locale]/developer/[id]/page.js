@@ -69,7 +69,7 @@ const Developer = async ({ params }) => {
                   width={120}
                   height={120}
                   className="img-1 spin-right"
-                  src="/images/about/element-12.png"
+                  src="/images/about/element-12.webp"
                   alt="agents"
                   loading="lazy"
 
@@ -78,7 +78,7 @@ const Developer = async ({ params }) => {
                   width={41}
                   height={11}
                   className="img-2 bounce-x"
-                  src="/images/about/element-13.png"
+                  src="/images/about/element-13.webp"
                   alt="agents"
                   loading="lazy"
 
@@ -87,7 +87,7 @@ const Developer = async ({ params }) => {
                   width={57}
                   height={49}
                   className="img-3 bounce-y"
-                  src="/images/about/element-11.png"
+                  src="/images/about/element-11.webp"
                   alt="agents"
                   loading="lazy"
 

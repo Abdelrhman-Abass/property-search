@@ -8,7 +8,8 @@ const MainCard = ({ colstyle = false, data, type }) => {
   const h = useTranslations("home");
   const g = useTranslations("global");
   const locale = useLocale();
-
+  console.log(data)
+  
   if (type == "compound") {
     let image;
     if (data?.defaultMediaPath) {
@@ -31,8 +32,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 width={380}
                 height={250}
                 className="w-100 cover"
-                src={"https://developer-eg.com/palm-east-new-cairo/images/bg.jpg"}
-                // src={image}
+                src={image? image : "/slider.webp"}
                 alt={locale == "ar" ? data?.nameAR : data?.nameEN}
               />
               <div className="list-price">
@@ -84,7 +84,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 width={382}
                 height={248}
                 className="w-100 cover"
-                src={`${process.env.NEXT_PUBLIC_PROPERTIES_IMAGE}/${data?.mediaPath}`}
+                src={data?.mediaPath ?`${process.env.NEXT_PUBLIC_PROPERTIES_IMAGE}/${data?.mediaPath}`:"/slider.webp"}
                 alt={locale == "ar" ? data.titleAR : data.titleEn}
                 loading="lazy"
               />

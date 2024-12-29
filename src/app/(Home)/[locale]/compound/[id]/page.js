@@ -51,11 +51,14 @@ export async function generateMetadata({ params }) {
 
 const Compound = async ({ params, searchParams }) => {
   const data = await ApiGetter({ url: `/api/CompoundDetails/${params.id}` });
-
+  const {id} = await params
+  const property = await ApiGetter({
+    url: `/api/PropertySearch/search?CompoundId=${id}`,
+  });
   if (!data || !data?.data) {
     return notFound();
   }
-
+  console.log(property?.data)
   const compoundData = data?.data || {};
   const title =
     params.locale == "ar"
@@ -84,7 +87,7 @@ const Compound = async ({ params, searchParams }) => {
             </div>
           </div>
           <Properties
-            id={params.id}
+            propertyData={property}
             title={title}
             searchParams={searchParams}
           />

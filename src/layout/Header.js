@@ -22,7 +22,7 @@ const Header = () => {
                     <Image
                       width={155}
                       height={60}
-                      src="/logo.png"
+                      src="/logo.webp"
                       alt="Header Logo"
                       priority
                       loading="eager"
@@ -32,7 +32,7 @@ const Header = () => {
                     <Image
                       width={155}
                       height={60}
-                      src="/logo.png"
+                      src="/logo.webp"
                       alt="Header Logo"
                       priority
                       loading="eager"

@@ -29,6 +29,13 @@ const nextConfig = {
       },
     ];
   },
+  webpack(config) {
+    // Example of customizing Webpack if needed
+    config.resolve.fallback = {
+      fs: false, // Example if you need to disable specific Node.js modules (in case of SSR issues)
+    };
+    return config;
+  },
   async headers() {
     return [
       {
@@ -36,7 +43,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=60, stale-while-revalidate=59",
+            value: "public, max-age=7200, stale-while-revalidate=7200",
           },
         ],
       },

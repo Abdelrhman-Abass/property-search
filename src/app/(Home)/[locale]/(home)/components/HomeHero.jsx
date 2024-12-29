@@ -18,7 +18,7 @@ const HomeHero = ({ data }) => {
             </div>
           </div>
         </div>
-        <Link href="#top-area">
+        <Link href="#top-area" aria-label="mouse scroll">
           <div className="mouse_scroll animate-up-4"></div>
         </Link>
       </div>

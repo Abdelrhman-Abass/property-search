@@ -13,7 +13,7 @@ const loading = () => {
           width={155}
           className="loader-img"
           height={60}
-          src="/logo.png"
+          src="/logo.webp"
           alt="Header Logo"
           priority
           loading="eager"

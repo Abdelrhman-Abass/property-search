@@ -57,7 +57,7 @@ const FloorPlans = ({
                         <span className="mr10-sm">{t(title)}</span>
                         <span>
                           <Image
-                            src="/blueprint-scheme.png"
+                            src="/blueprint-scheme.webp"
                             alt="scheme"
                             width={24}
                             height={24}

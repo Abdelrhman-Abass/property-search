@@ -22,7 +22,7 @@ const Footer = ({ children }) => {
                   width={190}
                   height={85}
                   className="mb40"
-                  src="/white-logo.png"
+                  src="/white-logo.webp"
                   alt="Footer Logo"
                   loading="lazy"
                 />

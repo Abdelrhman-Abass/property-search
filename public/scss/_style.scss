@@ -1333,6 +1333,11 @@ li {
     width: 100%; // Add this line
 }
 
+@media (max-width:772px) {
+    .home-banner-style1{
+        background-image: url(/slidermobile.webp);
+    }
+}
 
 .home-banner-style1::before {
     content: "";
