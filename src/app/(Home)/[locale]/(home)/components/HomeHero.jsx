@@ -8,7 +8,7 @@ const HomeHero = ({ data }) => {
 
   return (
     <section
-      
+
       className="home-banner-style1 p0"
     >
       {/* Next.js Image as Background */}
@@ -30,35 +30,36 @@ const HomeHero = ({ data }) => {
         }}
       /> */}
       <Image
-          width={600}
-          height={450}
-              className="slider w-100 h-100 cover"
-              src="/slider.webp"
-              alt={"banner"}
-              priority
-              loading="eager"
-              quality={80}
-              style={{
-                position: "absolute",
-                objectPosition: "center",
-                zIndex: -1,
-              }}
-            />   
+        width={1920}
+        height={1080}
+        className="slider w-100 h-100 cover"
+        src="/slider.webp"
+        alt="banner"
+        priority
+        loading="eager" // Lazy-load for non-critical images
+        quality={80}
+        style={{
+          position: "absolute",
+          objectPosition: "center",
+          zIndex: -1,
+        }}
+      />
       <Image
-          width={250}
-          height={450}
-              className=" mobile-slider w-100 h-100 cover"
-              src="/slidermobile.webp"
-              alt={"banner"}
-              priority
-              loading="eager"
-              quality={80}
-              style={{
-                position: "absolute",
-                objectPosition: "center",
-                zIndex: -1,
-              }}
-            />   
+        width={250} // Set the width to a mobile-appropriate size
+        height={450} // Keep the height proportional to width
+        className="mobile-slider w-100 h-100 cover"
+        src="/slidermobile.webp"
+        alt="banner"
+        loading="lazy"
+        quality={80}
+        srcSet="/_next/image?url=%2Fslidermobile.webp&amp;w=320&amp;q=80 320w, /_next/image?url=%2Fslidermobile.webp&amp;w=480&amp;q=80 480w, /_next/image?url=%2Fslidermobile.webp&amp;w=640&amp;q=80 640w"
+        sizes="(max-width: 768px) 100vw"
+        style={{
+          position: "absolute",
+          objectPosition: "center",
+          zIndex: -1,
+        }}
+      />
       <div className="home-style1">
         <div className="container">
           <div className="row">
