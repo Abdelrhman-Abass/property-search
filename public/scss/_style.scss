@@ -1333,11 +1333,18 @@ li {
     width: 100%; // Add this line
 }
 
-// @media (max-width:772px) {
-//     .home-banner-style1{
-//         background-image: url(/slidermobile.webp);
-//     }
-// }
+@media (max-width: 771px) {
+    .home-banner-style1 .slider {
+        display: none;
+    }
+}
+
+/* For screens larger than or equal to 772px */
+@media (min-width: 772px) {
+    .home-banner-style1 .mobile-slider {
+        display: none;
+    }
+}
 
 .home-banner-style1::before {
     content: "";

@@ -30,10 +30,25 @@ const HomeHero = ({ data }) => {
         }}
       /> */}
       <Image
-          width={400}
+          width={600}
           height={450}
-              className="w-100 h-100 cover"
+              className="slider w-100 h-100 cover"
               src="/slider.webp"
+              alt={"banner"}
+              priority
+              loading="eager"
+              quality={80}
+              style={{
+                position: "absolute",
+                objectPosition: "center",
+                zIndex: -1,
+              }}
+            />   
+      <Image
+          width={250}
+          height={450}
+              className=" mobile-slider w-100 h-100 cover"
+              src="/slidermobile.webp"
               alt={"banner"}
               priority
               loading="eager"
