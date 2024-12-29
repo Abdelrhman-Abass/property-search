@@ -23,8 +23,8 @@ const Banner = ({ data }) => {
               className="w-100 h-100 cover"
               src={imagePath}
               alt={"banner"}
-              priority
-              loading="eager"
+              
+              loading="lazy"
             />   
           <div className="overlay">
             <h5>{locale == "ar" ? data?.titleAR : data?.titleEN}</h5>

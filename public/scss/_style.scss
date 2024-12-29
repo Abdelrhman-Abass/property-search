@@ -1325,7 +1325,7 @@ li {
 
 /* Hero Styles All Type Of */
 .home-banner-style1 {
-    background-image: url(/slider.webp);
+    // background-image: url(/slider.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; // Add this line
@@ -1333,11 +1333,11 @@ li {
     width: 100%; // Add this line
 }
 
-@media (max-width:772px) {
-    .home-banner-style1{
-        background-image: url(/slidermobile.webp);
-    }
-}
+// @media (max-width:772px) {
+//     .home-banner-style1{
+//         background-image: url(/slidermobile.webp);
+//     }
+// }
 
 .home-banner-style1::before {
     content: "";
@@ -1360,22 +1360,18 @@ li {
     height: 680px;
 }
 
-@media (max-width: 767px) {
-    .home-banner-style1 {
-        padding: 60px 0 !important;
-    }
-}
+
 
 @media (max-width: 991.98px) {
     .home-banner-style1 .home-style1 {
         height: 500px;
     }
 }
-@media (max-width: 767px) {
-    .home-banner-style1 {
-        padding: 60px 0 !important;
-    }
-}
+// @media (max-width: 767px) {
+//     .home-banner-style1 {
+//         padding: 60px 0 !important;
+//     }
+// }
 
 .inner-banner-style1 .hero-sub-title {
     color: #ffffff;
