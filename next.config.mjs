@@ -15,6 +15,7 @@ const nextConfig = {
     ],
   },
   reactStrictMode: false, // Disable strict mode
+  output: 'standalone',
   
   devIndicators: {
     autoPrerender: false,
