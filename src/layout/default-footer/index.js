@@ -23,7 +23,7 @@ const Footer = ({ children }) => {
                   height={85}
                   className="mb40"
                   src="/white-logo.webp"
-                  alt="Footer Logo"
+                  alt="Property Search Footer Logo"
                   loading="lazy"
                 />
               </Link>

@@ -23,7 +23,7 @@ const Header = () => {
                       width={155}
                       height={60}
                       src="/logo.webp"
-                      alt="Header Logo"
+                      alt="Property Search Header Logo"
                       priority
                       loading="eager"
                     />
@@ -33,7 +33,7 @@ const Header = () => {
                       width={155}
                       height={60}
                       src="/logo.webp"
-                      alt="Header Logo"
+                      alt="Property Search Header Logo"
                       priority
                       loading="eager"
                     />

@@ -185,7 +185,7 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
                     onClick={open}
                     role="button"
                     src={`${image}/${img}`}
-                    alt="alt"
+                    alt={`${title}-image`}
                     style={{ display: "none" }}
                   />
                 )}

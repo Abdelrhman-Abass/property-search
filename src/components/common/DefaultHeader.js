@@ -41,7 +41,7 @@ const DefaultHeader = () => {
                         width={138}
                         height={44}
                         src="/images/header-logo2.svg"
-                        alt="Header Logo"
+                        alt="Property search Header Logo"
                         priority
                         loading="eager"
                       />
@@ -51,7 +51,7 @@ const DefaultHeader = () => {
                         width={138}
                         height={44}
                         src="/images/header-logo2.svg"
-                        alt="Header Logo"
+                        alt="property search Header Logo"
                         priority
                         loading="eager"
                       />

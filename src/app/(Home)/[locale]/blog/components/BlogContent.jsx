@@ -36,7 +36,7 @@ const BlogContent = ({ contents = [] , questions= []}) => {
                       width={400}
                       height={400}
                       src={`${imagePath}/${mediaContent.path}`}
-                      alt="blog"
+                      alt="blog Content"
                       className="bdrs12 post-img-2 w-100 con  mt60 "
                       loading="lazy"
 

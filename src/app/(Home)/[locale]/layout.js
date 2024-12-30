@@ -92,7 +92,7 @@ export default async function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.webp" />
 
         <title>{title}</title>
         <meta name="title" content={title} />
@@ -101,6 +101,9 @@ export default async function RootLayout({ children, params: { locale } }) {
           name="keywords"
           content={locale == "ar" ? arKeywords : enKeywords}
         />
+        <meta property="og:image" content="/logo.webp" />
+        <meta property="og:image:alt" content="Property Search Logo Image" />
+
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {/* <!-- twitter --> */}

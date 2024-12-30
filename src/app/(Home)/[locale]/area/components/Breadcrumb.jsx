@@ -21,7 +21,7 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
           height={130}
           src={image}
           style={{ borderRadius: "50%", objectFit: "cover" }}
-          alt="agents"
+          alt={`agents ${locale == "ar" ? data?.nameAr : data?.nameEn}`}
           loading="lazy"
 
         />

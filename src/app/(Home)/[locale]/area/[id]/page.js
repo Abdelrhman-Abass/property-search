@@ -93,7 +93,7 @@ const Area = async ({ params }) => {
                   height={120}
                   className="img-1 spin-right"
                   src="/images/about/element-12.webp"
-                  alt="agents"
+                  alt="agents About animation 12"
                   loading="lazy"
 
                 />
@@ -102,7 +102,7 @@ const Area = async ({ params }) => {
                   height={11}
                   className="img-2 bounce-x"
                   src="/images/about/element-13.webp"
-                  alt="agents"
+                  alt="agents About animation 13"
                   loading="lazy"
 
                 />
@@ -111,7 +111,7 @@ const Area = async ({ params }) => {
                   height={49}
                   className="img-3 bounce-y"
                   src="/images/about/element-11.webp"
-                  alt="agents"
+                  alt="agents About animation 11"
                   loading="lazy"
 
                 />

@@ -30,7 +30,7 @@ const MobileMenu = () => {
                 />
               </p>
               <Link className="mobile_logo" href={"/"}>
-                <Image width={130} height={50} src="/logo.webp" alt="logo"  loading="lazy"/>
+                <Image width={130} height={50} src="/logo.webp" alt="Property search logo"  loading="lazy"/>
               </Link>
               <SwitchLang />
             </div>
@@ -54,7 +54,7 @@ const MobileMenu = () => {
               <span className="far fa-times"></span>
             </div>
             <div className="sidebar-logo">
-              <Image width={130} height={50} src="/logo.webp" alt="logo" loading="lazy" />
+              <Image width={130} height={50} src="/logo.webp" alt=" property search logo" loading="lazy" />
             </div>
           </div>
           {/* End header */}

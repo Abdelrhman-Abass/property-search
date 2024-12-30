@@ -58,7 +58,7 @@ const FloorPlans = ({
                         <span>
                           <Image
                             src="/blueprint-scheme.webp"
-                            alt="scheme"
+                            alt={` ${title} scheme`}
                             width={24}
                             height={24}
                             loading="lazy"
@@ -81,7 +81,7 @@ const FloorPlans = ({
                         height={544}
                         className="w-100 h-100 cover"
                         src={imageSrc}
-                        alt="listing figureout"
+                        alt={` ${title} listing figureout`}
                         loading="lazy"
                       />
                     </div>

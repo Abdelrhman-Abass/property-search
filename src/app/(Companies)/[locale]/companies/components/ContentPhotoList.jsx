@@ -31,7 +31,7 @@ const ContentPhotoList = ({ company }) => {
                   ? `${imagePath}/${item.image}`
                   : photoPlcaHolder
               }
-              alt={`Photo ${item.id || index}`}
+              alt={`Photo ${locale === "ar" ? item.titleAR : item.titleEN}`}
               
               className="img-fluid rounded custom-height w-100 object-fit-cover"
             />

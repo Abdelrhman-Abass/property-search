@@ -51,7 +51,7 @@ const TopAreasList = ({ data = [] }) => {
                         height={200}
                         className="w-100 cover"
                         src={`${process.env.NEXT_PUBLIC_AREAS_IMAGE}/${image}`}
-                        alt="cities"
+                        alt={`${nameAR}`}
                         loading="lazy"
                       />
                     </div>

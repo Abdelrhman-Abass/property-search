@@ -40,7 +40,7 @@ const Blog = ({ blog }) => {
           priority
           className="w-100 cover"
           src={imagePath}
-          alt="blog"
+          alt={`blog ${titleAR}`}
           loading="eager"
         />
       </div>

@@ -22,7 +22,7 @@ const Banner = ({ data }) => {
               height={215}
               className="w-100 h-100 cover"
               src={imagePath}
-              alt={"banner"}
+              alt={"Home banner"}
               
               loading="lazy"
             />   

@@ -22,7 +22,7 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
             height={172}
             src={logo}
             style={{ borderRadius: "50%", objectFit: "cover" }}
-            alt="developer-logo"
+            alt={`${locale == "ar" ? data?.developerNameAR : data?.developerNameEN}-logo`}
             loading="lazy"
 
           />

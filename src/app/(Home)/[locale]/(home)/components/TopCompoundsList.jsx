@@ -51,7 +51,7 @@ const TopCompoundsList = ({ data }) => {
                         width={220}
                         height={200}
                         className="cover"
-                        alt="apartment city"
+                        alt={`apartment ${nameAR} city`}
                         src={`${process.env.NEXT_PUBLIC_COMPOUNDS_IMAGE}/${defaultMediaPath}`}
                         loading="lazy"
                       />
