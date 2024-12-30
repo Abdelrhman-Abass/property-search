@@ -9,6 +9,8 @@ import { ApiGetter } from "@/services/ApiGetter";
 import { notFound } from "next/navigation";
 import Recommended from "./components/RecommendedList";
 import ContactUs from "@/layout/contact/ContactUs";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
+
 
 async function getPropertyDetails(id) {
   return await ApiGetter({ url: `/api/Property/${id}` });
@@ -106,6 +108,8 @@ const Property = async ({ params }) => {
             areaId={propertyData.areaId}
             price={propertyData.price}
           />
+          <WhatsAppButton data={propertyData?.titleAR} />
+
         </div>
       </section>
     </>

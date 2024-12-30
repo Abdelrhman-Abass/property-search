@@ -16,7 +16,6 @@ const Properties = async ({ propertyData, title, searchParams }) => {
   //   url: `/api/PropertySearch/search?CompoundId=${id}&${queryString}&pageSize=${pageSize}`,
   // });
   const properties = propertyData?.data;
-  console.log(properties)
 
   return (
     <>

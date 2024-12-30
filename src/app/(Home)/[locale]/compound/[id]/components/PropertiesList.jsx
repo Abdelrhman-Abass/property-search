@@ -6,7 +6,6 @@ import MainList from "@/layout/main/MainList";
 
 const PropertiesList = ({ title, data, pageSize, totalRecords }) => {
   const scrollToSectionRef = useRef();
-  console.log(data)
   return (
     <div ref={scrollToSectionRef}>
       <MainList

@@ -77,7 +77,6 @@ const Compound = async ({ params, searchParams }) => {
   if (!data || !data?.data) {
     return notFound();
   }
-  console.log(property?.data)
   const compoundData = data?.data || {};
   const title =
     params.locale == "ar"
