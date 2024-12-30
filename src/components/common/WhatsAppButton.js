@@ -26,8 +26,8 @@ const WhatsAppButton = ({ data }) => {
         <Link href={whatsappUrl} passHref>
           <button className="contact-button whatsapp" aria-label="Whats app buuton" target="_blank" rel="noopener noreferrer">
             {/* <i className="fab fa-whatsapp"></i> */}
-            <FontAwesomeIcon icon="fab fa-whatsapp" />
-          </button>
+            <FontAwesomeIcon icon="fa-brands fa-whatsapp" />          
+            </button>
         </Link>
 
         {/* Phone Button */}
