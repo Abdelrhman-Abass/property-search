@@ -52,7 +52,7 @@ export default function BlogHead({ blog }) {
                   height={400}
                   priority
                   loading="eager"
-                  style={{ borderRadius: 10 , objectFit:cover }}
+                  style={{ borderRadius: 10 , objectFit:"cover" }}
                   className="w-100 con"
                   src={imagePath}
                   alt={blog?.titleAR}
@@ -70,7 +70,7 @@ export default function BlogHead({ blog }) {
                     height={400}
                     priority
                     loading="eager"
-                    style={{ borderRadius: 10 , objectFit:cover }}
+                    style={{ borderRadius: 10 , objectFit:"cover" }}
                     className="w-100 con"
                     src={imagePath}
                     alt={blog?.titleAR}
