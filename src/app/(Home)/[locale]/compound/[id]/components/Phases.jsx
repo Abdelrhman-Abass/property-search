@@ -1,6 +1,7 @@
 import ApartmentTypes from "@/components/home/ApartmentTypes";
 import { useLocale } from "next-intl";
 import React from "react";
+import { GoArrowUpLeft, GoArrowUpRight } from "react-icons/go";
 
 const Phases = () => {
   const locale = useLocale();
@@ -23,7 +24,8 @@ const Phases = () => {
                     locale == "ar" ? "rotate180" : ""
                   } apartment-type2-prev__active swiper_button `}
                 >
-                  <i className="far fa-arrow-left-long" />
+                  <GoArrowUpLeft style={{fontSize:22}} />          
+
                 </button>
               </div>
               <div className="col-auto">
@@ -36,7 +38,8 @@ const Phases = () => {
                     locale == "ar" ? "rotate180" : ""
                   } apartment-type2-next__active swiper_button `}
                 >
-                  <i className="far fa-arrow-right-long" />
+                  <GoArrowUpRight style={{fontSize:22}} />          
+
                 </button>
               </div>
             </div>

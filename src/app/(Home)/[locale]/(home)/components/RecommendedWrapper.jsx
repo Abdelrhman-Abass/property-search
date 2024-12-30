@@ -3,6 +3,8 @@ import { useLocale } from "next-intl";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+
 // import Card from "./Card";
 import MainCard from "@/layout/main/MainCard";
 
@@ -54,7 +56,8 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
             } featured-next__active swiper_button _next areas`}
             aria-label="Recommended Warapper"
           >
-            <i className="far fa-chevron-left" />
+          <FaAngleRight style={{fontSize:25}} />          
+
           </button>
           <button
             className={`${
@@ -63,7 +66,8 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
             aria-label="Recommended Warapper Change"
 
           >
-            <i className="far fa-chevron-right" />
+            <FaAngleLeft style={{fontSize:25}} />          
+
           </button>
         </>
       )}

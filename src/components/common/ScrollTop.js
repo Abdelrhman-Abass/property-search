@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { FaAngleUp } from "react-icons/fa";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,8 @@ export default function ScrollToTop() {
         style={{ cursor: "pointer" }}
         onClick={scrollToTop}
       >
-        <i className="fas fa-angle-up"></i>
+        <FaAngleUp style={{fontSize:30 , marginTop:-10 }} />          
+
       </button>
       )}
       {/* <WhatsAppButton/> */}

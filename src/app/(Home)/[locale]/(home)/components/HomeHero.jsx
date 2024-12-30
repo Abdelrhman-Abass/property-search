@@ -17,7 +17,7 @@ const HomeHero = ({ data }) => {
         src="/slider.webp"
         alt="Home Background Image"
         width={1920}
-
+        height={920}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
         quality={80}
         priority

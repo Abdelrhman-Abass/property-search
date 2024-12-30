@@ -3,6 +3,7 @@ import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaWhatsapp ,FaPhoneAlt , FaVideo} from "react-icons/fa";
 
 const Blog = ({ blog }) => {
   const locale = useLocale();
@@ -53,7 +54,7 @@ const Blog = ({ blog }) => {
           <span className="day">{blogDate.day}</span>
         </div>
         
-        <h6 className="title mt20 truncate-text" style={{height:50}}>
+        <h6 className="title mt20 truncate-text" style={{height:45}}>
           <Link href={`/${locale}/blog/${id}`}>
             {locale == "ar" ? titleAR : titleEN}
           </Link>
@@ -88,7 +89,7 @@ const Blog = ({ blog }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-whatsapp"></i>
+              <FaWhatsapp style={{fontSize:25}} />          
               <span className="mx10"> {locale == "ar" ? " واتساب" : "WhatsApp"}</span>
             </button>
           </Link>
@@ -101,7 +102,7 @@ const Blog = ({ blog }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fas fa-phone"></i>
+              <FaPhoneAlt style={{fontSize:20}} />          
               <span className="mx10"> {locale == "ar" ? " اتصل" : "Call"}</span>
             </button>
           </Link>
@@ -114,7 +115,7 @@ const Blog = ({ blog }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fas fa-video"></i>
+              <FaVideo style={{fontSize:25}} />          
               <span className="mx10"> {locale == "ar" ? " زووم" : "Zoom"}</span>
 
             </button>

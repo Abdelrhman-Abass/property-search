@@ -1,6 +1,7 @@
 "use client";
 import {Link} from "@/routing";
 import { usePathname } from "next/navigation";
+import { GoArrowUpRight } from "react-icons/go";
 
 if (typeof window !== "undefined") {
   import("bootstrap");
@@ -25,7 +26,8 @@ export default function ErrorPage() {
 
               <Link href="/" className="ud-btn btn-dark mt10">
                 {isEn ? "Home" : "الرئيسية"}
-                <i className="fal fa-arrow-right-long" />
+                <GoArrowUpRight style={{fontSize:30}} />          
+
               </Link>
             </div>
           </div>

@@ -5,6 +5,8 @@ import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { MdArrowDropDown, MdArrowLeft, MdArrowRight } from "react-icons/md";
+import { TiMinus } from "react-icons/ti";
 
 export default function BlogHead({ blog }) {
   const locale = useLocale();
@@ -118,9 +120,8 @@ export default function BlogHead({ blog }) {
                         className="collapse-toggle"
                         onClick={() => toggleCollapse(index)}
                       >
-                        {openIndex === index ? <i className="fa fa-sm fa-caret-down"></i> :
-
-                          locale === "ar" ? <i class="fa fa-sm fa-caret-left" aria-hidden="true"></i> : <i class="fa fa-sm fa-caret-right" aria-hidden="true"></i>
+                        {openIndex === index ? <MdArrowDropDown />:
+                          locale === "ar" ? <MdArrowLeft /> : <MdArrowRight />
 
                         } {locale == "ar" ? item.typeNameAR : item.typeNameEN}
                       </div>
@@ -137,8 +138,8 @@ export default function BlogHead({ blog }) {
                           textAlign: locale == "ar" ? "right" : "left",
                         }}
                       >
-                        <p style={{ textAlign: locale == "ar" ? "right" : "left" }}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  السعر : " : "  Price : "} {Intl.NumberFormat('fr-FR').format(item.price)}</p>
-                        <p style={{ textAlign: locale == "ar" ? "right" : "left" }}><i class="fa fa-sm fa-minus" aria-hidden="true"></i>{locale == "ar" ? "  المساحه : " : "  Space : "} {Intl.NumberFormat('fr-FR').format(item.area)} {locale == "ar" ? " م" : "m"}</p>
+                        <p style={{ textAlign: locale == "ar" ? "right" : "left" }}><TiMinus style={{marginTop:-5}} />{locale == "ar" ? "  السعر : " : "  Price : "} {Intl.NumberFormat('fr-FR').format(item.price)}</p>
+                        <p style={{ textAlign: locale == "ar" ? "right" : "left" }}><TiMinus style={{marginTop:-5}} />{locale == "ar" ? "  المساحه : " : "  Space : "} {Intl.NumberFormat('fr-FR').format(item.area)} {locale == "ar" ? " م" : "m"}</p>
                         {/* <p><i class="fa fa-sm fa-minus" aria-hidden="true"></i> {item.content.line2}</p> */}
                       </div>
                     </div>

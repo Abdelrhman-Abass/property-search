@@ -3,6 +3,7 @@ import {Link} from "@/routing";
 import Image from "next/image";
 import SwitchLang from "../SwitchLang";
 import { useLocale, useTranslations } from "next-intl";
+import { IoCloseSharp } from "react-icons/io5";
 
 const MobileMenu = () => {
   const local = useLocale();
@@ -51,7 +52,8 @@ const MobileMenu = () => {
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             >
-              <span className="far fa-times"></span>
+              <IoCloseSharp style={{fontSize:25}} />          
+
             </div>
             <div className="sidebar-logo">
               <Image width={130} height={50} src="/logo.webp" alt=" property search logo" loading="lazy" />

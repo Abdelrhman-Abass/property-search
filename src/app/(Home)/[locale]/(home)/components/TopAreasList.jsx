@@ -4,6 +4,9 @@ import {Link} from "@/routing";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { GoArrowUpRight } from "react-icons/go";
+
 
 const TopAreasList = ({ data = [] }) => {
   const t = useTranslations("home");
@@ -70,7 +73,8 @@ const TopAreasList = ({ data = [] }) => {
                       <div className="bottom-area">
                         <div className="ud-btn2 d-flex item-center gap-2">
                           <span>{t("seeDetails")}</span>
-                          <i className="fal fa-arrow-right-long" />
+                          <GoArrowUpRight style={{fontSize:22}} />          
+
                         </div>
                       </div>
                     </div>
@@ -89,7 +93,9 @@ const TopAreasList = ({ data = [] }) => {
         aria-label="Top Areas"
 
       >
-        <i className="far fa-chevron-left" />
+        <FaAngleRight style={{fontSize:25}} />          
+
+
       </button>
       {/* End prev */}
       <button
@@ -99,7 +105,8 @@ const TopAreasList = ({ data = [] }) => {
         aria-label="Top Areas Right"
 
       >
-        <i className="far fa-chevron-right" />
+        <FaAngleLeft style={{fontSize:25}} />          
+
       </button>
     </>
   );

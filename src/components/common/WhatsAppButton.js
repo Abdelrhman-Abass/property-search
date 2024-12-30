@@ -5,7 +5,7 @@ import { useData } from "../../context/index";
 import AdvanceFilterModal from '@/layout/advance-search';
 import ContactPopForm from './ContactPopForm';
 import StickyNotification from './ContactForm';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaWhatsapp ,FaPhoneAlt , FaVideo} from "react-icons/fa";
 
 const WhatsAppButton = ({ data }) => {
   const { appSettings } = useData();
@@ -25,15 +25,15 @@ const WhatsAppButton = ({ data }) => {
         {/* WhatsApp Button */}
         <Link href={whatsappUrl} passHref>
           <button className="contact-button whatsapp" aria-label="Whats app buuton" target="_blank" rel="noopener noreferrer">
-            {/* <i className="fab fa-whatsapp"></i> */}
-            <FontAwesomeIcon icon="fa-brands fa-whatsapp" />          
+            <FaWhatsapp style={{fontSize:25}} />          
             </button>
         </Link>
 
         {/* Phone Button */}
         <Link href={phoneUrl} passHref>
           <button className="contact-button phone" aria-label="Call Phone" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-phone"></i>
+            <FaPhoneAlt style={{fontSize:23}} />          
+
           </button>
         </Link>
 
@@ -47,7 +47,7 @@ const WhatsAppButton = ({ data }) => {
             type="button"
             rel="noopener noreferrer"
             onClick={() => setOpen(true)}>
-            <i className="fas fa-video"></i>
+            <FaVideo style={{fontSize:25}} />          
 
           </button>
 

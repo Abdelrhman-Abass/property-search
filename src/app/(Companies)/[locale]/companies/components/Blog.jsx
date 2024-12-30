@@ -3,6 +3,8 @@ import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaWhatsapp ,FaPhoneAlt , FaVideo} from "react-icons/fa";
+
 
 const Blog = ({ blog }) => {
   const locale = useLocale();
@@ -71,7 +73,7 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
               aria-label="Whats app contact"
             >
-              <i className="fab fa-whatsapp"></i>
+              <FaWhatsapp style={{fontSize:25}} />          
               <span className="mx10">واتساب</span>
             </button>
           </Link>
@@ -84,7 +86,8 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
               aria-label="phone calls"
             >
-              <i className="fas fa-phone"></i>
+              <FaPhoneAlt style={{fontSize:20}} />          
+
               <span className="mx10">اتصل</span>
             </button>
           </Link>
@@ -97,7 +100,8 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
               aria-label="Zoom meetings"
             >
-              <i className="fas fa-video"></i>
+              <FaVideo style={{fontSize:25}} />          
+
               <span className="mx10">زووم</span>
 
             </button>

@@ -4,7 +4,7 @@ import HeroHeaderGallery from "@/layout/HeroHeaderGallery";
 import About from "@/layout/About";
 import Map from "@/layout/Map";
 import FloorPlans from "@/layout/FloorPlans";
-import Phases from "./components/Phases";
+// import Phases from "./components/Phases";
 import Properties from "./@List/page";
 import { notFound } from "next/navigation";
 import ContactUs from "@/layout/contact/ContactUs";

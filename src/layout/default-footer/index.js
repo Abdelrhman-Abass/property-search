@@ -2,11 +2,9 @@
 import Image from "next/image";
 import {Link} from "@/routing";
 import ContactMeta from "./ContactMeta";
-import Social from "./Social";
-import MenuWidget from "./MenuWidget";
+
 import Copyright from "./Copyright";
 import { useData } from "@/context";
-import { useLocale } from "next-intl";
 
 const Footer = ({ children }) => {
   const { appSettings } = useData();

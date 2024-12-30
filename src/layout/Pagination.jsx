@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 const Pagination = ({
   totalPages = 1,
@@ -32,7 +33,8 @@ const Pagination = ({
           onClick={handlePrevious}
           disabled={currentPage === 1}
         >
-          <span className="fas fa-angle-left" />
+          <FaAngleRight style={{fontSize:25}} />          
+
         </button>
       </li>
     );
@@ -59,7 +61,8 @@ const Pagination = ({
           onClick={handleNext}
           disabled={currentPage === totalPages}
         >
-          <span className="fas fa-angle-right" />
+          <FaAngleLeft style={{fontSize:25}} />          
+
         </button>
       </li>
     );

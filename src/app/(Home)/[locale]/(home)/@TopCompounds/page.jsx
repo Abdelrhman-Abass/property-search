@@ -9,7 +9,7 @@ const HomeTopCompounds = async () => {
     take: 10,
   });
 
-  return <TopCompounds data={data} />;
+  return data ? <TopCompounds data={data} />: null ;
 };
 
 export default HomeTopCompounds;

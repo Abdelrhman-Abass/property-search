@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { useTranslations } from "next-intl";
 import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Form = ({ id, type = 0 }) => {
   const t = useTranslations("global");
@@ -178,7 +179,8 @@ const Form = ({ id, type = 0 }) => {
                     <span className="sr-only">Loading...</span>
                   </div>
                 ) : (
-                  <i className="fal fa-arrow-right-long" />
+                  <GoArrowUpRight style={{fontSize:22}} />          
+
                 )}
               </button>
             </div>

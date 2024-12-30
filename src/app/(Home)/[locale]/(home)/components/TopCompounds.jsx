@@ -3,6 +3,7 @@ import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import TopCompoundsList from "./TopCompoundsList";
 import ErrorMessage from "@/components/Error/ErrorMessage";
+import { GoArrowUpLeft, GoArrowUpRight } from "react-icons/go";
 
 const TopCompounds = ({ data }) => {
   const t = useTranslations("home");
@@ -27,7 +28,8 @@ const TopCompounds = ({ data }) => {
                       local == "en" ? "rotate180" : ""
                     } apartment-type2-next__active swiper_button `}
                   >
-                    <i className="far fa-arrow-right-long" />
+                    <GoArrowUpRight style={{fontSize:22}} />          
+
                   </button>
                 </div>
                 {/* End Next */}
@@ -42,7 +44,8 @@ const TopCompounds = ({ data }) => {
                       local == "en" ? "rotate180" : ""
                     } apartment-type2-prev__active swiper_button`}
                   >
-                    <i className="far fa-arrow-left-long" />
+                    <GoArrowUpLeft style={{fontSize:22}} />          
+
                   </button>
                 </div>
                 {/* End prev */}
