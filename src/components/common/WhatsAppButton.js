@@ -5,6 +5,7 @@ import { useData } from "../../context/index";
 import AdvanceFilterModal from '@/layout/advance-search';
 import ContactPopForm from './ContactPopForm';
 import StickyNotification from './ContactForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const WhatsAppButton = ({ data }) => {
   const { appSettings } = useData();
@@ -24,7 +25,8 @@ const WhatsAppButton = ({ data }) => {
         {/* WhatsApp Button */}
         <Link href={whatsappUrl} passHref>
           <button className="contact-button whatsapp" aria-label="Whats app buuton" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-whatsapp"></i>
+            {/* <i className="fab fa-whatsapp"></i> */}
+            <FontAwesomeIcon icon="fab fa-whatsapp" />
           </button>
         </Link>
 
