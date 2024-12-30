@@ -17,6 +17,22 @@ export async function generateMetadata({ params }) {
   });
   const title = compundData?.data?.seoTitle;
   const description = compundData?.data?.seoDescription;
+  let keywords = "";
+  if (compundData?.data?.seoMetaTags) {
+    // Check if seoMetaTags is a string
+    if (typeof compundData?.data?.seoMetaTags === "string") {
+      try {
+        // Try to parse the string into an array and join it if it's a valid JSON string
+        keywords = JSON.parse(compundData?.data?.seoMetaTags).join(", ");
+      } catch (error) {
+        // If parsing fails, assume it's already a string
+        keywords = compundData?.data?.seoMetaTags;
+      }
+    } else if (Array.isArray(compundData?.data?.seoMetaTags)) {
+      // If it's an array, join the items
+      keywords = compundData?.data?.seoMetaTags.join(", ");
+    }
+  }
   const image =
     compundData?.data?.mediaPaths?.length > 0
       ? process.env.NEXT_PUBLIC_COMPOUNDS_IMAGE +
@@ -25,13 +41,16 @@ export async function generateMetadata({ params }) {
   let seoResult = {
     title,
     description,
+    keywords,
     openGraph: {
       title,
       description,
+      keywords,
     },
     twitter: {
       title,
       description,
+      keywords,
     },
   };
   if (image) {

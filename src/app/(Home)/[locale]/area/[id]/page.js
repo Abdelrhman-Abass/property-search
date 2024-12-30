@@ -19,18 +19,36 @@ export async function generateMetadata({ params }) {
   const image = areaDetails?.data?.image
     ? process.env.NEXT_PUBLIC_AREAS_IMAGE + `/${areaDetails?.data?.image}`
     : "";
-
+  let keywords = "";
+  if (areaDetails?.data?.seoMetaTags) {
+    // Check if seoMetaTags is a string
+    if (typeof areaDetails?.data?.seoMetaTags === "string") {
+      try {
+        // Try to parse the string into an array and join it if it's a valid JSON string
+        keywords = JSON.parse(areaDetails?.data?.seoMetaTags).join(", ");
+      } catch (error) {
+        // If parsing fails, assume it's already a string
+        keywords = areaDetails?.data?.seoMetaTags;
+      }
+    } else if (Array.isArray(areaDetails?.data?.seoMetaTags)) {
+      // If it's an array, join the items
+      keywords = areaDetails?.data?.seoMetaTags.join(", ");
+    }
+  }
   let seoResult = {
     title,
     description,
+    keywords,
     openGraph: {
       title,
       description,
+      keywords,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      keywords,
     },
   };
   if (image) {
@@ -55,7 +73,7 @@ const Area = async ({ params }) => {
     return notFound();
   }
   return (
-    <section className="agent-single pt60 pt0-sm pb-0 ">
+    <section className="agent-single pt60 pt0-md pb-0 ">
       <AboutCompounds
         title={
           params.locale == "ar"
@@ -68,7 +86,7 @@ const Area = async ({ params }) => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-7">
-              <Breadcrumb data={areaDetails?.data} colorWhite={false}/>
+              <Breadcrumb data={areaDetails?.data} colorWhite={false} />
               <div className="img-box-12 position-relative d-none d-xl-block">
                 <Image
                   width={120}

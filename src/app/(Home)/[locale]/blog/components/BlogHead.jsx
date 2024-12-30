@@ -56,7 +56,6 @@ export default function BlogHead({ blog }) {
                   className="w-100 con"
                   src={imagePath}
                   alt={blog?.titleAR}
-                  layout="responsive"
                 />
               </div>
             </div>
@@ -74,7 +73,6 @@ export default function BlogHead({ blog }) {
                     className="w-100 con"
                     src={imagePath}
                     alt={blog?.titleAR}
-                    layout="responsive"
                   />
                 </div>
               </div>

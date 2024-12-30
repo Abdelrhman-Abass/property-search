@@ -17,6 +17,7 @@ export async function generateMetadata({ params }) {
     params.locale == "ar"
       ? aboutData?.data?.shortDescriptionAR
       : aboutData?.data?.shortDescriptionEN;
+  
   const image = aboutData?.data?.image;
 
   return {

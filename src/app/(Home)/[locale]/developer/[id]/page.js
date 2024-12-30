@@ -58,7 +58,7 @@ const Developer = async ({ params }) => {
   }
 
   return (
-    <section className="agent-single pt60 pt10-sm pb-0">
+    <section className="agent-single pt60 pt0-md pb-0">
       <div className="cta-agent bgc-dark mx-auto maxw1600 pt60 pb60 bdrs12 position-relative mx20-lg">
         <div className="container">
           <div className="row align-items-center">
