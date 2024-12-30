@@ -53,7 +53,7 @@ const Blog = ({ blog }) => {
           <span className="day">{blogDate.day}</span>
         </div>
         
-        <h6 className="title mt20 truncate-text" style={{height:45}}>
+        <h6 className="title mt20 truncate-text" style={{height:50}}>
           <Link href={`/${locale}/blog/${id}`}>
             {locale == "ar" ? titleAR : titleEN}
           </Link>
@@ -89,7 +89,7 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
             >
               <i className="fab fa-whatsapp"></i>
-              <span className="mx10">واتساب</span>
+              <span className="mx10"> {locale == "ar" ? " واتساب" : "WhatsApp"}</span>
             </button>
           </Link>
 
@@ -102,7 +102,7 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
             >
               <i className="fas fa-phone"></i>
-              <span className="mx10">اتصل</span>
+              <span className="mx10"> {locale == "ar" ? " اتصل" : "Call"}</span>
             </button>
           </Link>
 
@@ -115,7 +115,7 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
             >
               <i className="fas fa-video"></i>
-              <span className="mx10">زووم</span>
+              <span className="mx10"> {locale == "ar" ? " زووم" : "Zoom"}</span>
 
             </button>
           </Link>

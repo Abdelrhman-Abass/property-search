@@ -20,12 +20,6 @@ export default function BlogHead({ blog }) {
     }
   };
 
-  const fakeData = [
-    { id: 1, title: "Unit 1", content: { line1: "Detail 1A", line2: "Detail 1B" } },
-    { id: 2, title: "Unit 2", content: { line1: "Detail 2A", line2: "Detail 2B" } },
-    { id: 3, title: "Unit 3", content: { line1: "Detail 3A", line2: "Detail 3B" } },
-  ];
-
 
   return (
     <>
@@ -35,11 +29,7 @@ export default function BlogHead({ blog }) {
             <h2 className="blog-title">
               {locale == "ar" ? blog?.titleAR : blog?.titleEN}
             </h2>
-            {/* <p className="m--1 ff-heading">
-              {locale == "ar"
-                ? blog?.shortDescriptionAR
-                : blog?.shortDescriptionEN}
-            </p> */}
+            
             <div className="blog-single-meta">
               <div className="post-author d-sm-flex align-items-center">
                 <Link href="#" className="ml15">{blogDate?.fullDate}</Link>
@@ -62,10 +52,11 @@ export default function BlogHead({ blog }) {
                   height={400}
                   priority
                   loading="eager"
-                  style={{ borderRadius: 10 }}
+                  style={{ borderRadius: 10 , objectFit:cover }}
                   className="w-100 con"
                   src={imagePath}
                   alt={blog?.titleAR}
+                  layout="responsive"
                 />
               </div>
             </div>
@@ -79,10 +70,11 @@ export default function BlogHead({ blog }) {
                     height={400}
                     priority
                     loading="eager"
-                    style={{ borderRadius: 10 }}
+                    style={{ borderRadius: 10 , objectFit:cover }}
                     className="w-100 con"
                     src={imagePath}
                     alt={blog?.titleAR}
+                    layout="responsive"
                   />
                 </div>
               </div>
