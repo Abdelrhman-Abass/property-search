@@ -30,6 +30,7 @@ const nextConfig = {
       },
     ];
   },
+  
   webpack(config) {
     // Example of customizing Webpack if needed
     config.resolve.fallback = {
@@ -44,7 +45,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=7200, stale-while-revalidate=7200",
+            value: "public, max-age=1, stale-while-revalidate=1",
           },
         ],
       },

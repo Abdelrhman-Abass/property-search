@@ -103,13 +103,13 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
                     {({ ref, open }) => (
                       <Image
                         src={`${image}/${mediaPaths[0]}`}
-                        width={590}
-                        height={510}
+                        width={490}
+                        height={210}
                         ref={ref}
                         onClick={open}
                         alt={`${title}-image`}
                         role="button"
-                        className="w-100 h-100 cover"
+                        className=" cover"
                       />
                     )}
                   </Item>

@@ -87,6 +87,7 @@ const StickyNotification = () => {
       {/* Sticky Notification */}
       {isNotificationVisible && (
         <div
+          className="animate-up-5"
           style={{
             position: "fixed",
             bottom: "70px",

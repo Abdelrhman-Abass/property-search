@@ -8,11 +8,11 @@ const Hero = ({ data }) => {
   return (
     <>
       <div className="inner-banner-style1 text-center">
-        <h2 className="hero-title animate-up-2">
+        <h1 className="hero-title animate-up-2">
           {locale === "ar"
             ? data.titleAR || t("urHome")
             : data.titleEN || t("urHome")}
-        </h2>
+        </h1>
         <p className="hero-text fz15 animate-up-3">
           {locale === "ar"
             ? data.shortDescriptionAR || t("large")

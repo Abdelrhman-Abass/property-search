@@ -13,7 +13,7 @@ const About = ({ developer, id }) => {
       : developer?.developerDescriptionEN;
 
   return (
-    <div className="container">
+    <div className="container mb100 mb0-md">
       <div className="row wow fadeInUp" data-aos-delay="300">
         <div className="col-lg-8 pr40 pr20-lg">
           <div className="row">

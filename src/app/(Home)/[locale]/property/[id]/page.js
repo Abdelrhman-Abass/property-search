@@ -96,7 +96,7 @@ const Property = async ({ params }) => {
               />
               <FloorPlans
                 masterPlanImage={`${process.env.NEXT_PUBLIC_PROPERTIES_MASTER_IMAGE}/${propertyData?.masterPlanImage}`}
-                floorPlanImage={`${process.env.NEXT_PUBLIC_PROPERTIES_MASTER_IMAGE}/${propertyData?.floorPlanImage}`}
+                floorPlanImage={`${process.env.NEXT_PUBLIC_PROPERTIES_FLOOR_IMAGE}/${propertyData?.floorPlanImage}`}
                 isCompound={false}
               />
             </div>

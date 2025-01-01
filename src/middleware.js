@@ -1,4 +1,5 @@
 import createMiddleware from "next-intl/middleware";
+import { NextResponse } from 'next/server';
 
 export default createMiddleware({
   // A list of all locales that are supported

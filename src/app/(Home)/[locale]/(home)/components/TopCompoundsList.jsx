@@ -50,7 +50,7 @@ const TopCompoundsList = ({ data }) => {
                       <Image
                         width={220}
                         height={200}
-                        className="cover"
+                        className="cover w-100"
                         alt={`apartment ${nameAR} city`}
                         src={`${process.env.NEXT_PUBLIC_COMPOUNDS_IMAGE}/${defaultMediaPath}`}
                         loading="lazy"

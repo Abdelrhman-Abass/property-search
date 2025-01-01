@@ -8,7 +8,6 @@ const MainCard = ({ colstyle = false, data, type }) => {
   const h = useTranslations("home");
   const g = useTranslations("global");
   const locale = useLocale();
-  console.log(data)
   
   if (type == "compound") {
     let image;
@@ -28,7 +27,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
         >
           <Link href={`/compound/${data.id}`}>
             <div className="list-thumb">
-              <img
+              <Image
                 width={380}
                 height={250}
                 className="w-100 cover"
@@ -115,9 +114,11 @@ const MainCard = ({ colstyle = false, data, type }) => {
 
             <hr className="mt-2 mb-2" />
             <div className="list-meta2 d-flex justify-content-between align-items-center">
+			<Link href={`/developer/${data?.developerId}`}>
               <span className="for-what">
                 {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
               </span>
+			  </Link>
               <div className="icons d-flex align-items-center">
                 <Link href={`/developer/${data?.developerId}`}>
                   <span className="flaticon-fullscreen" />

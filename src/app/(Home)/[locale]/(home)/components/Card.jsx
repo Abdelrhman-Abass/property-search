@@ -50,9 +50,12 @@ const Data = ({ colstyle = false, data }) => {
           </div>
           <hr className="mt-2 mb-2" />
           <div className="list-meta2 d-flex justify-content-between align-items-center">
-            <span className="for-what">
-              {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
-            </span>
+		  <Link href={`/developer/${data?.developerId}`}>
+              <span className="for-what">
+                {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
+              </span>
+			  </Link>
+            
             <div className="icons d-flex align-items-center">
               <Link href={`/developer/${data?.developerID}`}>
                 <span className="flaticon-fullscreen" />

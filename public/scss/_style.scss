@@ -479,7 +479,7 @@ li {
     height: 35px;
     line-height: 40px;
     text-align: center;
-    width: 35px;
+    
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -487,7 +487,7 @@ li {
 }
 
 .listing-style1 .list-meta2 a:hover {
-    background-color: #f7f7f7;
+    
     color: var(--headings-color);
 }
 
@@ -843,6 +843,7 @@ li {
     .facilities .listing-style14 .list-meta p {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 }
 
@@ -1332,6 +1333,10 @@ li {
 }
 
 @media (max-width: 771px) {
+    
+    .home-banner-style1 {
+        height: 55vh;
+    }
     .home-banner-style1 .slider {
         display: none;
     }
@@ -1394,6 +1399,14 @@ li {
 @media (max-width: 767.98px) {
     .inner-banner-style1 .hero-title {
         font-size: 36px;
+    }
+}
+@media (max-width: 410.98px) {
+    .inner-banner-style1 {
+        margin-top: -60px;
+    }
+    .inner-banner-style1 .hero-title {
+        font-size: 25px;
     }
 }
 
@@ -1994,7 +2007,8 @@ section {
 
 .animate-up-2,
 .animate-up-3,
-.animate-up-4{
+.animate-up-4,
+.animate-up-5{
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-backface-visibility: visible !important;
@@ -2023,6 +2037,12 @@ section {
     animation-duration: 1.1s;
     -webkit-animation-delay: 1.1s;
     animation-delay: 1.1s;
+}
+.animate-up-5 {
+    -webkit-animation-duration: 1.1s;
+    animation-duration: 1.1s;
+    -webkit-animation-delay: 10.1s;
+    animation-delay: 10.1s;
 }
 
 

@@ -52,7 +52,7 @@ const ApartmentTypes = ({ data }) => {
                       width={220}
                       height={202}
                       // w-100 h-100
-                      className="cover"
+                      className="cover w-100"
                       src={apartment.imageSrc}
                       alt="apartment city"
                       loading="lazy"
