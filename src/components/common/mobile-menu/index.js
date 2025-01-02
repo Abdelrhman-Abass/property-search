@@ -52,7 +52,7 @@ const MobileMenu = () => {
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             >
-              <IoCloseSharp style={{fontSize:25}} />          
+              <IoCloseSharp className='fs25'  />          
 
             </div>
             <div className="sidebar-logo">

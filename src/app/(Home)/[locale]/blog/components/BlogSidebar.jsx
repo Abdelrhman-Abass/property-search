@@ -40,7 +40,7 @@ const BlogSidebar = () => {
             key={index}
           >
             <div className="news-img flex-shrink-0">
-              <Image width={90} height={80} src={post.image} alt="blog"  loading="lazy"/>
+              <Image width={90} height={80} src={post.image} alt="blog"   loading="lazy"/>
             </div>
             <div className="news-content flex-shrink-1 mx-3">
               <p className="new-text mb0 fz14">

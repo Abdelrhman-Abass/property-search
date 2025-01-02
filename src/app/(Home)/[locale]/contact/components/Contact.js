@@ -16,13 +16,13 @@ const Contact = () => {
     <>
       <section className="p-0">
         <iframe
-          className="home8-map contact-page"
+          className="home8-map contact-page border-0" 
           loading="lazy"
           src={mapSrc}
           title="Property Search Location"
           aria-label="Property Search Location"
           referrerPolicy="no-referrer-when-downgrade"
-          style={{ border: 0 }}
+          // style={{ border: 0 }}
           allowFullScreen
         ></iframe>
       </section>

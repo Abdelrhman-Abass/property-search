@@ -13,7 +13,8 @@ const CopyRight = () => {
           <p className="copyright-text text-gray ff-heading mb-0">
             ©{" "}
             <a
-              style={{ color: "inherit" }}
+              // style={{ color: "inherit" }}
+              className="text-reset"
             >
               Property Search
             </a>{" "}

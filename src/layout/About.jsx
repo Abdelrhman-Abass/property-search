@@ -99,7 +99,7 @@ const About = ({ data, isCompound }) => {
                       </span>
                     </div>
                     <div>
-                      <h5>ج {monthlyPayment} </h5>
+                      <h5> {monthlyPayment} </h5>
                       <span>
                         {locale == "ar"
                           ? "دفعة شهرية "

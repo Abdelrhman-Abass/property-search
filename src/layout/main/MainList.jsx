@@ -74,7 +74,7 @@ export default function MainList({
               <div className="col-lg-03 w-fit d-flex align-items-center justify-content-center">
                 <div className="page_control_shorting d-flex align-items-center justify-content-center justify-content-sm-end">
                   <div className="pcs_dropdown pr10 d-flex align-items-center">
-                    <span style={{ minWidth: "80px" }}>
+                    <span className="min80width">
                       {locale == "ar" ? "ترتيب حسب" : "Order by"}
                     </span>
                     <select
@@ -98,7 +98,7 @@ export default function MainList({
       </section>
       <section className="pt0 pb40">
         <div className="container">
-          <div className="row" style={{ rowGap: 32 }}>
+          <div className="row custom-row-gap">
             {!isLoading ? (
               data?.length ? (
                 data?.map((compound,idx) => (
@@ -122,8 +122,7 @@ export default function MainList({
                   {!networkError ? (
                     <button
                     aria-label=" Reset "
-                      style={{ width: "fit-content", marginTop: "-7px" }}
-                      className="advance-search-icon ud-btn btn-thm p-1 px-3"
+                      className="advance-search-icon ud-btn btn-thm p-1 px-3 network-error-button"
                       type="button"
                       onClick={onResetFetch}
                     >

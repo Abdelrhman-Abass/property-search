@@ -56,12 +56,12 @@ const Blog = ({ blog }) => {
         <p className="text mt-15 pb5 text-secondary">
           {locale == "ar" ? subTitleAR : subTitleEN}
         </p>
-        <h6 className="text truncate-text-three" style={{maxHeight:70}}>
+        <h6 className="text truncate-text-three max70-height" >
           {shortDescriptionAR || shortDescriptionEN ? (
             (locale == "ar" ? shortDescriptionAR : shortDescriptionEN)
 
           ):(
-            <div style={{maxHeight:70}}></div>
+            <div className="max70-height"></div>
           )}
         </h6>
         <div className="contact-buttons-blog-out pt20">
@@ -73,7 +73,7 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
               aria-label="Whats app contact"
             >
-              <FaWhatsapp style={{fontSize:25}} />          
+              <FaWhatsapp className="fs25" />          
               <span className="mx10">واتساب</span>
             </button>
           </Link>
@@ -86,21 +86,24 @@ const Blog = ({ blog }) => {
               rel="noopener noreferrer"
               aria-label="phone calls"
             >
-              <FaPhoneAlt style={{fontSize:20}} />          
+              <FaPhoneAlt className="fs20" />          
 
               <span className="mx10">اتصل</span>
             </button>
           </Link>
 
           {/* Video Call Button */}
-          <Link href={videoCallUrl} passHref>
+          <Link href="#" passHref>
             <button
-              className="contact-button-blog-out video"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Zoom meetings"
+             className="contact-button-blog-out video"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="open toogle"
+             type="button"
+             data-bs-toggle="modal"
+             data-bs-target="#contactPopFprm"
             >
-              <FaVideo style={{fontSize:25}} />          
+              <FaVideo className="fs25" />          
 
               <span className="mx10">زووم</span>
 

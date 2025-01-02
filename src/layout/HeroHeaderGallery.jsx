@@ -84,9 +84,9 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
         {mediaPathsLength > 0 && (
           <Gallery>
             <div
-              className={`col-12 col-md-${
+              className={`col-6 col-md-${
                 mediaPathsLength === 1
-                  ? "12"
+                  ? "6"
                   : mediaPathsLength === 3
                   ? "4"
                   : "6"
@@ -130,10 +130,9 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
                 >
                   {mediaPaths.slice(1, 5).map((img, index) => (
                     <div
-                      className={`col-${
+                      className={` heo-header-padding col-${
                         mediaPathsLength === 2 ? "12" : "6"
                       } ps-sm-0`}
-                      style={{ padding: "0 0.75rem" }}
                       key={index}
                     >
                       <div className="sp-img-content w-100 h-100">
@@ -186,7 +185,7 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
                     role="button"
                     src={`${image}/${img}`}
                     alt={`${title}-image`}
-                    style={{ display: "none" }}
+                    className="d-none"
                   />
                 )}
               </Item>

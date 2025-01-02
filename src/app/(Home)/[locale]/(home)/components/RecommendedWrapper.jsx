@@ -56,7 +56,7 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
             } featured-next__active swiper_button _next areas`}
             aria-label="Recommended Warapper"
           >
-          <FaAngleRight style={{fontSize:25}} />          
+          <FaAngleRight className="fs25" />          
 
           </button>
           <button
@@ -66,7 +66,7 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
             aria-label="Recommended Warapper Change"
 
           >
-            <FaAngleLeft style={{fontSize:25}} />          
+            <FaAngleLeft className="fs25" />          
 
           </button>
         </>

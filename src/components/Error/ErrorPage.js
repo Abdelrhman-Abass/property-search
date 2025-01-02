@@ -26,7 +26,7 @@ export default function ErrorPage() {
 
               <Link href="/" className="ud-btn btn-dark mt10">
                 {isEn ? "Home" : "الرئيسية"}
-                <GoArrowUpRight style={{fontSize:30}} />          
+                <GoArrowUpRight className='fs30'  />          
 
               </Link>
             </div>

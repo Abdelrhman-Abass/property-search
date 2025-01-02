@@ -20,7 +20,7 @@ const ContactMeta = ({ appSettings }) => {
       {contactInfoList.map((contact, index) => (
         <div className="col-auto" key={index}>
           <div className="contact-info">
-            <p className="info-title" style={{ textAlign: "center" }}>
+            <p className="info-title text-center" >
               {contact.title}
             </p>
             {contact.phone && (
@@ -29,7 +29,7 @@ const ContactMeta = ({ appSettings }) => {
               </h6>
             )}
             {contact.mail && (
-              <h6 className="info-phone text-center" style={{ color: "#fff" }}>
+              <h6 className="info-phone text-center text-white">
                 <Link href={contact.mailLink}>{contact.mail}</Link>
               </h6>
             )}

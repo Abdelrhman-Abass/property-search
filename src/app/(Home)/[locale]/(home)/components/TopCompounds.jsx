@@ -28,7 +28,7 @@ const TopCompounds = ({ data }) => {
                       local == "en" ? "rotate180" : ""
                     } apartment-type2-next__active swiper_button `}
                   >
-                    <GoArrowUpRight style={{fontSize:22}} />          
+                    <GoArrowUpRight className="fs22" />          
 
                   </button>
                 </div>
@@ -44,7 +44,7 @@ const TopCompounds = ({ data }) => {
                       local == "en" ? "rotate180" : ""
                     } apartment-type2-prev__active swiper_button`}
                   >
-                    <GoArrowUpLeft style={{fontSize:22}} />          
+                    <GoArrowUpLeft className="fs22" />          
 
                   </button>
                 </div>

@@ -13,8 +13,8 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
   return (
     <>
       <div
-        style={{ minHeight: 172 }}
-        className="agent-single d-sm-flex align-items-center gap-4"
+        // style={{ minHeight: 172 }}
+        className="agent-single d-sm-flex align-items-center gap-4 min172-height"
       >
         <div className="single-img mb30-sm">
           <Image
@@ -22,7 +22,8 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
             height={172}
             src={logo}
             quality={100}
-            style={{ borderRadius: "50%", objectFit: "cover" }}
+            // style={{ borderRadius: "50%", objectFit: "cover" }}
+            className=""
             alt={`${locale == "ar" ? data?.developerNameAR : data?.developerNameEN}-logo`}
             loading="lazy"
 

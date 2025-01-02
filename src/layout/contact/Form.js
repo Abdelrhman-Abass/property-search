@@ -138,8 +138,7 @@ const Form = ({ id, type = 0 }) => {
                 {t("msg")}
               </label>
               <textarea
-                style={{ height: "auto" }}
-                className={`form-control ${errors.message ? "border-red" : ""}`}
+                className={` h-auto form-control ${errors.message ? "border-red" : ""}`}
                 cols={30}
                 rows={6}
                 placeholder={t("msg")}
@@ -151,12 +150,8 @@ const Form = ({ id, type = 0 }) => {
             </div>
           </div>
           <ReCAPTCHA
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            className="mb10"
+            
+            className="mb10 d-flex align-items-center justify-content-center"
             ref={recaptcha}
             sitekey={process.env.NEXT_PUBLIC_KEY_CAPTCHA}
           />
@@ -172,14 +167,13 @@ const Form = ({ id, type = 0 }) => {
                 <span className="mx-1">{t("send")}</span>
                 {isLoading ? (
                   <div
-                    style={{ width: 16, height: 16, borderWidth: "0.15em " }}
-                    className="spinner-border text-light mx-2"
+                    className="spinner-border text-light mx-2 loading-form-content"
                     role="status"
                   >
                     <span className="sr-only">Loading...</span>
                   </div>
                 ) : (
-                  <GoArrowUpRight style={{fontSize:22}} />          
+                  <GoArrowUpRight className='fs22'  />          
 
                 )}
               </button>

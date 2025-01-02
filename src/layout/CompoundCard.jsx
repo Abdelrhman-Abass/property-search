@@ -24,6 +24,7 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
               src={data?.image}
               alt={`listings ${data?.title}`}
               loading="lazy"
+              layout="intrinsic"
             />
             <div className="list-price">
               {data?.price} {g("egp")}

@@ -22,7 +22,7 @@ const BlogContent = ({ contents = [] , questions= []}) => {
                 return type == 0 ? (
                   <div
                     key={order}
-                    className="ff-heading blog-description-background"
+                    className=" blog-description-background"
                     dangerouslySetInnerHTML={{
                       __html:
                         locale === "ar"
@@ -39,6 +39,7 @@ const BlogContent = ({ contents = [] , questions= []}) => {
                       alt="blog Content"
                       className="bdrs12 post-img-2 w-100 con  mt60 "
                       loading="lazy"
+                      
 
                     />
                   </>

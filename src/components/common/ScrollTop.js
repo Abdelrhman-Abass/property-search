@@ -32,11 +32,10 @@ export default function ScrollToTop() {
       {isVisible && (
       <button
       aria-label="Scroll button"
-        className="scrollToHome"
-        style={{ cursor: "pointer" }}
+        className="scrollToHome cursor-pointer"
         onClick={scrollToTop}
       >
-        <FaAngleUp style={{fontSize:30 , marginTop:-10 }} />          
+        <FaAngleUp className="scroll-top-icon" />          
 
       </button>
       )}

@@ -15,7 +15,7 @@ const Footer = () => {
             ©{" "}
             <Link
             href={"/"}
-              style={{ color: "inherit" }}
+              className="inherit-color"
             >
               Property Search
             </Link>{" "}

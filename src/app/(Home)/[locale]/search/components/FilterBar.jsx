@@ -30,8 +30,8 @@ const FilterBar = ({ setOrderBy, setSearchTerm, searchTerm, onSearch }) => {
       <div className="col-xl-8 d-flex align-items-center justify-content-between mb30 mt40">
         <div className="row gap-3">
           <div
-            style={{ width: "fit-content", padding: 0 }}
-            className="advance-search-field position-relative text-start "
+            // style={{ width: "fit-content", padding: 0 }}
+            className="advance-search-field position-relative text-start width-fit-content p-0"
           >
             <div className="form-search position-relative">
               <div className="box-search">
@@ -55,14 +55,15 @@ const FilterBar = ({ setOrderBy, setSearchTerm, searchTerm, onSearch }) => {
           </div>
           <button
           aria-label="Filter modal"
-            style={{
-              width: "fit-content",
-              display: "flex",
-              alignItems: "center",
-              gap: 4,
-              backgroundColor: "transparent",
-              border: "none",
-            }}
+            // style={{
+            //   width: "fit-content",
+            //   display: "flex",
+            //   alignItems: "center",
+            //   gap: 4,
+            //   backgroundColor: "transparent",
+            //   border: "none",
+            // }}
+            className="d-flex align-items-center gap-4 bg-transparent border-0 width-fit-content" 
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#searchModal"
@@ -73,8 +74,8 @@ const FilterBar = ({ setOrderBy, setSearchTerm, searchTerm, onSearch }) => {
           <button
             aria-label="Filter modal"
 
-            style={{ width: "fit-content" }}
-            className="advance-search-icon ud-btn btn-thm"
+            // style={{ width: "fit-content" }}
+            className="advance-search-icon ud-btn btn-thm width-fit-content"
             type="button"
             onClick={handleSubmitSearch}
           >
@@ -85,7 +86,7 @@ const FilterBar = ({ setOrderBy, setSearchTerm, searchTerm, onSearch }) => {
       <div className="col-xl-4 d-flex align-items-center justify-content-center mb30 mt40">
         <div className="page_control_shorting d-flex align-items-center justify-content-center justify-content-sm-end">
           <div className="pcs_dropdown pr10 d-flex align-items-center">
-            <span style={{ minWidth: "80px" }}>
+            <span  className="min80width">
               {locale == "ar" ? "ترتيب حسب" : "Order by"}
             </span>
             <select

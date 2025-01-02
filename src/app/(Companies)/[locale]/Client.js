@@ -27,7 +27,7 @@ export default function Client({ children }) {
 
   return (
     <DataProvider>
-      <div className="wrapper ovh" style={{ position: "relative" }}>
+      <div className="wrapper ovh position-relative" >
         {children}
         <ScrollToTop />
       </div>

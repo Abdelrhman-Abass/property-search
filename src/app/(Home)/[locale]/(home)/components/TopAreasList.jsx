@@ -73,7 +73,7 @@ const TopAreasList = ({ data = [] }) => {
                       <div className="bottom-area">
                         <div className="ud-btn2 d-flex item-center gap-2">
                           <span>{t("seeDetails")}</span>
-                          <GoArrowUpRight style={{fontSize:22}} />          
+                          <GoArrowUpRight className="fs22" />          
 
                         </div>
                       </div>
@@ -93,7 +93,7 @@ const TopAreasList = ({ data = [] }) => {
         aria-label="Top Areas"
 
       >
-        <FaAngleRight style={{fontSize:25}} />          
+        <FaAngleRight className="fs25" />          
 
 
       </button>
@@ -105,7 +105,7 @@ const TopAreasList = ({ data = [] }) => {
         aria-label="Top Areas Right"
 
       >
-        <FaAngleLeft style={{fontSize:25}} />          
+        <FaAngleLeft className="fs25"/>          
 
       </button>
     </>

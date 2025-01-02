@@ -12,18 +12,17 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
 
   return (
     <div
-      style={{ minHeight: 172 }}
-      className="agent-single d-sm-flex align-items-center gap-4 "
+      className="agent-single d-sm-flex align-items-center gap-4 min172-height"
     >
       <div className="single-img mb30-sm">
         <Image
           width={130}
           height={130}
           src={image}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
+          className="breadcrumb-border"
           alt={`agents ${locale == "ar" ? data?.nameAr : data?.nameEn}`}
           loading="lazy"
-
+          
         />
       </div>
       <div className="single-contant ml0-xs   ">

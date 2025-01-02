@@ -33,7 +33,7 @@ const Pagination = ({
           onClick={handlePrevious}
           disabled={currentPage === 1}
         >
-          <FaAngleRight style={{fontSize:25}} />          
+          <FaAngleRight className='fs25'  />          
 
         </button>
       </li>
@@ -61,7 +61,7 @@ const Pagination = ({
           onClick={handleNext}
           disabled={currentPage === totalPages}
         >
-          <FaAngleLeft style={{fontSize:25}} />          
+          <FaAngleLeft className='fs25'  />          
 
         </button>
       </li>

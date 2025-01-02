@@ -12,7 +12,7 @@ import { useData } from "@/context";
 import { Modal } from "bootstrap";
 
 
-const ContactPopForm = ({message}) => {
+const ContactPopForm = ({ message }) => {
     const { appSettings } = useData();
     const recaptchaRef = useRef(null);
     const locale = useLocale();
@@ -83,12 +83,11 @@ const ContactPopForm = ({message}) => {
     };
 
     return (
-        <div className="modal-dialog modal-dialog-centered modal-lg" ref={modalRef}
-        id="contactModal"
-        tabIndex="-1"
-        aria-labelledby="contactModalLabel"
-        aria-hidden="true"
-            style={{ zIndex: 1101 }}>
+        <div className="modal-dialog modal-dialog-centered modal-lg contact-pop-index" ref={modalRef}
+            id="contactModal"
+            tabIndex="-1"
+            aria-labelledby="contactModalLabel"
+            aria-hidden="true">
             <div className="modal-content">
                 <div className="modal-header pl30 pr30">
                     <h5 className="modal-title" id="exampleModalLabel">

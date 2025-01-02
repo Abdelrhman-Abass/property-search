@@ -87,21 +87,21 @@ const StickyNotification = () => {
       {/* Sticky Notification */}
       {isNotificationVisible && (
         <div
-          className="animate-up-5"
-          style={{
-            position: "fixed",
-            bottom: "70px",
-            left: "20px",
-            background: "white",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            borderRadius: "8px",
-            padding: "16px",
-            zIndex: 1000,
-            maxWidth: "300px",
-          }}
+          className="animate-up-5 position-fixed bg-white rounded-3 p-3 custom-fixedContact-box"
+          // style={{
+          //   position: "fixed",
+          //   bottom: "70px",
+          //   left: "20px",
+          //   background: "white",
+          //   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          //   borderRadius: "8px",
+          //   padding: "16px",
+          //   zIndex: 1000,
+          //   maxWidth: "300px",
+          // }}
         >
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <h5 style={{ margin: "0", fontSize: "16px", fontWeight: "bold" }}>
+          <div className="d-flex justify-content-between">
+            <h5 className="m-0 fs-6 fw-bold">
               {g("News")}
             </h5>
             <button
@@ -118,18 +118,10 @@ const StickyNotification = () => {
               &times;
             </button>
           </div>
-          <p style={{ fontSize: "12px", margin: "8px 0" }}>{g("newsProperty")}</p>
+          <p className="contact-button-aria-p">{g("newsProperty")}</p>
           <button
           aria-label="New Propert"
-            style={{
-              background: "#007bff",
-              color: "white",
-              border: "none",
-              padding: "8px 16px",
-              borderRadius: "4px",
-              cursor: "pointer",
-              fontSize: "14px",
-            }}
+            className="contact-button-aria-label"
             data-bs-toggle="modal"
             data-bs-target="#contactForm"
             type="button"
@@ -200,12 +192,8 @@ const StickyNotification = () => {
               </div>
 
               <ReCAPTCHA
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-                className="mb10"
+                
+                className="mb10 d-flex align-items-center justify-content-center"
                 ref={recaptchaRef}
                 sitekey={process.env.NEXT_PUBLIC_KEY_CAPTCHA}
               />

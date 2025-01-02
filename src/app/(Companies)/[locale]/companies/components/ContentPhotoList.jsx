@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocale } from "next-intl";
+import Image from "next/image";
 
 const ContentPhotoList = ({ company }) => {
   const locale = useLocale();
@@ -11,27 +12,25 @@ const ContentPhotoList = ({ company }) => {
       {company.map((item, index) => (
         <div
           key={index}
-          className={`row align-items-center mb-4 content-padding-companies ${
+          className={`row align-items-center mb-4 content-padding-companies min500-height ${
             index % 2 !== 0 ? "flex-row-reverse bg-white" : ""
           }`}
-          style={{ minHeight: "500px"  }} // Ensure fixed height for the entire row
         >
           {/* Image Section */}
           <div
-            className="col-md-6 d-flex align-items-center justify-content-center"
+            className={`col-md-6 d-flex align-items-center justify-content-center height400 `}
             style={{
-              height: "400px", // Fixed height for image section
-              overflow: "hidden", // Prevents overflow for large images
               backgroundColor: index % 2 === 0 ? "#f8f9fa" : "white", // Alternate background color
             }}
           >
-            <img
+            <Image
               src={
                 item.image
                   ? `${imagePath}/${item.image}`
                   : photoPlcaHolder
               }
               alt={`Photo ${locale === "ar" ? item.titleAR : item.titleEN}`}
+              
               
               className="img-fluid rounded custom-height w-100 object-fit-cover"
             />

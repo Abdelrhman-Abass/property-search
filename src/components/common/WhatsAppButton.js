@@ -28,14 +28,14 @@ const WhatsAppButton = ({ data , url=""}) => {
         {/* WhatsApp Button */}
         <Link href={whatsappUrl} passHref>
           <button className="contact-button whatsapp" aria-label="Whats app buuton" target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp style={{fontSize:25}} />          
+            <FaWhatsapp className='fs25' />          
             </button>
         </Link>
 
         {/* Phone Button */}
         <Link href={phoneUrl} passHref>
           <button className="contact-button phone" aria-label="Call Phone" target="_blank" rel="noopener noreferrer">
-            <FaPhoneAlt style={{fontSize:23}} />          
+            <FaPhoneAlt className='fs22'  />          
 
           </button>
         </Link>
@@ -50,7 +50,7 @@ const WhatsAppButton = ({ data , url=""}) => {
             type="button"
             rel="noopener noreferrer"
             onClick={() => setOpen(true)}>
-            <FaVideo style={{fontSize:25}} />          
+            <FaVideo className='fs25'  />          
 
           </button>
 

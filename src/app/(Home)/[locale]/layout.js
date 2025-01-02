@@ -1,14 +1,12 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Client from "./Client";
-import Script from "next/script";
 import { Poppins, Noto_Kufi_Arabic } from "next/font/google";
 import Header from "@/layout/Header";
 import MobileMenu from "@/components/common/mobile-menu";
 import Footer from "@/layout/default-footer";
 import { Toaster } from "react-hot-toast";
 import MenuWidget from "@/layout/default-footer/MenuWidget";
-import Head from 'next/head';
 
 
 // Optimized font imports
@@ -86,10 +84,19 @@ export default async function RootLayout({ children, params: { locale } }) {
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.webp" />
-        <link rel="canonical" href="https://property-search.com" />
-        <link rel="alternate" hreflang="en" href="https://property-search.com/en" />
-        <link rel="alternate" hreflang="ar" href="https://property-search.com/ar" />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+			rel="canonical"
+			href={
+			  locale === "ar"
+				? "https://property-search.com/ar"
+				: "https://property-search.com/en"
+			}
+		  />
+
+		  
+		 <link rel="alternate" hreflang="en" href="https://property-search.com/en" />
+		 <link rel="alternate" hreflang="ar" href="https://property-search.com/ar" />
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(", ")} />
@@ -103,9 +110,19 @@ export default async function RootLayout({ children, params: { locale } }) {
         <meta property="og:site_name" content="property-search" />
 
         <meta property="og:locale" content={locale === "ar" ? "ar_AR" : "en_US"} />
+
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <Script
+        <meta name="twitter:card" content={description} />
+
+        {/* Facebook Page Meta Tag */}
+        <meta property="article:publisher" content="https://www.facebook.com" />
+
+        {/* Instagram and YouTube Meta Tags */}
+        <meta name="instagram:site" content="https://www.instagram.com" />
+        <meta name="youtube:channel" content="https://www.youtube.com" />
+
+        <script
           id="google-tag-manager"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
@@ -143,7 +160,7 @@ export default async function RootLayout({ children, params: { locale } }) {
             src="https://www.googletagmanager.com/ns.html?id=GTM-5P5PRK53"
             height="0"
             width="0"
-            style={{ display: "none", visibility: "hidden" }}
+            className="d-none hidden-visibility"
           ></iframe>
         </noscript>
 
@@ -153,10 +170,10 @@ export default async function RootLayout({ children, params: { locale } }) {
             <MobileMenu />
             <Toaster position="top-left" reverseOrder={false} />
 
-            <div style={{ minHeight: "100vh" }}>{children}</div>
+            <div className="min-vh-100">{children}</div>
             <section
               style={{ background: "#0f2950" }}
-              className="footer-style1 pt60 pb-0"
+              className="footer-style1 pt60 pb-0 "
             >
               <Footer>
                 <MenuWidget />

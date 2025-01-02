@@ -80,7 +80,7 @@ const Blog = ({ blog }) => {
         <Image
           width={300}
           height={200}
-
+          
           className="w-100 cover"
           src={imagePath}
           alt={`blog ${titleAR}`}
@@ -95,7 +95,7 @@ const Blog = ({ blog }) => {
           <span className="day">{blogDate.day}</span>
         </div>
 
-        <h6 className="title mt20 truncate-text" style={{ height: 45 }}>
+        <h6 className="title mt20 truncate-text height45" >
           <Link href={`/${locale}/blog/${id}`}>
             {locale == "ar" ? titleAR : titleEN}
           </Link>
@@ -108,10 +108,10 @@ const Blog = ({ blog }) => {
             </h6>
           </>
         ) : (
-          <p style={{ height: 30 }}></p>
+          <p className="height30"></p>
         )}
 
-        <div className="info-boxes mb20" style={{ height: 30 }}>
+        <div className="info-boxes mb20 height30" >
           <div className="info-box">
             <span>{downPaymentPercentage}% {locale == "ar" ? "دفعة مبدئية " : " Deposit"}</span>
             {/* <p className="info-label"> {locale == "ar" ? "مقدم " : " Deposit"}</p> */}
@@ -130,7 +130,7 @@ const Blog = ({ blog }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWhatsapp style={{ fontSize: 25 }} />
+              <FaWhatsapp className="fs25" />
               <span className="mx10"> {locale == "ar" ? " واتساب" : "WhatsApp"}</span>
             </button>
           </Link>
@@ -143,7 +143,7 @@ const Blog = ({ blog }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaPhoneAlt style={{ fontSize: 20 }} />
+              <FaPhoneAlt className="fs20" />
               <span className="mx10"> {locale == "ar" ? " اتصل" : "Call"}</span>
             </button>
           </Link>
@@ -159,7 +159,7 @@ const Blog = ({ blog }) => {
               data-bs-toggle="modal"
               data-bs-target="#contactPopFprm"
             >
-              <FaVideo style={{ fontSize: 25 }} />
+              <FaVideo className="fs25" />
               <span className="mx10"> {locale == "ar" ? " زووم" : "Zoom"}</span>
 
             </button>
