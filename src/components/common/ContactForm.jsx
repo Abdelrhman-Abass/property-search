@@ -47,7 +47,7 @@ const StickyNotification = () => {
       fullName: data.fullName,
       whatsApp: String(data.Watsmobile), // Replace with actual key for your API
     };
-    console.log(JSON.stringify(payload))
+    (JSON.stringify(payload))
 
     try {
       // Send the POST request to the server

@@ -124,7 +124,7 @@ const Area = async ({ params }) => {
       <WhatsAppButton data={params.locale == "ar"
         ? areaDetails?.data?.nameAr
         : areaDetails?.data?.nameEn
-      } />
+      } url={`area/${params.id}`}/>
     </section>
   );
 };

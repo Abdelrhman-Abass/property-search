@@ -107,6 +107,7 @@ const Compound = async ({ params, searchParams }) => {
           <Properties
             propertyData={property}
             title={title}
+            compundId = {params.id}
             searchParams={searchParams}
           />
         </div>

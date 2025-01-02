@@ -44,8 +44,8 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
               },
             }}
           >
-            {data.map((compound) => (
-              <SwiperSlide key={compound.id} className="mb-5">
+            {data.map((compound ,idx) => (
+              <SwiperSlide key={idx} className="mb-5">
                 <MainCard data={compound} colstyle={false} type={type} />
               </SwiperSlide>
             ))}

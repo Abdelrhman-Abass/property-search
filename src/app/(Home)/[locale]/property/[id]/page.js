@@ -108,7 +108,7 @@ const Property = async ({ params }) => {
             areaId={propertyData.areaId}
             price={propertyData.price}
           />
-          <WhatsAppButton data={propertyData?.titleAR} />
+          <WhatsAppButton data={propertyData?.titleAR} url={`property/${params.id}`}/>
 
         </div>
       </section>

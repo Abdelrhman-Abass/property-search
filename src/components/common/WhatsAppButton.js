@@ -6,10 +6,12 @@ import AdvanceFilterModal from '@/layout/advance-search';
 import ContactPopForm from './ContactPopForm';
 import StickyNotification from './ContactForm';
 import { FaWhatsapp ,FaPhoneAlt , FaVideo} from "react-icons/fa";
+import { useLocale } from 'next-intl';
 
-const WhatsAppButton = ({ data }) => {
+const WhatsAppButton = ({ data , url=""}) => {
   const { appSettings } = useData();
   const [open, setOpen] = useState(false)
+  const locale=useLocale()
   const phoneNumber = appSettings?.whatsApp; // Replace with the phone number you want to send the message to
   const message = `مرحبا أود الاستفسار عن ${data}`; // The message to send
   const encodedMessage = encodeURIComponent(message); // Encode the message to be URL safe
@@ -17,7 +19,8 @@ const WhatsAppButton = ({ data }) => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   const phoneUrl = `tel:${appSettings?.phone}`;
   const videoCallUrl = `https://somevideoapp.com/call/${phoneNumber}`; // Replace with actual video call URL
-
+  (url)
+  let messageUrl= `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}${locale}/`+ url  
   return (
     <>
       <StickyNotification />
@@ -60,7 +63,7 @@ const WhatsAppButton = ({ data }) => {
             aria-labelledby="contactPopFprm"
             aria-hidden="true"
           >
-            <ContactPopForm />
+            <ContactPopForm message={messageUrl}/>
           </div>
         </div>
 

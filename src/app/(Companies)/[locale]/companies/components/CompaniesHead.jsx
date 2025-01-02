@@ -13,7 +13,6 @@ export default function CompaniesHead({ blog }) {
   const imagePath = `${process.env.NEXT_PUBLIC_COMPANIES_IMAGE}/${blog?.image}`;
   const imagePathLOGO = `${process.env.NEXT_PUBLIC_COMPANIES_IMAGE}/${blog?.logo}`;
 
-  // console.log(imagePath)
   return (
     <>
       <div

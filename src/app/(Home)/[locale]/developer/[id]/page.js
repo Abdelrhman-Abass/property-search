@@ -108,7 +108,7 @@ const Developer = async ({ params }) => {
       />
       <WhatsAppButton data={params.locale == "ar"
             ? developerDetails?.data?.developerNameAR
-            : developerDetails?.data?.developerNameEN}/>
+            : developerDetails?.data?.developerNameEN} url={`developer/${params.id}`}/>
 
             <div className="container">
        <AsksSection questions={developerDetails?.data?.questions}/>     

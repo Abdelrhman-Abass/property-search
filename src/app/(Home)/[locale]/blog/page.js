@@ -21,7 +21,7 @@ const page = async ({ searchParams }) => {
   const page = searchParams?.page || 1;
   const pageSize = 10;
   const blogsData = await fetchData(page, pageSize);
-  // console.log(blogsData)
+  // (blogsData)
 
 
   return (
@@ -40,7 +40,7 @@ const page = async ({ searchParams }) => {
           </div>
         </div>
       </section>
-      <WhatsAppButton data={"property search"}/>
+      <WhatsAppButton data={"property search"} url={`blog`}/>
 
     </div>
   );

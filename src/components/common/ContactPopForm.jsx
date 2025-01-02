@@ -12,7 +12,7 @@ import { useData } from "@/context";
 import { Modal } from "bootstrap";
 
 
-const ContactPopForm = () => {
+const ContactPopForm = ({message}) => {
     const { appSettings } = useData();
     const recaptchaRef = useRef(null);
     const locale = useLocale();
@@ -68,7 +68,7 @@ const ContactPopForm = () => {
         }
 
         const { fullName, mobile, Watsmobile, date, time } = data;
-        const message = `Hello, here are the details:\n\nFull Name: ${fullName}\nMobile: ${mobile}\nWhatsApp Mobile: ${Watsmobile}\nDate: ${date}\nTime: ${time}`;
+        const message = `Hello, here are the details:\n\nFull Name: ${fullName}\nMobile: ${mobile}\nWhatsApp Mobile: ${Watsmobile}\nDate: ${date}\nTime: ${time} \nFrom ${message}`;
         const whatsappURL = `https://wa.me/${appSettings.whatsApp}?text=${encodeURIComponent(message)}`;
 
         // Open WhatsApp with the pre-filled message

@@ -68,7 +68,6 @@ const page = async ({ params }) => {
   if (!blog || !blog.data) {
     return notFound();
   }
-
   return (
     <>
       <section className="our-blog pt0 pb0 " >
@@ -76,7 +75,7 @@ const page = async ({ params }) => {
           <>
             <CompaniesHead blog={blog?.data} imagePath={imagePath} />
             <ContentPhotoList company={blog?.data?.landingPageDetails} imagePath={imagePath} />
-            <WhatsAppButton data={blog?.data?.titleAR} />
+            <WhatsAppButton data={blog?.data?.titleAR} url={`companies/${params.id}`}/>
           </>
         ) : (
           <BlogError blog={blog} blogId={params.id} />

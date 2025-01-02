@@ -54,9 +54,11 @@ const MainCard = ({ colstyle = false, data, type }) => {
             </div>
             <hr className="mt-2 mb-2" />
             <div className="list-meta2 d-flex justify-content-between align-items-center">
+            <Link href={`/developer/${data?.developerID}`}>
               <span className="for-what">
                 {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
               </span>
+              </Link>
               <div className="icons d-flex align-items-center">
                 <Link href={`/developer/${data?.developerID}`}>
                   <span className="flaticon-fullscreen" />
@@ -114,11 +116,11 @@ const MainCard = ({ colstyle = false, data, type }) => {
 
             <hr className="mt-2 mb-2" />
             <div className="list-meta2 d-flex justify-content-between align-items-center">
-			<Link href={`/developer/${data?.developerId}`}>
+            <Link href={`/developer/${data?.developerID}`}>
               <span className="for-what">
                 {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
               </span>
-			  </Link>
+              </Link>
               <div className="icons d-flex align-items-center">
                 <Link href={`/developer/${data?.developerId}`}>
                   <span className="flaticon-fullscreen" />

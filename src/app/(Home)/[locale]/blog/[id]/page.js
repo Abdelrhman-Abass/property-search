@@ -69,7 +69,7 @@ const page = async ({ params }) => {
               imagePath={imagePath}
               questions={blog?.data?.questions}
             />
-              <WhatsAppButton data={blog?.data?.titleAR}/>
+              <WhatsAppButton data={blog?.data?.titleAR} url={`blog/${params.id}`}/>
 
           </>
         ) : (

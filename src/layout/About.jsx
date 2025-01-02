@@ -82,7 +82,7 @@ const About = ({ data, isCompound }) => {
                 nameAr,
                 nameEn,
                 downPaymentPercentage,
-                receiptPaymentPercentage,
+                monthlyPayment,
                 yearsToReceive,
                 id,
               }) => {
@@ -99,7 +99,7 @@ const About = ({ data, isCompound }) => {
                       </span>
                     </div>
                     <div>
-                      <h5>ج {receiptPaymentPercentage} </h5>
+                      <h5>ج {monthlyPayment} </h5>
                       <span>
                         {locale == "ar"
                           ? "دفعة شهرية "

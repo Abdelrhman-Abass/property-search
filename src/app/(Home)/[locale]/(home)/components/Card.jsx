@@ -43,19 +43,19 @@ const Data = ({ colstyle = false, data }) => {
           <p className="list-text">
             {local == "ar" ? data.areaNameAR : data.areaNameEN}
           </p>
-          
+
           <div className="list-meta d-flex align-items-center">
             <span className="flaticon-expand d-flex" />
             {data.propertyCount} {h("properties")}
           </div>
           <hr className="mt-2 mb-2" />
           <div className="list-meta2 d-flex justify-content-between align-items-center">
-		  <Link href={`/developer/${data?.developerId}`}>
+            <Link href={`/developer/${data?.developerId}`}>
               <span className="for-what">
-                {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
               </span>
-			  </Link>
-            
+            </Link>
+
             <div className="icons d-flex align-items-center">
               <Link href={`/developer/${data?.developerID}`}>
                 <span className="flaticon-fullscreen" />
