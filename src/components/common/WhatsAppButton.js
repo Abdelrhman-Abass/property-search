@@ -8,7 +8,7 @@ import StickyNotification from './ContactForm';
 import { FaWhatsapp ,FaPhoneAlt , FaVideo} from "react-icons/fa";
 import { useLocale } from 'next-intl';
 
-const WhatsAppButton = ({ data , url=""}) => {
+const WhatsAppButton = ({ data , url="" , sticky=true}) => {
   const { appSettings } = useData();
   const [open, setOpen] = useState(false)
   const locale=useLocale()
@@ -23,7 +23,8 @@ const WhatsAppButton = ({ data , url=""}) => {
   let messageUrl= `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}${locale}/`+ url  
   return (
     <>
-      <StickyNotification />
+      {sticky ? <StickyNotification /> : null}
+      
       <div className="contact-buttons">
         {/* WhatsApp Button */}
         <Link href={whatsappUrl} passHref>

@@ -31,7 +31,6 @@ const ContentPhotoList = ({ company }) => {
               }
               alt={`Photo ${locale === "ar" ? item.titleAR : item.titleEN}`}
               
-              
               className="img-fluid rounded custom-height w-100 object-fit-cover"
             />
           </div>

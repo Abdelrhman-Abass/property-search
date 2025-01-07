@@ -39,7 +39,6 @@ export default function CompaniesHead({ blog }) {
                   src={imagePathLOGO}
                   alt={`Header Logo ${locale === "ar" ? blog?.titleAR : blog?.titleEN}`}
                   loading="lazy"
-                  
                 />
               </Link>
             </div>

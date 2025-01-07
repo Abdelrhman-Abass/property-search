@@ -927,6 +927,13 @@ button.expanded {
 .heo-header-padding{
   padding: 0 0.75rem !important;
 }
+
+@media (max-width: 768px) {
+  .heo-header-padding {
+    padding: 0 0.2rem !important;
+  }
+}
+
 .loading-form-content{
   width: 16px !important;
   height: 16px !important;

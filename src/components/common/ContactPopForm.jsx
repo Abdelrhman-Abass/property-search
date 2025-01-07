@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useRef } from "react";
@@ -10,7 +9,6 @@ import toast from "react-hot-toast";
 import { useLocale, useTranslations } from "next-intl";
 import { useData } from "@/context";
 import { Modal } from "bootstrap";
-
 
 const ContactPopForm = ({ message }) => {
     const { appSettings } = useData();
@@ -24,12 +22,15 @@ const ContactPopForm = ({ message }) => {
         fullName: z
             .string()
             .min(1, "Full name is required")
-            .refine(
-                (val) => val.split(" ").length > 1 && val.split(" ").length < 3,
-                locale === "ar"
-                    ? "الاسم يجب أن يكون بين كلمتين وثلاث كلمات"
-                    : "Full name must be between two and three words"
-            ),
+            .max(40, "Full name must be less than 40 characters")
+            .regex(/^[\p{Script=Arabic}A-Za-z\s]+$/u, "Full name can only contain letters and spaces") // Allow Arabic, English letters, and spaces
+			  
+			  .refine(
+				(val) => val.trim() === val,
+				locale === "ar"
+				  ? "الاسم لا يجب أن يحتوي على مسافات في البداية أو النهاية"
+				  : "Name should not have leading or trailing spaces"
+			  ),
         mobile: z
             .string()
             .min(11, locale == "ar" ? "الرقم لابد ان يكون بين 11 الي 15 رقم" : "Watsapp number must be between 11 and 15 numbers")
@@ -68,8 +69,12 @@ const ContactPopForm = ({ message }) => {
         }
 
         const { fullName, mobile, Watsmobile, date, time } = data;
-        const message = `Hello, here are the details:\n\nFull Name: ${fullName}\nMobile: ${mobile}\nWhatsApp Mobile: ${Watsmobile}\nDate: ${date}\nTime: ${time} \nFrom ${message}`;
-        const whatsappURL = `https://wa.me/${appSettings.whatsApp}?text=${encodeURIComponent(message)}`;
+        const trimmedFullName = fullName.trim(); // Trim the fullName
+
+        // Rename the variable to avoid conflict with the `message` prop
+        const whatsappMessage = `Hello, here are the details:\n\nFull Name: ${trimmedFullName}\nMobile: ${mobile}\nWhatsApp Mobile: ${Watsmobile}\nDate: ${date}\nTime: ${time} \nFrom ${message}`;
+
+        const whatsappURL = `https://wa.me/${appSettings.whatsApp}?text=${encodeURIComponent(whatsappMessage)}`;
 
         // Open WhatsApp with the pre-filled message
         window.open(whatsappURL, "blank");
@@ -112,6 +117,10 @@ const ContactPopForm = ({ message }) => {
                                     id="fullName"
                                     className={`form-control ${errors.fullName ? "border-red" : ""}`}
                                     placeholder={g("FullNamePlaceHolder")}
+                                    maxLength={40} // Limit input to 40 characters
+                                    onInput={(e) => {
+                                        e.target.value = e.target.value.replace(/[^\p{Script=Arabic}A-Za-z\s]/gu, ''); // Remove non-alphabetic characters
+                                    }}
                                     {...register("fullName")}
                                 />
                                 {errors.fullName && <p className="error-text">{errors.fullName.message}</p>}

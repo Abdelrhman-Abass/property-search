@@ -38,19 +38,7 @@ const nextConfig = {
     };
     return config;
   },
-  async headers() {
-    return [
-      {
-        source: "/api/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=1, stale-while-revalidate=1",
-          },
-        ],
-      },
-    ];
-  },
+  
   
 };
 

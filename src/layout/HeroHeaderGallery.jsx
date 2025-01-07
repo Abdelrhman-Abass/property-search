@@ -119,7 +119,7 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
 
             {mediaPathsLength > 1 && (
               <div
-                className={`overflow-hidden d-none d-md-block col-md-${
+                className={`overflow-hidden col-6 d-md-block col-md-${
                   mediaPathsLength === 3 ? "8" : "6"
                 } p-0 `}
               >

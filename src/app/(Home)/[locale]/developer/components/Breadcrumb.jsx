@@ -23,7 +23,7 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
             src={logo}
             quality={100}
             // style={{ borderRadius: "50%", objectFit: "cover" }}
-            className=""
+            className="breadcrumb-border"
             alt={`${locale == "ar" ? data?.developerNameAR : data?.developerNameEN}-logo`}
             loading="lazy"
 

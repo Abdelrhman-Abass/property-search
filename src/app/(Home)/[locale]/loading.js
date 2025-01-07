@@ -17,7 +17,6 @@ const loading = () => {
           alt="Loading Header Logo"
           priority
           loading="eager"
-          
         />
       </div>
     </div>

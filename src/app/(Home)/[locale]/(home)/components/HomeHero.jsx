@@ -24,7 +24,6 @@ const HomeHero = ({ data }) => {
           quality={80}
           priority
           
-          
         />
       
       </Link>

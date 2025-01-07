@@ -17,13 +17,16 @@ const StickyNotification = () => {
   const schema = z.object({
     fullName: z
       .string()
-      .min(1, "Full name is required")
-      .refine(
-        (val) => val.split(" ").length > 1 && val.split(" ").length < 3,
-        locale === "ar"
-          ? "الاسم يجب أن يكون بين كلمتين وثلاث كلمات"
-          : "Full name must be between two and three words"
-      ),
+            .min(1, "Full name is required")
+            .max(40, "Full name must be less than 40 characters")
+            .regex(/^[\p{Script=Arabic}A-Za-z\s]+$/u, "Full name can only contain letters and spaces") // Allow Arabic, English letters, and spaces
+			  
+			  .refine(
+				(val) => val.trim() === val,
+				locale === "ar"
+				  ? "الاسم لا يجب أن يحتوي على مسافات في البداية أو النهاية"
+				  : "Name should not have leading or trailing spaces"
+			  ),
     Watsmobile: z
       .string()
       .min(11, locale == "ar" ? "الرقم لابد ان يكون بين 11 الي 15 رقم" : "Watsapp number must be between 11 and 15 numbers")
@@ -164,6 +167,7 @@ const StickyNotification = () => {
                       id="fullName"
                       className={`form-control ${errors.fullName ? "border-red" : ""}`}
                       placeholder={locale === "ar" ? "أدخل اسمك الكامل" : "Enter your full name"}
+                      maxLength={30}
                       {...register("fullName")}
                     // onBlur={handleFullNameBlur} // Trigger validation on blur
                     />
