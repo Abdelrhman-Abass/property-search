@@ -56,7 +56,7 @@ const TopCompoundsList = ({ data }) => {
                         loading="lazy"
                       />
                     </div>
-                    <div className="apartment-content">
+                    <div className="apartment-content truncate-text" style={{minHeight:120}}>
                       <h6 className="title mb-0">
                         {local == "ar" ? nameAR : nameEN}
                       </h6>

@@ -75,7 +75,7 @@ const page = async ({ params }) => {
           <>
             <CompaniesHead blog={blog?.data} imagePath={imagePath} />
             <ContentPhotoList company={blog?.data?.landingPageDetails} imagePath={imagePath} />
-            <WhatsAppButton data={blog?.data?.titleAR} url={`companies/${params.id}`}/>
+            <WhatsAppButton data={blog?.data?.titleAR} url={`companies/${params.id}`} sticky={false}/>
           </>
         ) : (
           <BlogError blog={blog} blogId={params.id} />

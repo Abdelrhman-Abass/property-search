@@ -20,7 +20,6 @@ const Overview = ({ data }) => {
       label: "delivery",
       value: data?.deliveryYear,
     },
-
     {
       icon: "flaticon-expand",
       label: "theArea",
@@ -34,11 +33,16 @@ const Overview = ({ data }) => {
     },
   ];
 
+  // Filter out items where value is 0 or undefined
+  const filteredOverviewData = overviewData.filter(
+    (item) => item.value !== 0 && item.value !== undefined
+  );
+
   return (
     <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
       <h4 className="title fz17 mb30">{t("overview")}</h4>
       <div className="row">
-        {overviewData.map((item, index) => (
+        {filteredOverviewData.map((item, index) => (
           <div
             key={index}
             className={`col-sm-6 col-lg-4 ${item.xs ? "mb25-xs" : "mb25"}`}

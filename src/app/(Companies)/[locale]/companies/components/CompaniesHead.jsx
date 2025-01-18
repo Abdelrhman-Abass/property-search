@@ -32,7 +32,7 @@ export default function CompaniesHead({ blog }) {
         <nav className="navbar companies-index p-3">
           <div className="container">
             <div className="logos">
-              <Link className="header-logo logo1" href={`/`} aria-label="Logo Image">
+              <Link className="header-logo logo1" href={`#`} aria-label="Logo Image">
                 <Image
                   width={100}
                   height={60}
@@ -48,8 +48,8 @@ export default function CompaniesHead({ blog }) {
 
         {/* Centered Content */}
         <div className="container  companies-index  text-center my-auto text-white">
-          <h1 className="display-3 text-white fw-bold">{locale === "ar" ? blog?.titleAR : blog?.titleEN}</h1>
-          <h2 className="lead text-white">{locale === "ar" ? blog?.subTitleAR : blog?.subTitleEN}</h2>
+          <h1 className="display-3 text-white fw-bold">{locale === "ar" ? blog?.titleAR : (blog?.titleEN ? blog?.titleEN : blog?.titleAR)}</h1>
+          <h2 className="lead text-white">{locale === "ar" ? blog?.subTitleAR : (blog?.subTitleEN ? blog?.subTitleEN : blog?.subTitleAR)}</h2>
 
         </div>
       </div>

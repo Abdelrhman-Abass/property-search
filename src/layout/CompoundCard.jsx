@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import {Link} from "@/routing";
+import { Link } from "@/routing";
 
 const CompoundCard = ({ colstyle = false, data = {} }) => {
   const g = useTranslations("global");
@@ -41,14 +41,34 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
             <span className="flaticon-expand d-flex" /> {data?.sqft} {g("sqft")}
           </div>
           <hr className="mt-2 mb-2" />
-          <div className="list-meta2 d-flex justify-content-between align-items-center">
-            <span className="for-what">المطور العقاري</span>
-            <div className="icons d-flex align-items-center">
-              <Link href={`/developer/1`}>
-                <span className="flaticon-fullscreen" />
+          {data?.developerID ? (
+            <div className="list-meta2 d-flex justify-content-between align-items-center">
+              <Link href={`/developer/${data?.developerID}`}>
+                <span className="for-what">
+                  {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
               </Link>
+              <div className="icons d-flex align-items-center">
+                <Link href={`/developer/${data?.developerID}`}>
+                  <span className="flaticon-fullscreen" />
+                </Link>
+              </div>
             </div>
-          </div>
+
+          ) : (
+            <div className="list-meta2 d-flex justify-content-between align-items-center">
+              <Link href={`/developer/${data?.developerId}`}>
+                <span className="for-what">
+                  {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
+              </Link>
+              <div className="icons d-flex align-items-center">
+                <Link href={`/developer/${data?.developerId}`}>
+                  <span className="flaticon-fullscreen" />
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

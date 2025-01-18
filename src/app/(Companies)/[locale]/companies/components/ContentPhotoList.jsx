@@ -30,6 +30,8 @@ const ContentPhotoList = ({ company }) => {
                   : photoPlcaHolder
               }
               alt={`Photo ${locale === "ar" ? item.titleAR : item.titleEN}`}
+			  width={300}
+              height={300}
               
               className="img-fluid rounded custom-height w-100 object-fit-cover"
             />
@@ -45,7 +47,8 @@ const ContentPhotoList = ({ company }) => {
                 __html:
                   locale === "ar"
                     ? item?.contentAR
-                    : item?.contentEN,
+                    : item?.contentEN ? item?.contentEN : item?.contentAR,
+
               }}
             ></div>
           </div>

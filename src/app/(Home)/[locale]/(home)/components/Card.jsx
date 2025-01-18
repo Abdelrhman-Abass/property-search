@@ -40,7 +40,7 @@ const Data = ({ colstyle = false, data }) => {
               {local == "ar" ? data.nameAR : data.nameEN}
             </h6>
           </Link>
-          <p className="list-text">
+          <p className="list-text truncate-text">
             {local == "ar" ? data.areaNameAR : data.areaNameEN}
           </p>
 
@@ -49,19 +49,34 @@ const Data = ({ colstyle = false, data }) => {
             {data.propertyCount} {h("properties")}
           </div>
           <hr className="mt-2 mb-2" />
-          <div className="list-meta2 d-flex justify-content-between align-items-center">
-            <Link href={`/developer/${data?.developerId}`}>
-              <span className="for-what">
-                {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
-              </span>
-            </Link>
-
-            <div className="icons d-flex align-items-center">
+          {data?.developerID ? (
+            <div className="list-meta2 d-flex justify-content-between align-items-center">
               <Link href={`/developer/${data?.developerID}`}>
-                <span className="flaticon-fullscreen" />
+                <span className="for-what">
+                  {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
               </Link>
+              <div className="icons d-flex align-items-center">
+                <Link href={`/developer/${data?.developerID}`}>
+                  <span className="flaticon-fullscreen" />
+                </Link>
+              </div>
             </div>
-          </div>
+
+          ) : (
+            <div className="list-meta2 d-flex justify-content-between align-items-center">
+              <Link href={`/developer/${data?.developerId}`}>
+                <span className="for-what">
+                  {local == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
+              </Link>
+              <div className="icons d-flex align-items-center">
+                <Link href={`/developer/${data?.developerId}`}>
+                  <span className="flaticon-fullscreen" />
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

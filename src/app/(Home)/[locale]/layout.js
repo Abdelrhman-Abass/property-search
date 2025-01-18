@@ -96,18 +96,18 @@ export default async function RootLayout({ children, params: { locale } }) {
         <link rel="alternate" hreflang="en" href="https://property-search.com/en" />
         <link rel="alternate" hreflang="ar" href="https://property-search.com/ar" />
         <meta name="title" content={title} />
-        {/* <meta name="description" content={description} /> */}
+        
         <meta name="keywords" content={keywords.join(", ")} />
         <meta property="og:image" content="/logo.webp" />
         <meta property="og:image:alt" content="/logo.webp" />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        
         <meta property="og:url" content="https://property-search.com" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="property-search" />
         <meta property="og:locale" content={locale === "ar" ? "ar_AR" : "en_US"} />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        
         <meta name="twitter:card" content={description} />
         {/* Facebook Page Meta Tag */}
         <meta property="article:publisher" content="https://www.facebook.com" />

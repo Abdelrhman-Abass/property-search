@@ -40,7 +40,7 @@
     "search": "Search",
     "from": "From",
     "to": "To",
-    "discover": "Discover Compounds in",
+    "discover": "Discover Projects in",
     "fethError": "There was an error fetching data from the server.",
     "NotFoundItemsError": "There are no results for your search.",
     "SpecifyTime": "Book Meeting",

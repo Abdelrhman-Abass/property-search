@@ -28,11 +28,7 @@ const ContactMeta = ({ appSettings }) => {
                 <Link href={contact.phoneLink}>{contact.phone}</Link>
               </h6>
             )}
-            {contact.mail && (
-              <h6 className="info-phone text-center text-white">
-                <Link href={contact.mailLink}>{contact.mail}</Link>
-              </h6>
-            )}
+            
           </div>
         </div>
       ))}

@@ -2,13 +2,13 @@
 import { formatPrice } from "@/services";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import {Link} from "@/routing";
+import { Link } from "@/routing";
 
 const MainCard = ({ colstyle = false, data, type }) => {
   const h = useTranslations("home");
   const g = useTranslations("global");
   const locale = useLocale();
-  
+
   if (type == "compound") {
     let image;
     if (data?.defaultMediaPath) {
@@ -31,7 +31,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 width={380}
                 height={250}
                 className="w-100 cover"
-                src={image? image : "/slider.webp"}
+                src={image ? image : "/slider.webp"}
                 alt={locale == "ar" ? data?.nameAR : data?.nameEN}
               />
               <div className="list-price">
@@ -45,7 +45,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 {locale == "ar" ? data.nameAR : data.nameEN}
               </h6>
             </Link>
-            <p className="list-text">
+            <p className="list-text truncate-text">
               {locale == "ar" ? data?.areaNameAR : data?.areaNameEN}
             </p>
             <div className="list-meta d-flex align-items-center">
@@ -53,11 +53,13 @@ const MainCard = ({ colstyle = false, data, type }) => {
               {data?.propertyCount} {h("properties")}
             </div>
             <hr className="mt-2 mb-2" />
+            
+            {data?.developerID ? (
             <div className="list-meta2 d-flex justify-content-between align-items-center">
-            <Link href={`/developer/${data?.developerID}`}>
-              <span className="for-what">
-                {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
-              </span>
+              <Link href={`/developer/${data?.developerID}`}>
+                <span className="for-what">
+                  {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
               </Link>
               <div className="icons d-flex align-items-center">
                 <Link href={`/developer/${data?.developerID}`}>
@@ -65,6 +67,21 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 </Link>
               </div>
             </div>
+
+          ) : (
+            <div className="list-meta2 d-flex justify-content-between align-items-center">
+              <Link href={`/developer/${data?.developerId}`}>
+                <span className="for-what">
+                  {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
+              </Link>
+              <div className="icons d-flex align-items-center">
+                <Link href={`/developer/${data?.developerId}`}>
+                  <span className="flaticon-fullscreen" />
+                </Link>
+              </div>
+            </div>
+          )}
           </div>
         </div>
       </div>
@@ -85,7 +102,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 width={382}
                 height={248}
                 className="w-100 cover"
-                src={data?.mediaPath ?`${process.env.NEXT_PUBLIC_PROPERTIES_IMAGE}/${data?.mediaPath}`:"/slider.webp"}
+                src={data?.mediaPath ? `${process.env.NEXT_PUBLIC_PROPERTIES_IMAGE}/${data?.mediaPath}` : "/slider.webp"}
                 alt={locale == "ar" ? data.titleAR : data.titleEn}
                 loading="lazy"
               />
@@ -100,7 +117,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 {locale == "ar" ? data.titleAR : data.titleEn}
               </h6>
             </Link>
-            <p className="list-text">
+            <p className="list-text truncate-text">
               {locale == "ar"
                 ? data?.compoundNameAR + " - " + data?.areaNameAR
                 : data?.compoundNameEN + " - " + data?.areaNameEN}
@@ -115,11 +132,26 @@ const MainCard = ({ colstyle = false, data, type }) => {
             </div>
 
             <hr className="mt-2 mb-2" />
+            {data?.developerID ? (
             <div className="list-meta2 d-flex justify-content-between align-items-center">
-            <Link href={`/developer/${data?.developerID}`}>
-              <span className="for-what">
-                {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
-              </span>
+              <Link href={`/developer/${data?.developerID}`}>
+                <span className="for-what">
+                  {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
+              </Link>
+              <div className="icons d-flex align-items-center">
+                <Link href={`/developer/${data?.developerID}`}>
+                  <span className="flaticon-fullscreen" />
+                </Link>
+              </div>
+            </div>
+
+          ) : (
+            <div className="list-meta2 d-flex justify-content-between align-items-center">
+              <Link href={`/developer/${data?.developerId}`}>
+                <span className="for-what">
+                  {locale == "ar" ? data?.developerNameAR : data?.developerNameEN}
+                </span>
               </Link>
               <div className="icons d-flex align-items-center">
                 <Link href={`/developer/${data?.developerId}`}>
@@ -127,6 +159,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 </Link>
               </div>
             </div>
+          )}
           </div>
         </div>
       </div>

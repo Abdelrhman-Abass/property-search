@@ -14,7 +14,7 @@ const SwitchLang = ({company =false}) => {
     startTransition(() => {
       const localtion = pathname.slice(3);
       const changed = local == "ar" ? "en" : "ar";
-      router.replace(`/${changed}/${localtion}`);
+      router.replace(`/${changed}${localtion}`);
     });
   };
 
@@ -25,9 +25,12 @@ const SwitchLang = ({company =false}) => {
         onClick={onChangeLang}
         className="d-flex align-items-center gap-1 lang-btn"
       >
-        <div className="lang-global">
-          <Image src="/lang.webp" width={19} height={19} alt="Switch langauage" loading="lazy" />
-        </div>
+        {company == false ? 
+			<div className="lang-global">
+			  <Image src="/lang.webp" width={19} height={19} alt="Switch langauage" loading="lazy" />
+			</div>
+			:null
+		}
         <span className={`text-uppercase ${company && "text-white"}`}>{local == "ar" ? "EN" : "AR"}</span>
       </button>
     </div>
