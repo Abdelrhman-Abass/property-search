@@ -24,8 +24,8 @@ const Header = () => {
                       height={60}
                       src="/logo.webp"
                       alt="Property Search Header Logo"
-                      loading="lazy"
-                    />
+                      loading="lazy"                    
+                      />
                   </Link>
                   <Link className="header-logo logo2" href={`/`}>
                     <Image

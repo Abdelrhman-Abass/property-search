@@ -18,7 +18,8 @@ const Banner = ({ data }) => {
           
         >
           <Image
-              fill
+              width={200}
+              height={215}
               className="w-100 h-100 cover"
               src={imagePath}
               alt={"Home banner"}
