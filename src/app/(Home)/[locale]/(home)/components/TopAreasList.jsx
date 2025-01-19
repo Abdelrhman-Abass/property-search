@@ -56,6 +56,7 @@ const TopAreasList = ({ data = [] }) => {
                         src={`${process.env.NEXT_PUBLIC_AREAS_IMAGE}/${image}`}
                         alt={`${nameAR}`}
                         loading="lazy"
+                        
                       />
                     </div>
                     <div className="feature-content">

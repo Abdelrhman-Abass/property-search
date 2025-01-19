@@ -99,8 +99,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
           <Link href={`/property/${data.id}`}>
             <div className="list-thumb">
               <Image
-                width={382}
-                height={248}
+                fill
                 className="w-100 cover"
                 src={data?.mediaPath ? `${process.env.NEXT_PUBLIC_PROPERTIES_IMAGE}/${data?.mediaPath}` : "/slider.webp"}
                 alt={locale == "ar" ? data.titleAR : data.titleEn}

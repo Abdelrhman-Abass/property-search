@@ -13,21 +13,16 @@ const HomeHero = ({ data }) => {
     >
       {/* Next.js Image as Background */}
       {/* set NODE_ENV=production && npm run build && pm2 restart server.js */}
-       {/* <Link href="#" prefetch> */}
+      
         <Image
           src="/slider.webp"
           alt="Home Background Image"
           className="position-absolute w-100 h-100 z-n1 bg-image-cover"
-          // width={1920}
-          // height={920}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
-          // quality={100}
-          // lazy={true}
           fill
           
         />
       
-      {/* </Link> */}
+      
 
       <h1  className="d-none">Luxury Real Estate in Egypt البحث عن منزل أحلامك</h1>
       <h2 className="d-none">Find Your Dream Villas and Apartments لدينا مجموعة كبيرة من الوحدات التى يمكنك معرفة معلومات عنها. </h2>
