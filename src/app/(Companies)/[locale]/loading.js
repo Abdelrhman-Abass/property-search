@@ -15,7 +15,8 @@ const loading = () => {
           height={60}
           src="/logo.webp"
           alt="Header Logo"
-          loading="lazy"
+          priority
+          loading="eager"
         />
       </div>
     </div>

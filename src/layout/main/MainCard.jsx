@@ -33,7 +33,6 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 className="w-100 cover"
                 src={image ? image : "/slider.webp"}
                 alt={locale == "ar" ? data?.nameAR : data?.nameEN}
-                loading="lazy"
               />
               <div className="list-price">
                 {formatPrice(data?.minPrice)} {g("egp")}

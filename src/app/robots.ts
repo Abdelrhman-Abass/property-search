@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/private/",
       },
     ],
-    sitemap: "https://property-search.com/sitemap.xml",
+    sitemap: "https://property-search.com/ar/sitemap.xml",
     host: "https://property-search.com",
   };
 }

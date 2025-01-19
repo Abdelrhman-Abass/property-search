@@ -19,7 +19,7 @@ const HomeHero = ({ data }) => {
           alt="Home Background Image"
           className="position-absolute w-100 h-100 z-n1 bg-image-cover"
           fill
-          loading="lazy"
+          
         />
       
       

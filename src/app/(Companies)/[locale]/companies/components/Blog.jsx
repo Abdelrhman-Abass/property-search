@@ -42,10 +42,11 @@ const Blog = ({ blog }) => {
         <Image
           width={360}
           height={200}
+          priority
           className="w-100 cover"
           src={imagePath}
           alt={`blog ${titleAR}`}
-          loading="lazy"
+          loading="eager"
         />
       </div>
       <div className="blog-content pl30 pb20">

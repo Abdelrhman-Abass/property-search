@@ -42,7 +42,8 @@ const DefaultHeader = () => {
                         height={44}
                         src="/images/header-logo2.svg"
                         alt="Property search Header Logo"
-                        loading="lazy"
+                        priority
+                        loading="eager"
                       />
                     </Link>
                     <Link className="header-logo logo2" href={`/`}>
@@ -51,7 +52,8 @@ const DefaultHeader = () => {
                         height={44}
                         src="/images/header-logo2.svg"
                         alt="property search Header Logo"
-                        loading="lazy"
+                        priority
+                        loading="eager"
                       />
                     </Link>
                   </div>
