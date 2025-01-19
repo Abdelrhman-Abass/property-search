@@ -21,8 +21,9 @@ const HomeHero = ({ data }) => {
           width={1920}
           height={920}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
-          quality={100}
-          lazy={true}
+          // quality={100}
+          // lazy={true}
+          fill
           
         />
       
