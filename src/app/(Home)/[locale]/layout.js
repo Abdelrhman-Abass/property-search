@@ -160,8 +160,8 @@ export default async function RootLayout({ children, params: { locale } }) {
 
         <NextIntlClientProvider messages={messages}>
           <Client>
-            {/* <Header />
-            <MobileMenu /> */}
+            <Header />
+            <MobileMenu />
             <Toaster position="top-left" reverseOrder={false} />
 
             <div className="min-vh-100">{children}</div>
@@ -169,9 +169,9 @@ export default async function RootLayout({ children, params: { locale } }) {
               style={{ background: "#0f2950" }}
               className="footer-style1 pt60 pb-0"
             >
-              {/* <Footer>
+              <Footer>
                 <MenuWidget />
-              </Footer> */}
+              </Footer>
             </section>
           </Client>
         </NextIntlClientProvider>
