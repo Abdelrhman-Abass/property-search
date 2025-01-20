@@ -1,13 +1,9 @@
-import withBundleAnalyzer from "@next/bundle-analyzer";
 import nextIntl from "next-intl/plugin";
 
 const withNextIntl = nextIntl('./src/i18n.js');
 
 /** @type {import('next').NextConfig} */
 // Initialize the Bundle Analyzer plugin
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.NODE_ENV === "production", // Enable only if production=true
-});
 
 // Next.js configuration
 /** @type {import('next').NextConfig} */
@@ -89,7 +85,7 @@ const nextConfig = {
 };
 
 // Chain the plugins
-export default withBundleAnalyzer(withNextIntl(nextConfig));
+export default withNextIntl(nextConfig);
 
 
 
