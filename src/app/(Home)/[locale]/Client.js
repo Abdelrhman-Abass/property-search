@@ -17,7 +17,7 @@ export default function Client({ children }) {
 
   useEffect(() => {
     Aos.init({
-      duration: 900,
+      duration: 100,
       once: true,
     });
     setIsMounted(true);
