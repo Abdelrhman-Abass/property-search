@@ -30,14 +30,14 @@ const Home = async () => {
   return (
     <>
 
-      <HomeHeroPage />
-      <Banner data={banners?.data?.find((item) => item?.order === 1)} notAos />
+      {/* <HomeHeroPage />
+      <Banner data={banners?.data?.find((item) => item?.order === 1)} notAos /> */}
       <HomeTopAreas />
       <Banner data={banners?.data?.find((item) => item?.order === 2)} />
       <HomeTopCompounds />
       <Banner data={banners?.data?.find((item) => item?.order === 3)} />
       <HomeRecommended />
-      {/* <WhatsAppButton data={"property search"} sticky={false}/> */}
+      <WhatsAppButton data={"property search"} sticky={false}/>
 
     </>
   );
