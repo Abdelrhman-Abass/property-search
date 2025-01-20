@@ -25,7 +25,7 @@ export async function generateMetadata({params: { locale } }) {
 }
 
 const Home = async () => {
-  const banners = await ApiGetter({ url: `/api/PageSections` });
+  // const banners = await ApiGetter({ url: `/api/PageSections` });
 
   return (
     <>
