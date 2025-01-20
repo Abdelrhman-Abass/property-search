@@ -18,12 +18,12 @@ const Banner = ({ data }) => {
           
         >
           <Image
-              fill
+              width={200}
+              height={215}
               className="w-100 h-100 cover"
               src={imagePath}
               alt={"Home banner"}
               
-              // loading="lazy"
             />   
           <div className="overlay">
             <h5>{locale == "ar" ? data?.titleAR : data?.titleEN}</h5>
