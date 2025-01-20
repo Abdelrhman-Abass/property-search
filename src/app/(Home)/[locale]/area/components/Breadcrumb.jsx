@@ -21,7 +21,6 @@ const Breadcrumb = ({ colorWhite = true, data = {} }) => {
           src={image}
           className="breadcrumb-border"
           alt={`agents ${locale == "ar" ? data?.nameAr : data?.nameEn}`}
-          loading="lazy"
         />
       </div>
       <div className="single-contant ml0-xs   ">

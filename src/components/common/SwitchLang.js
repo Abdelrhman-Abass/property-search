@@ -27,7 +27,7 @@ const SwitchLang = ({company =false}) => {
       >
         {company == false ? 
 			<div className="lang-global">
-			  <Image src="/lang.webp" width={19} height={19} alt="Switch langauage" />
+			  <Image src="/lang.webp" width={19} height={19} alt="Switch langauage"  />
 			</div>
 			:null
 		}

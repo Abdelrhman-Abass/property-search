@@ -27,11 +27,10 @@ const MobileMenu = () => {
                   height={9}
                   src="/images/mobile-dark-nav-icon.svg"
                   alt="mobile icon"
-                  // loading="lazy"
                 />
               </p>
               <Link className="mobile_logo" href={"/"}>
-                <Image width={130} height={50} src="/logo.webp" alt="Property search logo" />
+                <Image width={130} height={50} src="/logo.webp" alt="Property search logo"  />
               </Link>
               <SwitchLang />
             </div>

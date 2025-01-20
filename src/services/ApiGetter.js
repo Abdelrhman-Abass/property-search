@@ -2,7 +2,7 @@
 
 export const ApiGetter = async ({ url, take, type = "ISR" }) => {
   let fetchType = {
-    next: { revalidate: 7200 }, // Revalidate every 2 hours (7200 seconds)
+    next: { revalidate: 1 }, // Revalidate every 2 hours (7200 seconds)
   };
 
   if (type === "SSG") {

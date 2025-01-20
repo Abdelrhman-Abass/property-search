@@ -14,7 +14,7 @@ const Map = ({ title, lat, lng }) => {
         <div className="col-md-12">
           <iframe
             className="position-relative bdrs12 mt30 h250 w-100"
-            // loading="lazy"
+            loading="lazy"
             src={mapSrc}
             title={title}
             aria-label={title}

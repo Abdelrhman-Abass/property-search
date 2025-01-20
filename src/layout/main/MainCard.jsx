@@ -104,7 +104,6 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 className="w-100 cover"
                 src={data?.mediaPath ? `${process.env.NEXT_PUBLIC_PROPERTIES_IMAGE}/${data?.mediaPath}` : "/slider.webp"}
                 alt={locale == "ar" ? data.titleAR : data.titleEn}
-                // loading="lazy"
               />
               <div className="list-price">
                 {formatPrice(data?.price)} {g("egp")}
