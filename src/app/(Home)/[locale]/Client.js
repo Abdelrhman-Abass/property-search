@@ -2,10 +2,10 @@
 import ScrollToTop from "@/components/common/ScrollTop";
 import Aos from "aos";
 import "aos/dist/aos.css";
-// import "../../../../public/scss/main.scss";
+import "../../../../public/scss/main.scss";
 import "rc-slider/assets/index.css";
 import { useEffect, useState } from "react";
-// import "../../../../public/style.css";
+import "../../../../public/style.css";
 import { DataProvider } from "@/context";
 
 if (typeof window !== "undefined") {

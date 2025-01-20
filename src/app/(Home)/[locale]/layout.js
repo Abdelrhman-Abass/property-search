@@ -127,7 +127,7 @@ export default async function RootLayout({ children, params: { locale } }) {
         </Script>
 
         {/* Schema.org JSON-LD */}
-        <script
+        <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -159,7 +159,7 @@ export default async function RootLayout({ children, params: { locale } }) {
         </noscript>
 
         <NextIntlClientProvider messages={messages}>
-          <Client>
+          {/* <Client> */}
             <Header />
             <MobileMenu />
             <Toaster position="top-left" reverseOrder={false} />
@@ -173,7 +173,7 @@ export default async function RootLayout({ children, params: { locale } }) {
                 <MenuWidget />
               </Footer>
             </section>
-          </Client>
+          {/* </Client> */}
         </NextIntlClientProvider>
       </body>
     </html>
