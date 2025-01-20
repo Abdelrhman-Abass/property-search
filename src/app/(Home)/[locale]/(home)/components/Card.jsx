@@ -27,7 +27,7 @@ const Data = ({ colstyle = false, data }) => {
               className="w-100 h-100 cover"
               src={image}
               alt={data?.nameAR}
-              loading="lazy"
+              // loading="lazy"
             />
             <div className="list-price">
               {formatPrice(data.minPrice)} {g("egp")}

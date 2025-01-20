@@ -23,7 +23,7 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
               className="w-100 h-100 cover"
               src={data?.image}
               alt={`listings ${data?.title}`}
-              loading="lazy"
+              // loading="lazy"
             />
             <div className="list-price">
               {data?.price} {g("egp")}

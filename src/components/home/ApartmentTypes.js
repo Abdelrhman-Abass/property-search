@@ -55,7 +55,7 @@ const ApartmentTypes = ({ data }) => {
                       className="cover w-100"
                       src={apartment.imageSrc}
                       alt="apartment city"
-                      loading="lazy"
+                      // loading="lazy"
                     />
                   </div>
                   <div className="apartment-content">

@@ -22,7 +22,7 @@ const Footer = ({ children }) => {
                   className="mb40"
                   src="/white-logo.webp"
                   alt="Property Search Footer Logo"
-                  loading="lazy"
+                  // loading="lazy"
                 />
               </Link>
               <ContactMeta appSettings={appSettings} />

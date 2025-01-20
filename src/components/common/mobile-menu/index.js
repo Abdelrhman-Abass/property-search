@@ -27,11 +27,11 @@ const MobileMenu = () => {
                   height={9}
                   src="/images/mobile-dark-nav-icon.svg"
                   alt="mobile icon"
-                  loading="lazy"
+                  // loading="lazy"
                 />
               </p>
               <Link className="mobile_logo" href={"/"}>
-                <Image width={130} height={50} src="/logo.webp" alt="Property search logo"  loading="lazy"/>
+                <Image width={130} height={50} src="/logo.webp" alt="Property search logo" />
               </Link>
               <SwitchLang />
             </div>
@@ -56,7 +56,7 @@ const MobileMenu = () => {
 
             </div>
             <div className="sidebar-logo">
-              <Image width={130} height={50} src="/logo.webp" alt=" property search logo" loading="lazy" />
+              <Image width={130} height={50} src="/logo.webp" alt=" property search logo"  />
             </div>
           </div>
           {/* End header */}

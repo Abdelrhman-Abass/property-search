@@ -53,7 +53,7 @@ const TopCompoundsList = ({ data }) => {
                         className="cover w-100"
                         alt={`apartment ${nameAR} city`}
                         src={`${process.env.NEXT_PUBLIC_COMPOUNDS_IMAGE}/${defaultMediaPath}`}
-                        loading="lazy"
+                        // loading="lazy"
                       />
                     </div>
                     <div className="apartment-content truncate-text" style={{minHeight:120}}>

@@ -23,7 +23,7 @@ const Banner = ({ data }) => {
               src={imagePath}
               alt={"Home banner"}
               
-              loading="lazy"
+              // loading="lazy"
             />   
           <div className="overlay">
             <h5>{locale == "ar" ? data?.titleAR : data?.titleEN}</h5>

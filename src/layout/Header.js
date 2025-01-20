@@ -24,8 +24,8 @@ const Header = () => {
                       height={60}
                       src="/logo.webp"
                       alt="Property Search Header Logo"
-                      priority
-                      loading="eager"
+                      // priority
+                      // loading="eager"
                     />
                   </Link>
                   <Link className="header-logo logo2" href={`/`}>
@@ -34,8 +34,8 @@ const Header = () => {
                       height={60}
                       src="/logo.webp"
                       alt="Property Search Header Logo"
-                      priority
-                      loading="eager"
+                      // priority
+                      // loading="eager"
                     />
                   </Link>
                 </div>
