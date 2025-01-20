@@ -25,19 +25,19 @@ export async function generateMetadata({params: { locale } }) {
 }
 
 const Home = async () => {
-  // const banners = await ApiGetter({ url: `/api/PageSections` });
+  const banners = await ApiGetter({ url: `/api/PageSections` });
 
   return (
     <>
 
       <HomeHeroPage />
-      {/* <Banner data={banners?.data?.find((item) => item?.order === 1)} notAos /> */}
+      <Banner data={banners?.data?.find((item) => item?.order === 1)} notAos />
       <HomeTopAreas />
-      {/* <Banner data={banners?.data?.find((item) => item?.order === 2)} /> */}
+      <Banner data={banners?.data?.find((item) => item?.order === 2)} />
       <HomeTopCompounds />
-      {/* <Banner data={banners?.data?.find((item) => item?.order === 3)} /> */}
+      <Banner data={banners?.data?.find((item) => item?.order === 3)} />
       <HomeRecommended />
-      <WhatsAppButton data={"property search"} sticky={false}/>
+      {/* <WhatsAppButton data={"property search"} sticky={false}/> */}
 
     </>
   );
