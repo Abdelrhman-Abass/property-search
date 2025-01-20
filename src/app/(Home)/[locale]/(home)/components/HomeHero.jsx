@@ -14,13 +14,13 @@ const HomeHero = ({ data }) => {
       {/* Next.js Image as Background */}
       {/* set NODE_ENV=production && npm run build && pm2 restart server.js */}
       
-        <Image
+        {/* <Image
           src="/slider.webp"
           alt="Home Background Image"
           className="position-absolute w-100 h-100 z-n1 bg-image-cover"
           fill
           
-        />
+        /> */}
       
       
 
