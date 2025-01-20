@@ -32,7 +32,7 @@ const Home = async () => {
 
       <HomeHeroPage />
       <Banner data={banners?.data?.find((item) => item?.order === 1)} notAos />
-      {/* <HomeTopAreas /> */}
+      <HomeTopAreas />
       <Banner data={banners?.data?.find((item) => item?.order === 2)} />
       <HomeTopCompounds />
       <Banner data={banners?.data?.find((item) => item?.order === 3)} />
