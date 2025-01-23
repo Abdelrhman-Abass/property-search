@@ -40,7 +40,7 @@ const Header = () => {
                 <MainMenu />
               </div>
             </div>
-            <SwitchLang />
+            {/* <SwitchLang /> */}
           </div>
         </div>
       </nav>

@@ -42,7 +42,7 @@ export default function CompaniesHead({ blog }) {
                 />
               </Link>
             </div>
-            <SwitchLang company={true}/>
+            {/* <SwitchLang company={true}/> */}
           </div>
         </nav>
 

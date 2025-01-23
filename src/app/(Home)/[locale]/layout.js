@@ -78,20 +78,16 @@ const SEOConfig = {
 
 export default async function RootLayout({ children, params: { locale } }) {
   const messages = await getMessages();
-  const { title, description, keywords } = SEOConfig[locale];
+  const { title, description, keywords } = SEOConfig["ar"];
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html lang={locale} dir="rtl">
       <head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"
-          href={
-            locale === "ar"
-              ? "https://property-search.com/ar"
-              : "https://property-search.com/en"
-          }
+          href="https://property-search.com/ar"
         />
         <link rel="alternate" hreflang="en" href="https://property-search.com/en" />
         <link rel="alternate" hreflang="ar" href="https://property-search.com/ar" />
@@ -105,7 +101,7 @@ export default async function RootLayout({ children, params: { locale } }) {
         <meta property="og:url" content="https://property-search.com" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="property-search" />
-        <meta property="og:locale" content={locale === "ar" ? "ar_AR" : "en_US"} />
+        <meta property="og:locale" content= "ar_AR"  />
         <meta name="twitter:title" content={title} />
         
         <meta name="twitter:card" content={description} />
@@ -146,7 +142,7 @@ export default async function RootLayout({ children, params: { locale } }) {
         />
       </head>
       <body
-        className={`body ${locale === "ar" ? notoKufiArabic.variable : poppins.variable}`}
+        className={`body ${notoKufiArabic.variable }`}
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

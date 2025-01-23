@@ -1,5 +1,4 @@
 "use server";
-// import dynamic from "next/dynamic";
 
 import Banner from "./components/Banner";
 import HomeTopAreas from "./@TopAreas/page";
@@ -8,16 +7,10 @@ import HomeRecommended from "./@Recommended/page";
 import { ApiGetter } from "@/services/ApiGetter";
 import HomeHeroPage from "./@homeHero/page";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
-// const Banner = dynamic(() => import("./components/Banner"));
-// const HomeTopAreas = dynamic(() => import("./@TopAreas/page"));
-// const HomeTopCompounds = dynamic(() => import("./@TopCompounds/page"));
-// const HomeRecommended = dynamic(() => import("./@Recommended/page"));
-// const HomeHeroPage = dynamic(() => import("./@homeHero/page"));
-// const WhatsAppButton = dynamic(() => import("@/components/common/WhatsAppButton"));
 
 
 export async function generateMetadata({params: { locale } }) {
-  const description = locale == "ar" ? "أفضل موقع وسيط عقاري في مصر. تصفح جميع المناطق والمجمعات السكنية والعقارات داخل مصر حسب السعر والموقع والمرافق للعثور على المكان المثالي." :  "Browse and monitor real estate prices in Egypt. Search areas, prices, and facilities to find the perfect place for you."
+  const description = "أفضل موقع وسيط عقاري في مصر. تصفح جميع المناطق والمجمعات السكنية والعقارات داخل مصر حسب السعر والموقع والمرافق للعثور على المكان المثالي." 
 
   let seoResult = {
     description,

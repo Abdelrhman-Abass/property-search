@@ -32,7 +32,7 @@ const MobileMenu = () => {
               <Link className="mobile_logo" href={"/"}>
                 <Image width={130} height={50} src="/logo.webp" alt="Property search logo"  />
               </Link>
-              <SwitchLang />
+              {/* <SwitchLang /> */}
             </div>
           </div>
         </div>
