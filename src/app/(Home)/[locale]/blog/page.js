@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
 
 const page = async ({ searchParams }) => {
   const page = searchParams?.page || 1;
-  const pageSize = 10;
+  const pageSize = 9;
   const blogsData = await fetchData(page, pageSize);
   // (blogsData)
 

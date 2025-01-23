@@ -6,7 +6,6 @@ import * as z from "zod";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 import { useLocale, useTranslations } from "next-intl";
-
 // Define the Zod validation schema
 
 const StickyNotification = () => {
@@ -14,6 +13,7 @@ const StickyNotification = () => {
   const recaptchaRef = useRef(null);
   const g = useTranslations("global");
   const locale = useLocale()
+  
   const schema = z.object({
     fullName: z
       .string()
@@ -91,17 +91,7 @@ const StickyNotification = () => {
       {isNotificationVisible && (
         <div
           className="animate-up-5 position-fixed bg-white rounded-3 p-3 custom-fixedContact-box"
-          // style={{
-          //   position: "fixed",
-          //   bottom: "70px",
-          //   left: "20px",
-          //   background: "white",
-          //   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          //   borderRadius: "8px",
-          //   padding: "16px",
-          //   zIndex: 1000,
-          //   maxWidth: "300px",
-          // }}
+          
         >
           <div className="d-flex justify-content-between">
             <h5 className="m-0 fs-6 fw-bold">
