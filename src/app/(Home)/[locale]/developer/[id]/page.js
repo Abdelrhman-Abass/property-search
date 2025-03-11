@@ -28,25 +28,36 @@ export async function generateMetadata({ params }) {
     ? process.env.NEXT_PUBLIC_DEVELOPER_IMAGE +
       `/${developerDetails?.data?.logo}`
     : "";
-  let seoResult = {
-    title,
-    description,
-    keywords,
-    twitter: {
+
+    let canonicalUrl = `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/developer/${params.id}`;
+
+
+  
+    let seoResult = {
       title,
       description,
       keywords,
-    },
-    openGraph: {
-      title,
-      description,
-      keywords,
-    },
-  };
-  if (image) {
-    seoResult.twitter = { ...seoResult.twitter, image };
-    seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
-  }
+      alternates: {
+        canonical: canonicalUrl,
+      },
+      openGraph: {
+        title,
+        description,
+        keywords,
+        url: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/developer/${params.id}`,
+        images: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`    },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        keywords,
+        image: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`,
+      },
+    };
+  // if (image) {
+  //   seoResult.twitter = { ...seoResult.twitter, image };
+  //   seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
+  // }
 
   return seoResult;
 }

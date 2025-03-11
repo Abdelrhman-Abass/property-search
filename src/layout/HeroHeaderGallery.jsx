@@ -39,7 +39,7 @@ const HeroHeaderGallery = ({ isCompound = true, data }) => {
               </span>
             </div>
             <Link
-              href={`/area/${data?.areaId}`}
+              href={isCompound ? `/area/${data?.areaId}` : `/compound/${data?.compoundId}`}
               className="pd-meta d-md-flex align-items-center w-fit"
             >
               <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm w-fit">

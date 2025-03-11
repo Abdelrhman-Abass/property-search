@@ -2,7 +2,7 @@
   "global": {
     "overview": "Overview",
     "egp": "EGP",
-    "bed": "Bed",
+    "bed": "Room",
     "bath": "Bath",
     "sqft": "sqm",
     "reference": "Reference",
@@ -64,7 +64,8 @@
     "blog": "Blog",
     "about": "About Us",
     "contact": "Contact Us",
-    "startutps" :"Developer Companies"
+    "startutps" :"Developer Companies",
+    "developer" : "Developer"
   },
   "home": {
     "best": "The Best Place to",
@@ -77,6 +78,8 @@
     "topCompounds": "Most Searched Compounds",
     "topCompoundsError": "There are no compounds available now",
     "recommended": "Recommended for You",
+    "prop-recommended": "Units Recommended for You",
+
     "recommendedError": "There are no recommends now",
     "compound": "Compound",
     "properties": "Properties",

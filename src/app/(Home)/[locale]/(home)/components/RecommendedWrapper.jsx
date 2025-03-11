@@ -1,16 +1,19 @@
 "use client";
 import { useLocale } from "next-intl";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-
+import Pagination from "@/layout/Pagination";
+import {useState} from "react"
 // import Card from "./Card";
 import MainCard from "@/layout/main/MainCard";
 
 const RecommendedWrapper = ({ data, type = "compound" }) => {
   const local = useLocale();
   const isClient = typeof window !== "undefined";
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 1;
 
   return (
     <>
@@ -19,15 +22,15 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
           <Swiper
             dir="rtl"
             spaceBetween={30}
-            modules={[Navigation, Pagination]}
+            modules={[Navigation]}
             navigation={{
               nextEl: ".featured-next__active",
               prevEl: ".featured-prev__active",
             }}
-            pagination={{
-              el: ".featured-pagination__active",
-              clickable: true,
-            }}
+            // pagination={{
+            //   el: ".featured-pagination__active",
+            //   clickable: true,
+            // }}
             slidesPerView={1}
             breakpoints={{
               300: {
@@ -69,6 +72,15 @@ const RecommendedWrapper = ({ data, type = "compound" }) => {
             <FaAngleLeft className="fs25" />          
 
           </button>
+          <div className="row">
+          <div className="mbp_pagination text-center">
+            <Pagination
+              totalPages={totalPages}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          </div>
+        </div>
         </>
       )}
     </>

@@ -37,6 +37,7 @@ const SEOConfig = {
     description:
       "أفضل موقع وسيط عقاري في مصر. تصفح جميع المناطق والمجمعات السكنية والعقارات داخل مصر حسب السعر والموقع والمرافق للعثور على المكان المثالي.",
     keywords: [
+      "بروبرتي سيرش ",
       "كمبوند",
       "وحدات",
       "القاهرة",
@@ -56,6 +57,26 @@ const SEOConfig = {
       "أفضل عقارات في مصر",
       "شراء شقة في مصر",
       "اسعار العقارات في مصر",
+      "Property Search",
+      "property search",
+      "real estate Egypt",
+      "property for sale Egypt",
+      "buy property Egypt",
+      "Egyptian real estate",
+      "apartments for sale Egypt",
+      "houses for sale Egypt",
+      "luxury real estate Egypt",
+      "residential properties Egypt",
+      "best real estate in Egypt",
+      "real estate broker Egypt",
+      "Compound",
+      "Units",
+      "Fifth Settlement",
+      "Search",
+      "Details",
+      "Real Estate",
+      "Villas",
+	  "Property",
     ],
   },
 };
@@ -82,27 +103,31 @@ export default async function RootLayout({ children, params: { locale } }) {
       <head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="canonical"
-          href=
-               "https://property-search.com/ar"
-          
-        />
+        href={
+            locale === "ar"
+              ? "https://property-search.com/ar"
+              : "https://property-search.com/en"
+          }
+
         <link rel="alternate" hreflang="en" href="https://property-search.com/en" />
         <link rel="alternate" hreflang="ar" href="https://property-search.com/ar" />
-        <meta name="title" content={title} />
-        {/* <meta name="description" content={description} /> */}
+        {/* <meta name="title" content={title} /> */}
+        {/* <link rel="canonical" href={canonicalUrl} /> */}
+
         <meta name="keywords" content={keywords.join(", ")} />
-        <meta property="og:image" content="/logo.webp" />
-        <meta property="og:image:alt" content="/logo.webp" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://property-search.com" />
+        <meta name="og:keywords" content={keywords.join(", ")} />
+        {/* <meta property="og:image" content="/logo.webp" />
+        <meta property="og:image:alt" content="/logo.webp" /> */}
+        {/* <meta property="og:image" content={image} /> */}
+        {/* <meta property="og:image:secure_url" content={image} /> */}
+        {/* <meta property="og:title" content={title} /> */}
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+
+        {/* <meta property="og:url" content="https://property-search.com" /> */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="property-search" />
-        <meta property="og:locale" content={"ar_AR" } />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        
         <meta name="twitter:card" content={description} />
         {/* Facebook Page Meta Tag */}
         <meta property="article:publisher" content="https://www.facebook.com" />

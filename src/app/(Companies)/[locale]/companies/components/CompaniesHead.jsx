@@ -34,8 +34,8 @@ export default function CompaniesHead({ blog }) {
             <div className="logos">
               <Link className="header-logo logo1" href={`#`} aria-label="Logo Image">
                 <Image
-                  width={100}
-                  height={60}
+                  width={200}
+                  height={100}
                   src={imagePathLOGO}
                   alt={`Header Logo ${locale === "ar" ? blog?.titleAR : blog?.titleEN}`}
                   loading="lazy"

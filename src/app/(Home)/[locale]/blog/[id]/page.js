@@ -17,36 +17,60 @@ export async function generateMetadata({ params }) {
   const title = blog?.data?.seoTitle;
   const description = blog?.data?.seoDescription;
   // const description = blog?.data?.seoMetaTags;
-  const keywords = blog?.data?.seoMetaTags;
+  // const keywords = blog?.data?.seoMetaTags;
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
-    const seoResult = {
-      keywords,
+
+    let keywords = "";
+  if (blog?.data?.seoMetaTags) {
+    // Check if seoMetaTags is a string
+    if (typeof blog?.data?.seoMetaTags === "string") {
+      try {
+        // Try to parse the string into an array and join it if it's a valid JSON string
+        keywords = JSON.parse(blog?.data?.seoMetaTags).join(", ");
+      } catch (error) {
+        // If parsing fails, assume it's already a string
+        keywords = blog?.data?.seoMetaTags;
+      }
+    } else if (Array.isArray(blog?.data?.seoMetaTags)) {
+      // If it's an array, join the items
+      keywords = blog?.data?.seoMetaTags.join(", ");
+    }
+  }
+  let canonicalUrl = `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/blog/${params.id}`;
+
+
+  
+    let seoResult = {
       title,
       description,
+      keywords,
+      alternates: {
+        canonical: canonicalUrl,
+      },
       openGraph: {
-        keywords,
         title,
         description,
-        images: image ? [{ url: image }] : undefined,
+        keywords,
+        url: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/blog/${params.id}`,
+        images: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`     
       },
       twitter: {
-        keywords,
+        card: "summary_large_image",
         title,
         description,
+        keywords,
         card: "summary", // Twitter card type
-        image: image || undefined,
+        image: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`,
       },
-      additionalMetaTags: [], // Always initialize as an array
-
     };
   
 
-  if (image) {
-    seoResult.twitter = { ...seoResult.twitter, image };
-    seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
-  }
+  // if (image) {
+  //   seoResult.twitter = { ...seoResult.twitter, image };
+  //   seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
+  // }
   return seoResult;
 }
 

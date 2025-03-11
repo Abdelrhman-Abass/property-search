@@ -41,26 +41,34 @@ export async function generateMetadata({ params }) {
       ? process.env.NEXT_PUBLIC_PROPERTIES_IMAGE +
         `/${property?.data?.mediaPaths[0]}`
       : "";
+  let canonicalUrl = `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/property/${params.id}`;
+      let seoResult = {
+        title,
+        description,
+        keywords,
+        alternates: {
+          canonical: canonicalUrl,
+        },
 
-  let seoResult = {
-    title,
-    description,
-    keywords,
-    openGraph: {
-      title,
-      description,
-      keywords,
-    },
-    twitter: {
-      title,
-      description,
-      keywords,
-    },
-  };
-  if (image) {
-    seoResult.twitter = { ...seoResult.twitter, image };
-    seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
-  }
+        openGraph: {
+          title,
+          description,
+          keywords,
+          url: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/property/${params.id}`,
+          images: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`        
+        },
+        twitter: {
+          card: "summary_large_image",
+          title,
+          description,
+          keywords,
+          image: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`,
+        },
+      };
+  // if (image) {
+  //   seoResult.twitter = { ...seoResult.twitter, image };
+  //   seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
+  // }
   if (property?.data?.seoMetaTags) {
     let tags = property?.data.seoMetaTags;
     tags = Array.isArray(tags) && tags.length > 0 ? tags : [tags];
@@ -79,6 +87,7 @@ const Property = async ({ params }) => {
     return notFound();
   }
   const propertyData = data.data;
+
 
   return (
     <>

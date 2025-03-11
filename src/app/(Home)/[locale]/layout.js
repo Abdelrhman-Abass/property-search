@@ -25,7 +25,8 @@ const poppins = Poppins({
 // SEO configuration (can be moved to an external config file)
 const SEOConfig = {
   en: {
-    title: "Property Search - بروبرتي سيرش | Search Smarter, Find Faster",
+    title: "Property Search Egypt - بروبرتي سيرش مصر | Search Smarter, Find Faster",
+    image: "/logo.webp",
     description:
       "Browse and monitor real estate prices in Egypt. Search areas, prices, and facilities to find the perfect place for you.",
     keywords: [
@@ -49,10 +50,16 @@ const SEOConfig = {
     ],
   },
   ar: {
-    title: "بروبرتي سيرش - Property Search | بحث ذكي، وعثور أسرع",
+    title: "بروبرتي سيرش (Property Search) - بحث ذكي وسريع عن العقارات في مصر",
+    image: "/logo.webp",
     description:
       "أفضل موقع وسيط عقاري في مصر. تصفح جميع المناطق والمجمعات السكنية والعقارات داخل مصر حسب السعر والموقع والمرافق للعثور على المكان المثالي.",
     keywords: [
+	   "Property Search",
+	   "Property Search Egypt",
+
+      "بروبرتي سيرش  مصر",
+      "property search",
       "كمبوند",
       "وحدات",
       "القاهرة",
@@ -72,36 +79,62 @@ const SEOConfig = {
       "أفضل عقارات في مصر",
       "شراء شقة في مصر",
       "اسعار العقارات في مصر",
+      "real estate Egypt",
+      "property for sale Egypt",
+      "buy property Egypt",
+      "Egyptian real estate",
+      "apartments for sale Egypt",
+      "houses for sale Egypt",
+      "luxury real estate Egypt",
+      "residential properties Egypt",
+      "best real estate in Egypt",
+      "real estate broker Egypt",
+      "Compound",
+      "Units",
+      "Fifth Settlement",
+      "Search",
+      "Details",
+      "Real Estate",
+      "Villas",
+	  "Property",
     ],
   },
 };
 
 export default async function RootLayout({ children, params: { locale } }) {
   const messages = await getMessages();
-  const { title, description, keywords } = SEOConfig["ar"];
+  const { title, description, keywords , image} = SEOConfig[locale];
 
+
+  // Dynamically generate the canonical URL
   return (
-    <html lang={locale} dir="rtl">
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="canonical"
-          href="https://property-search.com/ar"
-        />
+        href={
+            locale === "ar"
+              ? "https://property-search.com/ar"
+              : "https://property-search.com/en"
+          }
+
         <link rel="alternate" hreflang="en" href="https://property-search.com/en" />
         <link rel="alternate" hreflang="ar" href="https://property-search.com/ar" />
-        <meta name="title" content={title} />
-        
+        {/* <meta name="title" content={title} /> */}
+        {/* <link rel="canonical" href={canonicalUrl} /> */}
+
         <meta name="keywords" content={keywords.join(", ")} />
-        <meta property="og:image" content="/logo.webp" />
-        <meta property="og:image:alt" content="/logo.webp" />
-        <meta property="og:title" content={title} />
-        
-        <meta property="og:url" content="https://property-search.com" />
+        <meta name="og:keywords" content={keywords.join(", ")} />
+        {/* <meta property="og:image" content="/logo.webp" />
+        <meta property="og:image:alt" content="/logo.webp" /> */}
+        {/* <meta property="og:image" content={image} /> */}
+        {/* <meta property="og:image:secure_url" content={image} /> */}
+        {/* <meta property="og:title" content={title} /> */}
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+
+        {/* <meta property="og:url" content="https://property-search.com" /> */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="property-search" />
-        <meta property="og:locale" content= "ar_AR"  />
         <meta name="twitter:title" content={title} />
         
         <meta name="twitter:card" content={description} />
@@ -142,8 +175,8 @@ export default async function RootLayout({ children, params: { locale } }) {
         />
       </head>
       <body
-        className={`body ${notoKufiArabic.variable }`}
-      >
+        className={`body ${locale === "ar" ? notoKufiArabic.variable : poppins.variable}`}
+        >
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

@@ -2,7 +2,7 @@
   "global": {
     "overview": "لمحة عامة",
     "egp": "جم",
-    "bed": "سرير",
+    "bed": "غرف",
     "bath": "حمام",
     "sqft": "م2",
     "reference": "المرجع",
@@ -65,7 +65,9 @@
     "blog": "مقالات",
     "about": "عنا",
     "contact": "تواصل معنا",
-    "startutps": "الشركات المطورة"
+    "startutps": "المطورين ",
+    "developer": "المطورين "
+
   },
   "home": {
     "best": "أفضل مكان ل",
@@ -75,11 +77,12 @@
     "placeholder": "أدخل عنوانا أو حيا أو مدينة للبحث",
     "topAreas": "أهم المناطق",
     "topAreasError": "لا توجد مناطق متاحة الآن",
-    "topCompounds": "الكمبوندات الأكثر بحثًا",
-    "topCompoundsError": "لا توجد كمبوندات متاحة الآن",
+    "topCompounds": "المشاريع الأكثر بحثًا",
+    "topCompoundsError": "لا توجد مشاريع متاحة الآن",
     "recommended": "نرشح لك",
+    "prop-recommended": "وحدات نرشحها لك",
     "recommendedError": "لا توجد ترشيحات الآن",
-    "compound": "كمبوند",
+    "compound": "مشروع",
     "properties": "وحدات",
     "seeDetails": "انظر التفاصيل",
     "property": "وحدة"

@@ -4,6 +4,7 @@ import Head from "./components/Head";
 import MainList from "@/layout/main/MainList";
 import SearchPagination from "./components/SearchPagination";
 import { ApiGetter } from "@/services/ApiGetter";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 export async function generateMetadata({ params, searchParams }) {
   const SearchTerm = searchParams?.SearchTerm;
@@ -58,6 +59,8 @@ const Search = async ({ searchParams }) => {
         pageSize={pageSize}
         totalRecords={data?.data?.totalRecords || []}
       />
+            <WhatsAppButton data={"property search"} url={`companies`}/>
+
     </section>
   );
 };

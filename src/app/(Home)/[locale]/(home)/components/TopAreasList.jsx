@@ -59,7 +59,7 @@ const TopAreasList = ({ data = [] }) => {
                     </div>
                     <div className="feature-content">
                       <div className="top-area">
-                        <h6 className="title mb-1">
+                        <h6 className="title mb-1" >
                           {local == "ar" ? nameAR : nameEN}
                         </h6>
                         <p className="text mb-0">

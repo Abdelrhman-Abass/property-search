@@ -122,12 +122,27 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 : data?.compoundNameEN + " - " + data?.areaNameEN}
             </p>
             <div className="list-meta d-flex align-items-center">
-              <span className="flaticon-bed d-flex" /> {data.bedrooms}{" "}
-              {g("bed")}
-              <span className="flaticon-shower d-flex" /> {data.bathrooms}{" "}
-              {g("bath")}
-              <span className="flaticon-expand d-flex" /> {data.builtUpArea}{" "}
-              {g("sqft")}
+              {data.bedrooms > 0 && (
+                  <>
+                    <span className="flaticon-bed d-flex" /> {data.bedrooms}{" "}
+                    {g("bed")}
+                  </>
+                )}
+                
+                
+                {data.bathrooms  > 0  && (
+                  <>
+                    <span className="flaticon-shower d-flex" /> {data.bathrooms}{" "}
+                    {g("bath")}
+                  </>
+                )}
+                {data.builtUpArea  > 0 && (
+                  <>
+                    <span className="flaticon-expand d-flex" /> {data.builtUpArea}{" "}
+                    {g("sqft")}
+                  </>
+                )}
+                
             </div>
 
             <hr className="mt-2 mb-2" />

@@ -74,9 +74,9 @@ const MobileMenu = () => {
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link href={`/about`}>{t("about")}</Link>
                 </li>
-                {/* <li data-bs-dismiss="offcanvas" aria-label="Close">
-                  <Link href={`/companies`}>{t("startutps")}</Link>
-                </li> */}
+                <li data-bs-dismiss="offcanvas" aria-label="Close">
+                  <Link href={`/developers`}>{t("startutps")}</Link>
+                </li>
                 <li data-bs-dismiss="offcanvas" aria-label="Close">
                   <Link href={`/contact`}>{t("contact")}</Link>
                 </li>

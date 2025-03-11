@@ -426,3 +426,188 @@
   z-index: -9;
 }
 /*Down Arrow Icon*/
+
+
+.side-buttons{
+  position: fixed;
+    transform: rotate(-90deg);
+    z-index: 20;
+    right: -100px;
+    top: 50%;
+    opacity: 1;
+    padding:15px;
+}
+
+
+.whats_button{
+  background-color: var(--main-color-hover);
+  color: #FFF !important;
+  width: 120px;
+  border-radius: 10px 10px 0 0;
+  margin: 0 2px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+
+.whats_button:hover{
+  background-color: #0e2c50;
+} 
+
+.whats_button a{
+  color:white;
+  text-decoration: none
+}
+
+.phone_but{
+  width: 40px;
+  background-color: #DDCCB8;
+  font-size: 1.2rem;
+}
+
+
+.floating-buttons {
+  position: fixed;
+  right: 0;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  transition: right 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  
+}
+/* Show the buttons when visible */
+.floating-buttons.show_i {
+  right: 10px;
+  opacity: 1;
+}
+
+/* Hide the buttons when not visible */
+.floating-buttons.hide_i {
+  right: -60px;
+  opacity: 0;
+}
+
+.contact-us {
+  background-color:  #128c7e;
+  color: white;
+  padding: 9px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  border-radius: 0px 10px 10px 0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+}
+.contact-us svg{
+  transform: rotate(150deg);
+  margin-left:-10px;
+  margin-top:10px;
+  font-size:x-large;
+}
+.contact-us:hover{
+  background-color: #114d46;
+  color:white;
+  text-decoration: none
+} 
+
+@media only screen and (max-width: 786px) {
+    .floating-buttons {
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        left: 15%;
+        padding: 2px;
+        right: 0%;
+        top: unset;
+        height: 55px;
+        transform: rotate(0);
+    }
+
+  .contact-us{
+    background-color: #128c7e;
+    border-radius: 10px ;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 9px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    transform: rotate(0deg);
+    transition: background .3s;
+    writing-mode: horizontal-tb;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+}
+
+  .contact-us svg {
+    font-size: xx-large;
+    margin-left: 15px;
+    margin-top: 5px;
+    transform: rotateZ(15deg);
+  }
+}
+@media only screen and (max-width: 450px) {
+  .floating-buttons {
+      bottom: 0;
+      display: flex;
+      left: 20%;
+      padding: 2px;
+      right: 0%;
+      top: unset;
+      transform: rotate(0);
+  }
+}
+@media only screen and (max-width: 350px) {
+  .floating-buttons {
+      bottom: 0;
+      display: flex;
+      left: 40%;
+      padding: 2px;
+      right: 0%;
+      top: unset;
+      transform: rotate(0);
+  }
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px 0 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.phone {
+  background-color: #d4a373;
+  color: white;
+}
+
+.phone:hover {
+  background-color: #b08968;
+}
+
+.whatsapp {
+  background-color: #25d366;
+  color: white;
+}
+
+.whatsapp:hover {
+  background-color: #1da851;
+}

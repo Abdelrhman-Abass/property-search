@@ -18,15 +18,22 @@ export async function generateMetadata({ params }) {
       ? aboutData?.data?.shortDescriptionAR
       : aboutData?.data?.shortDescriptionEN;
   
-  const image = aboutData?.data?.image;
+  // const image = aboutData?.data?.image;
+  const image = `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`;
+
+  let canonicalUrl = `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/about`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title,
       description,
-      images: [{ url: `${process.env.NEXT_PUBLIC_PAGES_IMAGE}/${image}` }],
+      url: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/about`,
+      images: image 
     },
     twitter: {
       card: "summary_large_image",

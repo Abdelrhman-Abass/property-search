@@ -34,31 +34,38 @@ export async function generateMetadata({ params }) {
   const image = blog?.data?.image
     ? process.env.NEXT_PUBLIC_ARTICLES_CONTENTS_IMAGE + `/${blog?.data?.image}`
     : "";
+    let canonicalUrl = `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/companies/${params.id}`;
+
+
   const seoResult = {
     keywords,
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       keywords,
       title,
       description,
-      images: image ? [{ url: image }] : undefined,
+      url: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}ar/companies/${params.id}`,
+      images: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`,   
     },
     twitter: {
       keywords,
       title,
       description,
       card: "summary", // Twitter card type
-      image: image || undefined,
+      image: `${process.env.NEXT_PUBLIC_FRONT_DOMAIN}slider.jpg`,
     },
     additionalMetaTags: [], // Always initialize as an array
 
   };
 
-  if (image) {
-    seoResult.twitter = { ...seoResult.twitter, image };
-    seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
-  }
+  // if (image) {
+  //   seoResult.twitter = { ...seoResult.twitter, image };
+  //   seoResult.openGraph = { ...seoResult.openGraph, images: [{ url: image }] };
+  // }
   return seoResult;
 }
 

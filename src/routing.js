@@ -7,7 +7,7 @@ export const defaultLocale = "ar";
 export const defaultLanguageCode = "en-US";
 
 export const routing = defineRouting({
-  locales: ['en'],
+  locales: ['en' , 'ar'],
   defaultLocale: 'ar'
 });
 

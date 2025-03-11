@@ -56,7 +56,7 @@ const TopCompoundsList = ({ data }) => {
                       />
                     </div>
                     <div className="apartment-content truncate-text" style={{minHeight:120}}>
-                      <h6 className="title mb-0">
+                      <h6 className="title mb-0" style={{height:50}}>
                         {local == "ar" ? nameAR : nameEN}
                       </h6>
                       <p className="text mb-0">

@@ -1880,26 +1880,26 @@ section {
 
 
 .scrollToHome {
-    background-color: transparent;
-    border: 1px solid #eb1b34;
-    border-radius: 50%;
-    bottom: 30px;
+    background-color: var(--main-color-hover);
+    border: 1px solid var(--main-color-hover);
+    border-radius: 10px;
+    bottom: 2px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(36, 65, 231, .3);
+    -o-box-shadow: 0 1px 4px 0 rgba(36, 65, 231, .3);
+    box-shadow: 0 1px 4px 0 rgba(36, 65, 231, .3);
     color: #eb1b34;
     display: block;
-    height: 45px;
+    height: 51px;
     line-height: 50px;
     position: fixed;
-    right: 20px;
+    left: 20px;
     text-align: center;
     text-decoration: none;
+    -webkit-transition: all .4sease;
+    -o-transition: all .4s ease;
+    transition: all .4sease;
     width: 45px;
     z-index: 9;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(36, 65, 231, 0.3);
-    -o-box-shadow: 0px 1px 4px 0px rgba(36, 65, 231, 0.3);
-    box-shadow: 0px 1px 4px 0px rgba(36, 65, 231, 0.3);
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
 }
 
 .scrollToHome:hover {
@@ -1907,7 +1907,7 @@ section {
 }
 
 .scrollToHome:hover {
-    background-color: #eb1b34;
+    background-color: #0e2c50;
     color: #ffffff;
 }
 
@@ -1936,19 +1936,43 @@ section {
 .contact-button {
     background-color: transparent;
     border: 1px solid #eb1b34;
-    border-radius: 50%;
+    border-radius: 10px 0px 0px 10px;
     color: #eb1b34;
     display: block;
     height: 45px;
     width: 45px;
     text-align: center;
-    line-height: 40px;
-    position: relative;
+    // line-height: 40px;
+    // position: relative;
     cursor: pointer;
     box-shadow: 0px 1px 4px 0px rgba(36, 65, 231, 0.3);
     transition: all 0.4s ease;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    -ms-border-radius: 10px 0px 0px 10px;
+    -o-border-radius: 10px 0px 0px 10px;
 }
-
+@media only screen and (max-width: 786px) {
+    .contact-button {
+        background-color: transparent;
+        border: 1px solid #eb1b34;
+        border-radius: 10px ;
+        box-shadow: 0 1px 4px 0 rgba(36, 65, 231, .3);
+        color: #eb1b34;
+        cursor: pointer;
+        // position: fixed;
+        display: block;
+        height: 100%;
+        // line-height: 40px;
+        bottom: 2px;
+        //position: fixed;
+        text-align: center;
+        transition: all .4sease;
+        width: 45px;
+        
+}
+    
+}
 .contact-button:hover {
     background-color: #eb1b34;
     color: #ffffff;
@@ -1973,30 +1997,43 @@ section {
 
 /* Phone Button */
 .contact-button.phone {
-    background-color: #128c7e;
-    border-color: #128c7e;
+    background-color: var(--main-color-hover);
+    border-color: var(--main-color-hover);
     color: white;
 }
 
 .contact-button.phone:hover {
-    background-color: hsl(173, 71%, 24%);
-    border-color: hsl(173, 71%, 24%);
+    background-color: #0e2c50;
+
 
     color: white;
 }
 
 /* Video Call Button */
 .contact-button.video {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: var(--main-color-hover);
+    border-color: var(--main-color-hover);
     color: white;
+    
 }
-
+// @media only screen and (max-width: 450px) {
+//     .contact-button.video {
+//         position:fixed;
+//         left:-35%;
+//     }
+//   }
+// @media only screen and (max-width: 787px) {
+//     .contact-button.video {
+//         position:fixed;
+//         left:-25%;
+//     }
+//   }
 .contact-button.video:hover {
-    background-color: hsl(211, 100%, 35%);
-    border-color: hsl(211, 100%, 35%);
+    background-color: #0e2c50;
+    border-color: #0e2c50;
 
     color: white;
+    
 }
 
 /* Show effect for the buttons when needed */
