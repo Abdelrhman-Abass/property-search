@@ -68,9 +68,7 @@ const FloorPlans = ({
                   </h2>
                   <div
                     id={`collapse${index}`}
-                    className={`accordion-collapse collapse ${
-                      index === 1 ? "show" : ""
-                    }`}
+                    className={`accordion-collapse collapse`}
                     aria-labelledby={`heading${index}`}
                     data-parent="#floor"
                   >

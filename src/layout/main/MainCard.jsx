@@ -48,7 +48,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
             <p className="list-text truncate-text">
               {locale == "ar" ? data?.areaNameAR : data?.areaNameEN}
             </p>
-            <div className="list-meta d-flex align-items-center">
+            <div className="list-meta d-flex align-items-center " >
               <span className="flaticon-expand d-flex" />
               {data?.propertyCount} {h("properties")}
             </div>
@@ -121,7 +121,7 @@ const MainCard = ({ colstyle = false, data, type }) => {
                 ? data?.compoundNameAR + " - " + data?.areaNameAR
                 : data?.compoundNameEN + " - " + data?.areaNameEN}
             </p>
-            <div className="list-meta d-flex align-items-center">
+            <div className="list-meta d-flex align-items-center" style={{minHeight:"2em"}}>
               {data.bedrooms > 0 && (
                   <>
                     <span className="flaticon-bed d-flex" /> {data.bedrooms}{" "}

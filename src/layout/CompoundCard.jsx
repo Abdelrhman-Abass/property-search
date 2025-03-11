@@ -33,7 +33,7 @@ const CompoundCard = ({ colstyle = false, data = {} }) => {
             <h6 className="list-title">{data?.title}</h6>
           </Link>
           <p className="list-text">{data?.location}</p>
-          <div className="list-meta d-flex align-items-center">
+          <div className="list-meta d-flex align-items-center" style={{minHeight:"2em"}}>
             <span className="flaticon-bed d-flex" /> {data?.bed} {g("bed")}
             <span className="flaticon-shower d-flex" /> {data?.bath} {g("bath")}
             <span className="flaticon-expand d-flex" /> {data?.sqft} {g("sqft")}
