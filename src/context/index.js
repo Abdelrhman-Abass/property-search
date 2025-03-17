@@ -31,7 +31,7 @@ export const DataProvider = ({ children }) => {
 
 
         setPropertyTypesData(
-          formatSelectData(propertyTypesResponse?.data, locale)
+          formatSelectData(propertyTypesResponse?.data, locale )
         );
         setAreasData(formatSelectData(areasResponse?.data, locale));
         setAppSettings(settingsResponse?.data);

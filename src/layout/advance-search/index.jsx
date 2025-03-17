@@ -250,7 +250,7 @@ import { useData } from "@/context";
 
 const AdvanceFilterModal = () => {
   const searchParams = useSearchParams();
-  const { propertyTypesData, areasData } = useData();
+  const { propertyTypesData, areasData ,loading } = useData();
 
   const router = useRouter();
   const translate = useTranslations("global");
@@ -264,6 +264,17 @@ const AdvanceFilterModal = () => {
     maxArea: "",
     selectedArea: "",
   });
+
+  useEffect(() => {
+    if (!loading && propertyTypesData.length > 0) {
+      setFilters((prev) => ({
+        ...prev,
+        propertyType: prev.propertyType || propertyTypesData[0]?.value || "",
+      }));
+    }
+  }, [propertyTypesData, loading]);
+
+  // console.log(propertyTypesData)
 
   const customStyles = {
     option: (styles, { isFocused, isSelected, isHovered }) => ({

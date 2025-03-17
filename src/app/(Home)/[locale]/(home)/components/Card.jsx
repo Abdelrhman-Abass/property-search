@@ -44,7 +44,7 @@ const Data = ({ colstyle = false, data }) => {
             {local == "ar" ? data.areaNameAR : data.areaNameEN}
           </p>
 
-          <div className="list-meta d-flex align-items-center">
+          <div className="list-meta d-flex align-items-center" style={{minHeight:"2em"}}>
             <span className="flaticon-expand d-flex" />
             {data.propertyCount} {h("properties")}
           </div>

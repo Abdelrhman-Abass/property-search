@@ -7,11 +7,14 @@ import { useLocale, useTranslations } from "next-intl";
 import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import { GoArrowUpRight } from "react-icons/go";
+import { IoClose } from "react-icons/io5"; // Close icon
 
 const Form = ({ id, type = 0, url }) => {
   const t = useTranslations("global");
   const f = useTranslations("form");
   const [isLoading, setIsLoading] = useState(false);
+  const [showPopup, setShowPopup] = useState(false); // ✅ State for Popup
+
   const recaptcha = useRef();
   const locale = useLocale();
 
@@ -66,6 +69,7 @@ const Form = ({ id, type = 0, url }) => {
       const data = await response.json();
       if (data.success) {
         toast.success(f("success"));
+        setShowPopup(true);
         reset();
       } else {
         toast.error(f("error"));
@@ -99,6 +103,19 @@ const Form = ({ id, type = 0, url }) => {
 
   return (
     <>
+    {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-box">
+            <button className="popup-close" onClick={() => setShowPopup(false)}>
+              <IoClose />
+            </button>
+            <h2>🎉 Thank You!</h2>
+            <p>{f("popupSuccess")}</p>
+            <p>{f("popupSuccessTwo")}</p>
+            <button className="popup-button" onClick={() => setShowPopup(false)}>{f("ok")}</button>
+          </div>
+        </div>
+      )}
       <form className="form-style1" onSubmit={handleSubmit(onSubmit)}>
         <div className="row">
           <div className="col-lg-12">
@@ -206,6 +223,7 @@ const Form = ({ id, type = 0, url }) => {
           </div>
         </div>
       </form>
+      
     </>
   );
 };

@@ -117,7 +117,10 @@
     "emailReq": "Email is required",
     "msg": "Message is required",
     "success": "Sent successfully",
-    "error": "Something went wrong. Try later."
+    "error": "Something went wrong. Try later.",
+    "popupSuccess": "Thank you for contacting the sales department",
+    "popupSuccessTwo" : "A sales representative will contact you soon",
+    "ok" : "OK"
   },
   "blogs": {
     "blogsError": "There are no blogs added yet",
