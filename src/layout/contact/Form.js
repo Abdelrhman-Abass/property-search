@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoClose } from "react-icons/io5"; // Close icon
+import { redirect } from "@/routing";
 
 const Form = ({ id, type = 0, url }) => {
   const t = useTranslations("global");
@@ -69,8 +70,9 @@ const Form = ({ id, type = 0, url }) => {
       const data = await response.json();
       if (data.success) {
         toast.success(f("success"));
-        setShowPopup(true);
-        reset();
+        // setShowPopup(true);
+        // reset();
+        redirect("/submitted");
       } else {
         toast.error(f("error"));
       }
