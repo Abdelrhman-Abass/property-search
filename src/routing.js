@@ -16,3 +16,12 @@ export const { Link, redirect, usePathname, useRouter, permanentRedirect } =
   createNavigation({
     routing
   });
+
+
+  export const redirectToHome = () => {
+    redirect("/"); // Redirects to the home page
+  };
+  
+  export const redirectToLocale = (locale) => {
+    redirect(`/ar/${locale}`); // Redirects to a specific locale
+  };

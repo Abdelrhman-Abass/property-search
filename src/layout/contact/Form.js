@@ -8,7 +8,10 @@ import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoClose } from "react-icons/io5"; // Close icon
-import { redirect } from "@/routing";
+// import { useRouter } from "next-intl/navigation"; // Use useRouter for client-side navigation
+// import { redirect , redirectToLocale } from "next-intl";
+import { useRouter, useSearchParams } from "next/navigation";
+
 
 const Form = ({ id, type = 0, url }) => {
   const t = useTranslations("global");
@@ -18,6 +21,7 @@ const Form = ({ id, type = 0, url }) => {
 
   const recaptcha = useRef();
   const locale = useLocale();
+  const router = useRouter(); // Initialize useRouter
 
   const validationSchema = yup.object().shape({
     fullName: yup
@@ -71,12 +75,14 @@ const Form = ({ id, type = 0, url }) => {
       if (data.success) {
         toast.success(f("success"));
         // setShowPopup(true);
-        // reset();
-        redirect("/submitted");
+        reset();
+        router.push("/ar/submitted");
       } else {
+        console.log(error + " from n02");
         toast.error(f("error"));
       }
     } catch (error) {
+      console.log(error + " from n02");
       toast.error(f("error"));
     } finally {
       setIsLoading(false);
@@ -105,7 +111,7 @@ const Form = ({ id, type = 0, url }) => {
 
   return (
     <>
-    {showPopup && (
+      {showPopup && (
         <div className="popup-overlay">
           <div className="popup-box">
             <button className="popup-close" onClick={() => setShowPopup(false)}>
@@ -114,7 +120,7 @@ const Form = ({ id, type = 0, url }) => {
             <h2>🎉 Thank You!</h2>
             <p>{f("popupSuccess")}</p>
             <p>{f("popupSuccessTwo")}</p>
-            <button className="popup-button" onClick={() => setShowPopup(false)}>{f("ok")}</button>
+            <button className="popup-button" onClick={() => router.push("/ar/submitted")}>{f("ok")}</button>
           </div>
         </div>
       )}
@@ -225,7 +231,7 @@ const Form = ({ id, type = 0, url }) => {
           </div>
         </div>
       </form>
-      
+
     </>
   );
 };
